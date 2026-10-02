@@ -1,0 +1,1304 @@
+patient_id,period,month_index,data_origin,age,sex,prediction,probability,actual,correct,error_type
+PT-M00-0001,Month 0 (Reference),0,HISTORICAL_BASELINE,63,Male,Lower Risk,0.353,Absence,Correct,True Negative
+PT-M00-0002,Month 0 (Reference),0,HISTORICAL_BASELINE,67,Male,Higher Risk,0.897,Disease Present,Correct,True Positive
+PT-M00-0003,Month 0 (Reference),0,HISTORICAL_BASELINE,67,Male,Higher Risk,0.9719,Disease Present,Correct,True Positive
+PT-M00-0004,Month 0 (Reference),0,HISTORICAL_BASELINE,37,Male,Lower Risk,0.1875,Absence,Correct,True Negative
+PT-M00-0005,Month 0 (Reference),0,HISTORICAL_BASELINE,41,Female,Lower Risk,0.0462,Absence,Correct,True Negative
+PT-M00-0006,Month 0 (Reference),0,HISTORICAL_BASELINE,56,Male,Lower Risk,0.0745,Absence,Correct,True Negative
+PT-M00-0007,Month 0 (Reference),0,HISTORICAL_BASELINE,62,Female,Higher Risk,0.5612,Disease Present,Correct,True Positive
+PT-M00-0008,Month 0 (Reference),0,HISTORICAL_BASELINE,57,Female,Lower Risk,0.2627,Absence,Correct,True Negative
+PT-M00-0009,Month 0 (Reference),0,HISTORICAL_BASELINE,63,Male,Higher Risk,0.9239,Disease Present,Correct,True Positive
+PT-M00-0010,Month 0 (Reference),0,HISTORICAL_BASELINE,53,Male,Higher Risk,0.8212,Disease Present,Correct,True Positive
+PT-M00-0011,Month 0 (Reference),0,HISTORICAL_BASELINE,57,Male,Lower Risk,0.358,Absence,Correct,True Negative
+PT-M00-0012,Month 0 (Reference),0,HISTORICAL_BASELINE,56,Female,Lower Risk,0.1472,Absence,Correct,True Negative
+PT-M00-0013,Month 0 (Reference),0,HISTORICAL_BASELINE,56,Male,Higher Risk,0.7346,Disease Present,Correct,True Positive
+PT-M00-0014,Month 0 (Reference),0,HISTORICAL_BASELINE,44,Male,Lower Risk,0.2958,Absence,Correct,True Negative
+PT-M00-0015,Month 0 (Reference),0,HISTORICAL_BASELINE,52,Male,Lower Risk,0.2194,Absence,Correct,True Negative
+PT-M00-0016,Month 0 (Reference),0,HISTORICAL_BASELINE,57,Male,Lower Risk,0.139,Absence,Correct,True Negative
+PT-M00-0017,Month 0 (Reference),0,HISTORICAL_BASELINE,48,Male,Higher Risk,0.5128,Disease Present,Correct,True Positive
+PT-M00-0018,Month 0 (Reference),0,HISTORICAL_BASELINE,54,Male,Lower Risk,0.1764,Absence,Correct,True Negative
+PT-M00-0019,Month 0 (Reference),0,HISTORICAL_BASELINE,48,Female,Lower Risk,0.0611,Absence,Correct,True Negative
+PT-M00-0020,Month 0 (Reference),0,HISTORICAL_BASELINE,49,Male,Lower Risk,0.0582,Absence,Correct,True Negative
+PT-M00-0021,Month 0 (Reference),0,HISTORICAL_BASELINE,64,Male,Lower Risk,0.3454,Absence,Correct,True Negative
+PT-M00-0022,Month 0 (Reference),0,HISTORICAL_BASELINE,58,Female,Lower Risk,0.1899,Absence,Correct,True Negative
+PT-M00-0023,Month 0 (Reference),0,HISTORICAL_BASELINE,58,Male,Lower Risk,0.3613,Disease Present,Incorrect,False Negative
+PT-M00-0024,Month 0 (Reference),0,HISTORICAL_BASELINE,58,Male,Higher Risk,0.6068,Disease Present,Correct,True Positive
+PT-M00-0025,Month 0 (Reference),0,HISTORICAL_BASELINE,60,Male,Higher Risk,0.9796,Disease Present,Correct,True Positive
+PT-M00-0026,Month 0 (Reference),0,HISTORICAL_BASELINE,50,Female,Lower Risk,0.085,Absence,Correct,True Negative
+PT-M00-0027,Month 0 (Reference),0,HISTORICAL_BASELINE,58,Female,Lower Risk,0.1333,Absence,Correct,True Negative
+PT-M00-0028,Month 0 (Reference),0,HISTORICAL_BASELINE,66,Female,Lower Risk,0.2206,Absence,Correct,True Negative
+PT-M00-0029,Month 0 (Reference),0,HISTORICAL_BASELINE,43,Male,Lower Risk,0.1978,Absence,Correct,True Negative
+PT-M00-0030,Month 0 (Reference),0,HISTORICAL_BASELINE,40,Male,Higher Risk,0.8876,Disease Present,Correct,True Positive
+PT-M00-0031,Month 0 (Reference),0,HISTORICAL_BASELINE,69,Female,Lower Risk,0.2161,Absence,Correct,True Negative
+PT-M00-0032,Month 0 (Reference),0,HISTORICAL_BASELINE,60,Male,Higher Risk,0.8631,Disease Present,Correct,True Positive
+PT-M00-0033,Month 0 (Reference),0,HISTORICAL_BASELINE,64,Male,Lower Risk,0.2717,Disease Present,Incorrect,False Negative
+PT-M00-0034,Month 0 (Reference),0,HISTORICAL_BASELINE,59,Male,Higher Risk,0.6263,Absence,Incorrect,False Positive
+PT-M00-0035,Month 0 (Reference),0,HISTORICAL_BASELINE,44,Male,Lower Risk,0.1365,Absence,Correct,True Negative
+PT-M00-0036,Month 0 (Reference),0,HISTORICAL_BASELINE,42,Male,Lower Risk,0.1498,Absence,Correct,True Negative
+PT-M00-0037,Month 0 (Reference),0,HISTORICAL_BASELINE,43,Male,Higher Risk,0.9201,Disease Present,Correct,True Positive
+PT-M00-0038,Month 0 (Reference),0,HISTORICAL_BASELINE,57,Male,Higher Risk,0.9164,Disease Present,Correct,True Positive
+PT-M00-0039,Month 0 (Reference),0,HISTORICAL_BASELINE,55,Male,Higher Risk,0.963,Disease Present,Correct,True Positive
+PT-M00-0040,Month 0 (Reference),0,HISTORICAL_BASELINE,61,Male,Lower Risk,0.4037,Absence,Correct,True Negative
+PT-M00-0041,Month 0 (Reference),0,HISTORICAL_BASELINE,65,Female,Higher Risk,0.8962,Disease Present,Correct,True Positive
+PT-M00-0042,Month 0 (Reference),0,HISTORICAL_BASELINE,40,Male,Lower Risk,0.3496,Absence,Correct,True Negative
+PT-M00-0043,Month 0 (Reference),0,HISTORICAL_BASELINE,71,Female,Lower Risk,0.2153,Absence,Correct,True Negative
+PT-M00-0044,Month 0 (Reference),0,HISTORICAL_BASELINE,59,Male,Lower Risk,0.1718,Absence,Correct,True Negative
+PT-M00-0045,Month 0 (Reference),0,HISTORICAL_BASELINE,61,Female,Lower Risk,0.3727,Disease Present,Incorrect,False Negative
+PT-M00-0046,Month 0 (Reference),0,HISTORICAL_BASELINE,58,Male,Higher Risk,0.7596,Disease Present,Correct,True Positive
+PT-M00-0047,Month 0 (Reference),0,HISTORICAL_BASELINE,51,Male,Lower Risk,0.2034,Absence,Correct,True Negative
+PT-M00-0048,Month 0 (Reference),0,HISTORICAL_BASELINE,50,Male,Higher Risk,0.8706,Disease Present,Correct,True Positive
+PT-M00-0049,Month 0 (Reference),0,HISTORICAL_BASELINE,65,Female,Lower Risk,0.1651,Absence,Correct,True Negative
+PT-M00-0050,Month 0 (Reference),0,HISTORICAL_BASELINE,53,Male,Lower Risk,0.0997,Absence,Correct,True Negative
+PT-M00-0051,Month 0 (Reference),0,HISTORICAL_BASELINE,41,Female,Lower Risk,0.1561,Absence,Correct,True Negative
+PT-M00-0052,Month 0 (Reference),0,HISTORICAL_BASELINE,65,Male,Lower Risk,0.4419,Absence,Correct,True Negative
+PT-M00-0053,Month 0 (Reference),0,HISTORICAL_BASELINE,44,Male,Higher Risk,0.5662,Disease Present,Correct,True Positive
+PT-M00-0054,Month 0 (Reference),0,HISTORICAL_BASELINE,44,Male,Lower Risk,0.0766,Absence,Correct,True Negative
+PT-M00-0055,Month 0 (Reference),0,HISTORICAL_BASELINE,60,Male,Higher Risk,0.9171,Disease Present,Correct,True Positive
+PT-M00-0056,Month 0 (Reference),0,HISTORICAL_BASELINE,54,Male,Higher Risk,0.9774,Disease Present,Correct,True Positive
+PT-M00-0057,Month 0 (Reference),0,HISTORICAL_BASELINE,50,Male,Higher Risk,0.6799,Disease Present,Correct,True Positive
+PT-M00-0058,Month 0 (Reference),0,HISTORICAL_BASELINE,41,Male,Higher Risk,0.5345,Disease Present,Correct,True Positive
+PT-M00-0059,Month 0 (Reference),0,HISTORICAL_BASELINE,54,Male,Lower Risk,0.2489,Absence,Correct,True Negative
+PT-M00-0060,Month 0 (Reference),0,HISTORICAL_BASELINE,51,Male,Lower Risk,0.4182,Absence,Correct,True Negative
+PT-M00-0061,Month 0 (Reference),0,HISTORICAL_BASELINE,51,Female,Higher Risk,0.883,Disease Present,Correct,True Positive
+PT-M00-0062,Month 0 (Reference),0,HISTORICAL_BASELINE,46,Female,Lower Risk,0.1251,Absence,Correct,True Negative
+PT-M00-0063,Month 0 (Reference),0,HISTORICAL_BASELINE,58,Male,Higher Risk,0.9698,Disease Present,Correct,True Positive
+PT-M00-0064,Month 0 (Reference),0,HISTORICAL_BASELINE,54,Female,Lower Risk,0.0425,Absence,Correct,True Negative
+PT-M00-0065,Month 0 (Reference),0,HISTORICAL_BASELINE,54,Male,Higher Risk,0.86,Disease Present,Correct,True Positive
+PT-M00-0066,Month 0 (Reference),0,HISTORICAL_BASELINE,60,Male,Higher Risk,0.9956,Disease Present,Correct,True Positive
+PT-M00-0067,Month 0 (Reference),0,HISTORICAL_BASELINE,60,Male,Lower Risk,0.2803,Disease Present,Incorrect,False Negative
+PT-M00-0068,Month 0 (Reference),0,HISTORICAL_BASELINE,54,Male,Lower Risk,0.3652,Absence,Correct,True Negative
+PT-M00-0069,Month 0 (Reference),0,HISTORICAL_BASELINE,59,Male,Higher Risk,0.9501,Disease Present,Correct,True Positive
+PT-M00-0070,Month 0 (Reference),0,HISTORICAL_BASELINE,46,Male,Lower Risk,0.3427,Disease Present,Incorrect,False Negative
+PT-M00-0071,Month 0 (Reference),0,HISTORICAL_BASELINE,65,Female,Lower Risk,0.1071,Absence,Correct,True Negative
+PT-M00-0072,Month 0 (Reference),0,HISTORICAL_BASELINE,67,Male,Higher Risk,0.7675,Disease Present,Correct,True Positive
+PT-M00-0073,Month 0 (Reference),0,HISTORICAL_BASELINE,62,Male,Higher Risk,0.9615,Disease Present,Correct,True Positive
+PT-M00-0074,Month 0 (Reference),0,HISTORICAL_BASELINE,65,Male,Higher Risk,0.743,Disease Present,Correct,True Positive
+PT-M00-0075,Month 0 (Reference),0,HISTORICAL_BASELINE,44,Male,Higher Risk,0.5221,Disease Present,Correct,True Positive
+PT-M00-0076,Month 0 (Reference),0,HISTORICAL_BASELINE,65,Female,Lower Risk,0.2115,Absence,Correct,True Negative
+PT-M00-0077,Month 0 (Reference),0,HISTORICAL_BASELINE,60,Male,Higher Risk,0.9897,Disease Present,Correct,True Positive
+PT-M00-0078,Month 0 (Reference),0,HISTORICAL_BASELINE,51,Female,Lower Risk,0.1444,Absence,Correct,True Negative
+PT-M00-0079,Month 0 (Reference),0,HISTORICAL_BASELINE,48,Male,Lower Risk,0.1237,Absence,Correct,True Negative
+PT-M00-0080,Month 0 (Reference),0,HISTORICAL_BASELINE,58,Male,Higher Risk,0.8163,Disease Present,Correct,True Positive
+PT-M00-0081,Month 0 (Reference),0,HISTORICAL_BASELINE,45,Male,Lower Risk,0.3966,Absence,Correct,True Negative
+PT-M00-0082,Month 0 (Reference),0,HISTORICAL_BASELINE,53,Female,Lower Risk,0.1547,Absence,Correct,True Negative
+PT-M00-0083,Month 0 (Reference),0,HISTORICAL_BASELINE,39,Male,Lower Risk,0.1265,Absence,Correct,True Negative
+PT-M00-0084,Month 0 (Reference),0,HISTORICAL_BASELINE,68,Male,Higher Risk,0.7636,Disease Present,Correct,True Positive
+PT-M00-0085,Month 0 (Reference),0,HISTORICAL_BASELINE,52,Male,Lower Risk,0.0781,Absence,Correct,True Negative
+PT-M00-0086,Month 0 (Reference),0,HISTORICAL_BASELINE,44,Male,Lower Risk,0.0968,Absence,Correct,True Negative
+PT-M00-0087,Month 0 (Reference),0,HISTORICAL_BASELINE,47,Male,Lower Risk,0.1059,Absence,Correct,True Negative
+PT-M00-0088,Month 0 (Reference),0,HISTORICAL_BASELINE,53,Female,Lower Risk,0.0999,Absence,Correct,True Negative
+PT-M00-0089,Month 0 (Reference),0,HISTORICAL_BASELINE,53,Female,Lower Risk,0.1286,Absence,Correct,True Negative
+PT-M00-0090,Month 0 (Reference),0,HISTORICAL_BASELINE,51,Female,Lower Risk,0.048,Absence,Correct,True Negative
+PT-M00-0091,Month 0 (Reference),0,HISTORICAL_BASELINE,66,Male,Lower Risk,0.3365,Absence,Correct,True Negative
+PT-M00-0092,Month 0 (Reference),0,HISTORICAL_BASELINE,62,Female,Higher Risk,0.8907,Disease Present,Correct,True Positive
+PT-M00-0093,Month 0 (Reference),0,HISTORICAL_BASELINE,62,Male,Higher Risk,0.8444,Absence,Incorrect,False Positive
+PT-M00-0094,Month 0 (Reference),0,HISTORICAL_BASELINE,44,Female,Lower Risk,0.0531,Absence,Correct,True Negative
+PT-M00-0095,Month 0 (Reference),0,HISTORICAL_BASELINE,63,Female,Lower Risk,0.1405,Absence,Correct,True Negative
+PT-M00-0096,Month 0 (Reference),0,HISTORICAL_BASELINE,52,Male,Higher Risk,0.7758,Disease Present,Correct,True Positive
+PT-M00-0097,Month 0 (Reference),0,HISTORICAL_BASELINE,59,Male,Higher Risk,0.9545,Disease Present,Correct,True Positive
+PT-M00-0098,Month 0 (Reference),0,HISTORICAL_BASELINE,60,Female,Higher Risk,0.9094,Disease Present,Correct,True Positive
+PT-M00-0099,Month 0 (Reference),0,HISTORICAL_BASELINE,52,Male,Lower Risk,0.2411,Absence,Correct,True Negative
+PT-M00-0100,Month 0 (Reference),0,HISTORICAL_BASELINE,48,Male,Lower Risk,0.1661,Absence,Correct,True Negative
+PT-M00-0101,Month 0 (Reference),0,HISTORICAL_BASELINE,45,Male,Lower Risk,0.2046,Absence,Correct,True Negative
+PT-M00-0102,Month 0 (Reference),0,HISTORICAL_BASELINE,34,Male,Lower Risk,0.0961,Absence,Correct,True Negative
+PT-M00-0103,Month 0 (Reference),0,HISTORICAL_BASELINE,57,Female,Lower Risk,0.4135,Absence,Correct,True Negative
+PT-M00-0104,Month 0 (Reference),0,HISTORICAL_BASELINE,71,Female,Lower Risk,0.181,Absence,Correct,True Negative
+PT-M00-0105,Month 0 (Reference),0,HISTORICAL_BASELINE,49,Male,Higher Risk,0.7664,Disease Present,Correct,True Positive
+PT-M00-0106,Month 0 (Reference),0,HISTORICAL_BASELINE,54,Male,Lower Risk,0.3101,Absence,Correct,True Negative
+PT-M00-0107,Month 0 (Reference),0,HISTORICAL_BASELINE,59,Male,Higher Risk,0.7539,Disease Present,Correct,True Positive
+PT-M00-0108,Month 0 (Reference),0,HISTORICAL_BASELINE,57,Male,Higher Risk,0.7185,Disease Present,Correct,True Positive
+PT-M00-0109,Month 0 (Reference),0,HISTORICAL_BASELINE,61,Male,Higher Risk,0.9745,Disease Present,Correct,True Positive
+PT-M00-0110,Month 0 (Reference),0,HISTORICAL_BASELINE,39,Male,Higher Risk,0.7947,Disease Present,Correct,True Positive
+PT-M00-0111,Month 0 (Reference),0,HISTORICAL_BASELINE,61,Female,Higher Risk,0.9091,Disease Present,Correct,True Positive
+PT-M00-0112,Month 0 (Reference),0,HISTORICAL_BASELINE,56,Male,Higher Risk,0.82,Disease Present,Correct,True Positive
+PT-M00-0113,Month 0 (Reference),0,HISTORICAL_BASELINE,52,Male,Lower Risk,0.1897,Absence,Correct,True Negative
+PT-M00-0114,Month 0 (Reference),0,HISTORICAL_BASELINE,43,Female,Higher Risk,0.9134,Disease Present,Correct,True Positive
+PT-M00-0115,Month 0 (Reference),0,HISTORICAL_BASELINE,62,Female,Higher Risk,0.753,Disease Present,Correct,True Positive
+PT-M00-0116,Month 0 (Reference),0,HISTORICAL_BASELINE,41,Male,Lower Risk,0.3914,Absence,Correct,True Negative
+PT-M00-0117,Month 0 (Reference),0,HISTORICAL_BASELINE,58,Male,Lower Risk,0.1372,Absence,Correct,True Negative
+PT-M00-0118,Month 0 (Reference),0,HISTORICAL_BASELINE,35,Female,Lower Risk,0.1157,Absence,Correct,True Negative
+PT-M00-0119,Month 0 (Reference),0,HISTORICAL_BASELINE,63,Male,Higher Risk,0.9457,Disease Present,Correct,True Positive
+PT-M00-0120,Month 0 (Reference),0,HISTORICAL_BASELINE,65,Male,Higher Risk,0.9484,Disease Present,Correct,True Positive
+PT-M00-0121,Month 0 (Reference),0,HISTORICAL_BASELINE,48,Male,Higher Risk,0.8244,Disease Present,Correct,True Positive
+PT-M00-0122,Month 0 (Reference),0,HISTORICAL_BASELINE,63,Female,Higher Risk,0.8783,Disease Present,Correct,True Positive
+PT-M00-0123,Month 0 (Reference),0,HISTORICAL_BASELINE,51,Male,Lower Risk,0.2597,Absence,Correct,True Negative
+PT-M00-0124,Month 0 (Reference),0,HISTORICAL_BASELINE,55,Male,Higher Risk,0.9023,Disease Present,Correct,True Positive
+PT-M00-0125,Month 0 (Reference),0,HISTORICAL_BASELINE,65,Male,Higher Risk,0.5672,Disease Present,Correct,True Positive
+PT-M00-0126,Month 0 (Reference),0,HISTORICAL_BASELINE,45,Female,Lower Risk,0.0769,Absence,Correct,True Negative
+PT-M00-0127,Month 0 (Reference),0,HISTORICAL_BASELINE,56,Female,Higher Risk,0.9582,Disease Present,Correct,True Positive
+PT-M00-0128,Month 0 (Reference),0,HISTORICAL_BASELINE,54,Male,Higher Risk,0.9495,Disease Present,Correct,True Positive
+PT-M00-0129,Month 0 (Reference),0,HISTORICAL_BASELINE,44,Male,Lower Risk,0.0495,Absence,Correct,True Negative
+PT-M00-0130,Month 0 (Reference),0,HISTORICAL_BASELINE,62,Female,Lower Risk,0.1683,Absence,Correct,True Negative
+PT-M00-0131,Month 0 (Reference),0,HISTORICAL_BASELINE,54,Male,Lower Risk,0.431,Absence,Correct,True Negative
+PT-M00-0132,Month 0 (Reference),0,HISTORICAL_BASELINE,51,Male,Lower Risk,0.4933,Absence,Correct,True Negative
+PT-M00-0133,Month 0 (Reference),0,HISTORICAL_BASELINE,29,Male,Lower Risk,0.0738,Absence,Correct,True Negative
+PT-M00-0134,Month 0 (Reference),0,HISTORICAL_BASELINE,51,Male,Lower Risk,0.2687,Absence,Correct,True Negative
+PT-M00-0135,Month 0 (Reference),0,HISTORICAL_BASELINE,43,Female,Lower Risk,0.0436,Absence,Correct,True Negative
+PT-M00-0136,Month 0 (Reference),0,HISTORICAL_BASELINE,55,Female,Lower Risk,0.0945,Absence,Correct,True Negative
+PT-M00-0137,Month 0 (Reference),0,HISTORICAL_BASELINE,70,Male,Higher Risk,0.8788,Disease Present,Correct,True Positive
+PT-M00-0138,Month 0 (Reference),0,HISTORICAL_BASELINE,62,Male,Higher Risk,0.7955,Disease Present,Correct,True Positive
+PT-M00-0139,Month 0 (Reference),0,HISTORICAL_BASELINE,35,Male,Higher Risk,0.8835,Disease Present,Correct,True Positive
+PT-M00-0140,Month 0 (Reference),0,HISTORICAL_BASELINE,51,Male,Lower Risk,0.2052,Absence,Correct,True Negative
+PT-M00-0141,Month 0 (Reference),0,HISTORICAL_BASELINE,59,Male,Lower Risk,0.1928,Absence,Correct,True Negative
+PT-M00-0142,Month 0 (Reference),0,HISTORICAL_BASELINE,59,Male,Higher Risk,0.537,Disease Present,Correct,True Positive
+PT-M00-0143,Month 0 (Reference),0,HISTORICAL_BASELINE,52,Male,Lower Risk,0.0531,Absence,Correct,True Negative
+PT-M00-0144,Month 0 (Reference),0,HISTORICAL_BASELINE,64,Male,Higher Risk,0.8216,Disease Present,Correct,True Positive
+PT-M00-0145,Month 0 (Reference),0,HISTORICAL_BASELINE,58,Male,Lower Risk,0.4917,Absence,Correct,True Negative
+PT-M00-0146,Month 0 (Reference),0,HISTORICAL_BASELINE,47,Male,Lower Risk,0.1546,Disease Present,Incorrect,False Negative
+PT-M00-0147,Month 0 (Reference),0,HISTORICAL_BASELINE,57,Male,Higher Risk,0.9388,Disease Present,Correct,True Positive
+PT-M00-0148,Month 0 (Reference),0,HISTORICAL_BASELINE,41,Male,Lower Risk,0.0878,Absence,Correct,True Negative
+PT-M00-0149,Month 0 (Reference),0,HISTORICAL_BASELINE,45,Male,Lower Risk,0.1067,Absence,Correct,True Negative
+PT-M00-0150,Month 0 (Reference),0,HISTORICAL_BASELINE,60,Female,Lower Risk,0.1593,Absence,Correct,True Negative
+PT-M00-0151,Month 0 (Reference),0,HISTORICAL_BASELINE,52,Male,Lower Risk,0.4599,Absence,Correct,True Negative
+PT-M00-0152,Month 0 (Reference),0,HISTORICAL_BASELINE,42,Female,Lower Risk,0.1884,Absence,Correct,True Negative
+PT-M00-0153,Month 0 (Reference),0,HISTORICAL_BASELINE,67,Female,Lower Risk,0.4322,Absence,Correct,True Negative
+PT-M00-0154,Month 0 (Reference),0,HISTORICAL_BASELINE,55,Male,Higher Risk,0.9644,Disease Present,Correct,True Positive
+PT-M00-0155,Month 0 (Reference),0,HISTORICAL_BASELINE,64,Male,Higher Risk,0.8617,Disease Present,Correct,True Positive
+PT-M00-0156,Month 0 (Reference),0,HISTORICAL_BASELINE,70,Male,Higher Risk,0.7505,Disease Present,Correct,True Positive
+PT-M00-0157,Month 0 (Reference),0,HISTORICAL_BASELINE,51,Male,Higher Risk,0.7262,Disease Present,Correct,True Positive
+PT-M00-0158,Month 0 (Reference),0,HISTORICAL_BASELINE,58,Male,Higher Risk,0.7484,Disease Present,Correct,True Positive
+PT-M00-0159,Month 0 (Reference),0,HISTORICAL_BASELINE,60,Male,Higher Risk,0.9216,Disease Present,Correct,True Positive
+PT-M00-0160,Month 0 (Reference),0,HISTORICAL_BASELINE,68,Male,Lower Risk,0.4517,Absence,Correct,True Negative
+PT-M00-0161,Month 0 (Reference),0,HISTORICAL_BASELINE,46,Male,Lower Risk,0.2757,Absence,Correct,True Negative
+PT-M00-0162,Month 0 (Reference),0,HISTORICAL_BASELINE,77,Male,Higher Risk,0.7232,Disease Present,Correct,True Positive
+PT-M00-0163,Month 0 (Reference),0,HISTORICAL_BASELINE,54,Female,Lower Risk,0.0957,Absence,Correct,True Negative
+PT-M00-0164,Month 0 (Reference),0,HISTORICAL_BASELINE,58,Female,Lower Risk,0.235,Absence,Correct,True Negative
+PT-M00-0165,Month 0 (Reference),0,HISTORICAL_BASELINE,48,Male,Lower Risk,0.1942,Absence,Correct,True Negative
+PT-M00-0166,Month 0 (Reference),0,HISTORICAL_BASELINE,57,Male,Lower Risk,0.4511,Absence,Correct,True Negative
+PT-M00-0167,Month 0 (Reference),0,HISTORICAL_BASELINE,52,Male,Lower Risk,0.0686,Absence,Correct,True Negative
+PT-M00-0168,Month 0 (Reference),0,HISTORICAL_BASELINE,54,Female,Lower Risk,0.2973,Absence,Correct,True Negative
+PT-M00-0169,Month 0 (Reference),0,HISTORICAL_BASELINE,35,Male,Higher Risk,0.6604,Disease Present,Correct,True Positive
+PT-M00-0170,Month 0 (Reference),0,HISTORICAL_BASELINE,45,Female,Lower Risk,0.0824,Absence,Correct,True Negative
+PT-M00-0171,Month 0 (Reference),0,HISTORICAL_BASELINE,70,Male,Higher Risk,0.8763,Disease Present,Correct,True Positive
+PT-M00-0172,Month 0 (Reference),0,HISTORICAL_BASELINE,53,Male,Higher Risk,0.6087,Absence,Incorrect,False Positive
+PT-M00-0173,Month 0 (Reference),0,HISTORICAL_BASELINE,59,Female,Lower Risk,0.4649,Disease Present,Incorrect,False Negative
+PT-M00-0174,Month 0 (Reference),0,HISTORICAL_BASELINE,62,Female,Lower Risk,0.3168,Absence,Correct,True Negative
+PT-M00-0175,Month 0 (Reference),0,HISTORICAL_BASELINE,64,Male,Higher Risk,0.8627,Disease Present,Correct,True Positive
+PT-M00-0176,Month 0 (Reference),0,HISTORICAL_BASELINE,57,Male,Higher Risk,0.9418,Disease Present,Correct,True Positive
+PT-M00-0177,Month 0 (Reference),0,HISTORICAL_BASELINE,52,Male,Higher Risk,0.5865,Absence,Incorrect,False Positive
+PT-M00-0178,Month 0 (Reference),0,HISTORICAL_BASELINE,56,Male,Higher Risk,0.9049,Disease Present,Correct,True Positive
+PT-M00-0179,Month 0 (Reference),0,HISTORICAL_BASELINE,43,Male,Lower Risk,0.1794,Absence,Correct,True Negative
+PT-M00-0180,Month 0 (Reference),0,HISTORICAL_BASELINE,53,Male,Lower Risk,0.2798,Absence,Correct,True Negative
+PT-M00-0181,Month 0 (Reference),0,HISTORICAL_BASELINE,48,Male,Higher Risk,0.6991,Disease Present,Correct,True Positive
+PT-M00-0182,Month 0 (Reference),0,HISTORICAL_BASELINE,56,Female,Higher Risk,0.9366,Disease Present,Correct,True Positive
+PT-M00-0183,Month 0 (Reference),0,HISTORICAL_BASELINE,42,Male,Lower Risk,0.3148,Absence,Correct,True Negative
+PT-M00-0184,Month 0 (Reference),0,HISTORICAL_BASELINE,59,Male,Higher Risk,0.5266,Absence,Incorrect,False Positive
+PT-M00-0185,Month 0 (Reference),0,HISTORICAL_BASELINE,60,Female,Lower Risk,0.3866,Disease Present,Incorrect,False Negative
+PT-M00-0186,Month 0 (Reference),0,HISTORICAL_BASELINE,63,Female,Lower Risk,0.269,Absence,Correct,True Negative
+PT-M00-0187,Month 0 (Reference),0,HISTORICAL_BASELINE,42,Male,Lower Risk,0.4424,Absence,Correct,True Negative
+PT-M00-0188,Month 0 (Reference),0,HISTORICAL_BASELINE,66,Male,Higher Risk,0.721,Disease Present,Correct,True Positive
+PT-M00-0189,Month 0 (Reference),0,HISTORICAL_BASELINE,54,Male,Higher Risk,0.6017,Disease Present,Correct,True Positive
+PT-M00-0190,Month 0 (Reference),0,HISTORICAL_BASELINE,69,Male,Higher Risk,0.848,Disease Present,Correct,True Positive
+PT-M00-0191,Month 0 (Reference),0,HISTORICAL_BASELINE,50,Male,Lower Risk,0.0637,Absence,Correct,True Negative
+PT-M00-0192,Month 0 (Reference),0,HISTORICAL_BASELINE,51,Male,Higher Risk,0.9588,Disease Present,Correct,True Positive
+PT-M00-0193,Month 0 (Reference),0,HISTORICAL_BASELINE,43,Male,Higher Risk,0.815,Disease Present,Correct,True Positive
+PT-M00-0194,Month 0 (Reference),0,HISTORICAL_BASELINE,62,Female,Higher Risk,0.6292,Disease Present,Correct,True Positive
+PT-M00-0195,Month 0 (Reference),0,HISTORICAL_BASELINE,68,Female,Lower Risk,0.1504,Absence,Correct,True Negative
+PT-M00-0196,Month 0 (Reference),0,HISTORICAL_BASELINE,67,Male,Higher Risk,0.8436,Disease Present,Correct,True Positive
+PT-M00-0197,Month 0 (Reference),0,HISTORICAL_BASELINE,69,Male,Higher Risk,0.5212,Absence,Incorrect,False Positive
+PT-M00-0198,Month 0 (Reference),0,HISTORICAL_BASELINE,45,Female,Lower Risk,0.3101,Absence,Correct,True Negative
+PT-M00-0199,Month 0 (Reference),0,HISTORICAL_BASELINE,50,Female,Lower Risk,0.0403,Absence,Correct,True Negative
+PT-M00-0200,Month 0 (Reference),0,HISTORICAL_BASELINE,59,Male,Lower Risk,0.3854,Disease Present,Incorrect,False Negative
+PT-M00-0201,Month 0 (Reference),0,HISTORICAL_BASELINE,50,Female,Lower Risk,0.1649,Absence,Correct,True Negative
+PT-M00-0202,Month 0 (Reference),0,HISTORICAL_BASELINE,64,Female,Lower Risk,0.3823,Absence,Correct,True Negative
+PT-M00-0203,Month 0 (Reference),0,HISTORICAL_BASELINE,57,Male,Lower Risk,0.378,Absence,Correct,True Negative
+PT-M00-0204,Month 0 (Reference),0,HISTORICAL_BASELINE,64,Female,Lower Risk,0.3126,Absence,Correct,True Negative
+PT-M00-0205,Month 0 (Reference),0,HISTORICAL_BASELINE,43,Male,Lower Risk,0.3994,Absence,Correct,True Negative
+PT-M00-0206,Month 0 (Reference),0,HISTORICAL_BASELINE,45,Male,Higher Risk,0.8305,Disease Present,Correct,True Positive
+PT-M00-0207,Month 0 (Reference),0,HISTORICAL_BASELINE,58,Male,Higher Risk,0.9852,Disease Present,Correct,True Positive
+PT-M00-0208,Month 0 (Reference),0,HISTORICAL_BASELINE,50,Male,Higher Risk,0.8961,Disease Present,Correct,True Positive
+PT-M00-0209,Month 0 (Reference),0,HISTORICAL_BASELINE,55,Male,Lower Risk,0.0934,Absence,Correct,True Negative
+PT-M00-0210,Month 0 (Reference),0,HISTORICAL_BASELINE,62,Female,Lower Risk,0.4966,Disease Present,Incorrect,False Negative
+PT-M00-0211,Month 0 (Reference),0,HISTORICAL_BASELINE,37,Female,Lower Risk,0.0265,Absence,Correct,True Negative
+PT-M00-0212,Month 0 (Reference),0,HISTORICAL_BASELINE,38,Male,Higher Risk,0.6099,Disease Present,Correct,True Positive
+PT-M00-0213,Month 0 (Reference),0,HISTORICAL_BASELINE,41,Male,Lower Risk,0.1827,Absence,Correct,True Negative
+PT-M00-0214,Month 0 (Reference),0,HISTORICAL_BASELINE,66,Female,Higher Risk,0.8816,Disease Present,Correct,True Positive
+PT-M00-0215,Month 0 (Reference),0,HISTORICAL_BASELINE,52,Male,Lower Risk,0.4961,Disease Present,Incorrect,False Negative
+PT-M00-0216,Month 0 (Reference),0,HISTORICAL_BASELINE,56,Male,Lower Risk,0.3749,Absence,Correct,True Negative
+PT-M00-0217,Month 0 (Reference),0,HISTORICAL_BASELINE,46,Female,Lower Risk,0.0339,Absence,Correct,True Negative
+PT-M00-0218,Month 0 (Reference),0,HISTORICAL_BASELINE,46,Female,Lower Risk,0.2971,Absence,Correct,True Negative
+PT-M00-0219,Month 0 (Reference),0,HISTORICAL_BASELINE,64,Female,Lower Risk,0.4902,Absence,Correct,True Negative
+PT-M00-0220,Month 0 (Reference),0,HISTORICAL_BASELINE,59,Male,Lower Risk,0.3055,Absence,Correct,True Negative
+PT-M00-0221,Month 0 (Reference),0,HISTORICAL_BASELINE,41,Female,Lower Risk,0.1082,Absence,Correct,True Negative
+PT-M00-0222,Month 0 (Reference),0,HISTORICAL_BASELINE,54,Female,Lower Risk,0.0631,Absence,Correct,True Negative
+PT-M00-0223,Month 0 (Reference),0,HISTORICAL_BASELINE,39,Female,Lower Risk,0.0321,Absence,Correct,True Negative
+PT-M00-0224,Month 0 (Reference),0,HISTORICAL_BASELINE,53,Male,Higher Risk,0.9599,Disease Present,Correct,True Positive
+PT-M00-0225,Month 0 (Reference),0,HISTORICAL_BASELINE,63,Female,Higher Risk,0.7194,Disease Present,Correct,True Positive
+PT-M00-0226,Month 0 (Reference),0,HISTORICAL_BASELINE,34,Female,Lower Risk,0.0219,Absence,Correct,True Negative
+PT-M00-0227,Month 0 (Reference),0,HISTORICAL_BASELINE,47,Male,Lower Risk,0.1952,Absence,Correct,True Negative
+PT-M00-0228,Month 0 (Reference),0,HISTORICAL_BASELINE,67,Female,Lower Risk,0.1263,Absence,Correct,True Negative
+PT-M00-0229,Month 0 (Reference),0,HISTORICAL_BASELINE,54,Male,Higher Risk,0.8018,Disease Present,Correct,True Positive
+PT-M00-0230,Month 0 (Reference),0,HISTORICAL_BASELINE,66,Male,Higher Risk,0.7364,Disease Present,Correct,True Positive
+PT-M00-0231,Month 0 (Reference),0,HISTORICAL_BASELINE,52,Female,Lower Risk,0.0383,Absence,Correct,True Negative
+PT-M00-0232,Month 0 (Reference),0,HISTORICAL_BASELINE,55,Female,Higher Risk,0.6006,Disease Present,Correct,True Positive
+PT-M00-0233,Month 0 (Reference),0,HISTORICAL_BASELINE,49,Male,Lower Risk,0.395,Disease Present,Incorrect,False Negative
+PT-M00-0234,Month 0 (Reference),0,HISTORICAL_BASELINE,74,Female,Lower Risk,0.3596,Absence,Correct,True Negative
+PT-M00-0235,Month 0 (Reference),0,HISTORICAL_BASELINE,54,Female,Lower Risk,0.1519,Absence,Correct,True Negative
+PT-M00-0236,Month 0 (Reference),0,HISTORICAL_BASELINE,54,Male,Higher Risk,0.8307,Disease Present,Correct,True Positive
+PT-M00-0237,Month 0 (Reference),0,HISTORICAL_BASELINE,56,Male,Higher Risk,0.9393,Disease Present,Correct,True Positive
+PT-M00-0238,Month 0 (Reference),0,HISTORICAL_BASELINE,46,Male,Higher Risk,0.7643,Disease Present,Correct,True Positive
+PT-M00-0239,Month 0 (Reference),0,HISTORICAL_BASELINE,49,Female,Lower Risk,0.0688,Absence,Correct,True Negative
+PT-M00-0240,Month 0 (Reference),0,HISTORICAL_BASELINE,42,Male,Lower Risk,0.0852,Absence,Correct,True Negative
+PT-M00-0241,Month 0 (Reference),0,HISTORICAL_BASELINE,41,Male,Lower Risk,0.1386,Absence,Correct,True Negative
+PT-M00-0242,Month 0 (Reference),0,HISTORICAL_BASELINE,41,Female,Lower Risk,0.0416,Absence,Correct,True Negative
+PT-M00-0243,Month 0 (Reference),0,HISTORICAL_BASELINE,49,Female,Lower Risk,0.0922,Absence,Correct,True Negative
+PT-M00-0244,Month 0 (Reference),0,HISTORICAL_BASELINE,61,Male,Higher Risk,0.5312,Disease Present,Correct,True Positive
+PT-M00-0245,Month 0 (Reference),0,HISTORICAL_BASELINE,60,Female,Lower Risk,0.1972,Absence,Correct,True Negative
+PT-M00-0246,Month 0 (Reference),0,HISTORICAL_BASELINE,67,Male,Higher Risk,0.5122,Disease Present,Correct,True Positive
+PT-M00-0247,Month 0 (Reference),0,HISTORICAL_BASELINE,58,Male,Higher Risk,0.6564,Disease Present,Correct,True Positive
+PT-M00-0248,Month 0 (Reference),0,HISTORICAL_BASELINE,47,Male,Higher Risk,0.8029,Disease Present,Correct,True Positive
+PT-M00-0249,Month 0 (Reference),0,HISTORICAL_BASELINE,52,Male,Higher Risk,0.78,Disease Present,Correct,True Positive
+PT-M00-0250,Month 0 (Reference),0,HISTORICAL_BASELINE,62,Male,Lower Risk,0.2167,Absence,Correct,True Negative
+PT-M00-0251,Month 0 (Reference),0,HISTORICAL_BASELINE,57,Male,Higher Risk,0.604,Absence,Incorrect,False Positive
+PT-M00-0252,Month 0 (Reference),0,HISTORICAL_BASELINE,58,Male,Higher Risk,0.9291,Disease Present,Correct,True Positive
+PT-M00-0253,Month 0 (Reference),0,HISTORICAL_BASELINE,64,Male,Higher Risk,0.7419,Absence,Incorrect,False Positive
+PT-M00-0254,Month 0 (Reference),0,HISTORICAL_BASELINE,51,Female,Lower Risk,0.056,Absence,Correct,True Negative
+PT-M00-0255,Month 0 (Reference),0,HISTORICAL_BASELINE,43,Male,Lower Risk,0.2222,Absence,Correct,True Negative
+PT-M00-0256,Month 0 (Reference),0,HISTORICAL_BASELINE,42,Female,Lower Risk,0.0425,Absence,Correct,True Negative
+PT-M00-0257,Month 0 (Reference),0,HISTORICAL_BASELINE,67,Female,Lower Risk,0.3204,Absence,Correct,True Negative
+PT-M00-0258,Month 0 (Reference),0,HISTORICAL_BASELINE,76,Female,Lower Risk,0.1602,Absence,Correct,True Negative
+PT-M00-0259,Month 0 (Reference),0,HISTORICAL_BASELINE,70,Male,Lower Risk,0.281,Absence,Correct,True Negative
+PT-M00-0260,Month 0 (Reference),0,HISTORICAL_BASELINE,57,Male,Lower Risk,0.437,Disease Present,Incorrect,False Negative
+PT-M00-0261,Month 0 (Reference),0,HISTORICAL_BASELINE,44,Female,Lower Risk,0.1691,Absence,Correct,True Negative
+PT-M00-0262,Month 0 (Reference),0,HISTORICAL_BASELINE,58,Female,Lower Risk,0.3795,Disease Present,Incorrect,False Negative
+PT-M00-0263,Month 0 (Reference),0,HISTORICAL_BASELINE,60,Female,Lower Risk,0.1324,Absence,Correct,True Negative
+PT-M00-0264,Month 0 (Reference),0,HISTORICAL_BASELINE,44,Male,Lower Risk,0.0617,Absence,Correct,True Negative
+PT-M00-0265,Month 0 (Reference),0,HISTORICAL_BASELINE,61,Male,Higher Risk,0.8161,Disease Present,Correct,True Positive
+PT-M00-0266,Month 0 (Reference),0,HISTORICAL_BASELINE,42,Male,Higher Risk,0.786,Disease Present,Correct,True Positive
+PT-M00-0267,Month 0 (Reference),0,HISTORICAL_BASELINE,52,Male,Lower Risk,0.4384,Disease Present,Incorrect,False Negative
+PT-M00-0268,Month 0 (Reference),0,HISTORICAL_BASELINE,59,Male,Higher Risk,0.7628,Disease Present,Correct,True Positive
+PT-M00-0269,Month 0 (Reference),0,HISTORICAL_BASELINE,40,Male,Higher Risk,0.53,Disease Present,Correct,True Positive
+PT-M00-0270,Month 0 (Reference),0,HISTORICAL_BASELINE,42,Male,Lower Risk,0.1134,Absence,Correct,True Negative
+PT-M00-0271,Month 0 (Reference),0,HISTORICAL_BASELINE,61,Male,Higher Risk,0.9235,Disease Present,Correct,True Positive
+PT-M00-0272,Month 0 (Reference),0,HISTORICAL_BASELINE,66,Male,Higher Risk,0.5735,Absence,Incorrect,False Positive
+PT-M00-0273,Month 0 (Reference),0,HISTORICAL_BASELINE,46,Male,Higher Risk,0.9657,Disease Present,Correct,True Positive
+PT-M00-0274,Month 0 (Reference),0,HISTORICAL_BASELINE,71,Female,Lower Risk,0.2401,Absence,Correct,True Negative
+PT-M00-0275,Month 0 (Reference),0,HISTORICAL_BASELINE,59,Male,Lower Risk,0.4109,Disease Present,Incorrect,False Negative
+PT-M00-0276,Month 0 (Reference),0,HISTORICAL_BASELINE,64,Male,Lower Risk,0.4277,Absence,Correct,True Negative
+PT-M00-0277,Month 0 (Reference),0,HISTORICAL_BASELINE,66,Female,Lower Risk,0.245,Absence,Correct,True Negative
+PT-M00-0278,Month 0 (Reference),0,HISTORICAL_BASELINE,39,Female,Lower Risk,0.074,Absence,Correct,True Negative
+PT-M00-0279,Month 0 (Reference),0,HISTORICAL_BASELINE,57,Male,Lower Risk,0.495,Disease Present,Incorrect,False Negative
+PT-M00-0280,Month 0 (Reference),0,HISTORICAL_BASELINE,58,Female,Lower Risk,0.2118,Absence,Correct,True Negative
+PT-M00-0281,Month 0 (Reference),0,HISTORICAL_BASELINE,57,Male,Higher Risk,0.9564,Disease Present,Correct,True Positive
+PT-M00-0282,Month 0 (Reference),0,HISTORICAL_BASELINE,47,Male,Lower Risk,0.0655,Absence,Correct,True Negative
+PT-M00-0283,Month 0 (Reference),0,HISTORICAL_BASELINE,55,Female,Higher Risk,0.9171,Disease Present,Correct,True Positive
+PT-M00-0284,Month 0 (Reference),0,HISTORICAL_BASELINE,35,Male,Lower Risk,0.0485,Absence,Correct,True Negative
+PT-M00-0285,Month 0 (Reference),0,HISTORICAL_BASELINE,61,Male,Higher Risk,0.6621,Disease Present,Correct,True Positive
+PT-M00-0286,Month 0 (Reference),0,HISTORICAL_BASELINE,58,Male,Higher Risk,0.7942,Disease Present,Correct,True Positive
+PT-M00-0287,Month 0 (Reference),0,HISTORICAL_BASELINE,58,Female,Higher Risk,0.8445,Disease Present,Correct,True Positive
+PT-M00-0288,Month 0 (Reference),0,HISTORICAL_BASELINE,58,Male,Higher Risk,0.5543,Absence,Incorrect,False Positive
+PT-M00-0289,Month 0 (Reference),0,HISTORICAL_BASELINE,56,Male,Lower Risk,0.2629,Absence,Correct,True Negative
+PT-M00-0290,Month 0 (Reference),0,HISTORICAL_BASELINE,56,Male,Lower Risk,0.1109,Absence,Correct,True Negative
+PT-M00-0291,Month 0 (Reference),0,HISTORICAL_BASELINE,67,Male,Higher Risk,0.5899,Disease Present,Correct,True Positive
+PT-M00-0292,Month 0 (Reference),0,HISTORICAL_BASELINE,55,Female,Lower Risk,0.099,Absence,Correct,True Negative
+PT-M00-0293,Month 0 (Reference),0,HISTORICAL_BASELINE,44,Male,Higher Risk,0.6708,Disease Present,Correct,True Positive
+PT-M00-0294,Month 0 (Reference),0,HISTORICAL_BASELINE,63,Male,Higher Risk,0.9253,Disease Present,Correct,True Positive
+PT-M00-0295,Month 0 (Reference),0,HISTORICAL_BASELINE,63,Female,Lower Risk,0.4552,Disease Present,Incorrect,False Negative
+PT-M00-0296,Month 0 (Reference),0,HISTORICAL_BASELINE,41,Male,Lower Risk,0.0581,Absence,Correct,True Negative
+PT-M00-0297,Month 0 (Reference),0,HISTORICAL_BASELINE,59,Male,Higher Risk,0.8438,Disease Present,Correct,True Positive
+PT-M00-0298,Month 0 (Reference),0,HISTORICAL_BASELINE,57,Female,Higher Risk,0.7328,Disease Present,Correct,True Positive
+PT-M00-0299,Month 0 (Reference),0,HISTORICAL_BASELINE,45,Male,Higher Risk,0.6076,Disease Present,Correct,True Positive
+PT-M00-0300,Month 0 (Reference),0,HISTORICAL_BASELINE,68,Male,Higher Risk,0.8921,Disease Present,Correct,True Positive
+PT-M00-0301,Month 0 (Reference),0,HISTORICAL_BASELINE,57,Male,Higher Risk,0.9152,Disease Present,Correct,True Positive
+PT-M00-0302,Month 0 (Reference),0,HISTORICAL_BASELINE,57,Female,Lower Risk,0.4182,Disease Present,Incorrect,False Negative
+PT-M00-0303,Month 0 (Reference),0,HISTORICAL_BASELINE,38,Male,Lower Risk,0.0666,Absence,Correct,True Negative
+PT-M01-0001,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),56,Female,Lower Risk,0.1444,Absence,Correct,True Negative
+PT-M01-0002,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),54,Female,Lower Risk,0.0582,Absence,Correct,True Negative
+PT-M01-0003,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),53,Female,Lower Risk,0.0999,Absence,Correct,True Negative
+PT-M01-0004,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),65,Female,Lower Risk,0.2115,Absence,Correct,True Negative
+PT-M01-0005,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),65,Female,Higher Risk,0.8908,Disease Present,Correct,True Positive
+PT-M01-0006,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),29,Male,Lower Risk,0.0731,Absence,Correct,True Negative
+PT-M01-0007,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),54,Female,Lower Risk,0.0476,Absence,Correct,True Negative
+PT-M01-0008,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),67,Male,Higher Risk,0.5122,Disease Present,Correct,True Positive
+PT-M01-0009,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),41,Female,Lower Risk,0.1093,Absence,Correct,True Negative
+PT-M01-0010,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),43,Male,Higher Risk,0.815,Disease Present,Correct,True Positive
+PT-M01-0011,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),61,Female,Higher Risk,0.9091,Disease Present,Correct,True Positive
+PT-M01-0012,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),56,Male,Lower Risk,0.0745,Absence,Correct,True Negative
+PT-M01-0013,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),65,Female,Higher Risk,0.9001,Disease Present,Correct,True Positive
+PT-M01-0014,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),53,Male,Lower Risk,0.0997,Absence,Correct,True Negative
+PT-M01-0015,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),56,Male,Higher Risk,0.82,Disease Present,Correct,True Positive
+PT-M01-0016,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),70,Male,Higher Risk,0.8788,Disease Present,Correct,True Positive
+PT-M01-0017,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),51,Male,Lower Risk,0.4182,Absence,Correct,True Negative
+PT-M01-0018,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),61,Female,Lower Risk,0.3673,Disease Present,Incorrect,False Negative
+PT-M01-0019,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),62,Male,Lower Risk,0.2167,Absence,Correct,True Negative
+PT-M01-0020,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),64,Male,Lower Risk,0.4447,Absence,Correct,True Negative
+PT-M01-0021,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),56,Female,Higher Risk,0.9582,Disease Present,Correct,True Positive
+PT-M01-0022,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),60,Male,Higher Risk,0.9897,Disease Present,Correct,True Positive
+PT-M01-0023,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),53,Male,Higher Risk,0.9599,Disease Present,Correct,True Positive
+PT-M01-0024,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),57,Male,Higher Risk,0.7065,Disease Present,Correct,True Positive
+PT-M01-0025,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),54,Male,Lower Risk,0.3101,Absence,Correct,True Negative
+PT-M01-0026,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),42,Male,Lower Risk,0.0852,Absence,Correct,True Negative
+PT-M01-0027,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),61,Male,Higher Risk,0.8161,Disease Present,Correct,True Positive
+PT-M01-0028,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),58,Male,Higher Risk,0.9698,Disease Present,Correct,True Positive
+PT-M01-0029,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),48,Male,Lower Risk,0.1924,Absence,Correct,True Negative
+PT-M01-0030,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),48,Male,Lower Risk,0.1723,Absence,Correct,True Negative
+PT-M01-0031,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),61,Male,Higher Risk,0.6666,Disease Present,Correct,True Positive
+PT-M01-0032,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),57,Female,Lower Risk,0.2627,Absence,Correct,True Negative
+PT-M01-0033,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),71,Female,Lower Risk,0.181,Absence,Correct,True Negative
+PT-M01-0034,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),63,Female,Lower Risk,0.4569,Disease Present,Incorrect,False Negative
+PT-M01-0035,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),49,Female,Lower Risk,0.0763,Absence,Correct,True Negative
+PT-M01-0036,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),71,Female,Lower Risk,0.181,Absence,Correct,True Negative
+PT-M01-0037,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),57,Male,Higher Risk,0.9154,Disease Present,Correct,True Positive
+PT-M01-0038,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),63,Male,Lower Risk,0.353,Absence,Correct,True Negative
+PT-M01-0039,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),58,Male,Lower Risk,0.1383,Absence,Correct,True Negative
+PT-M01-0040,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),59,Male,Lower Risk,0.195,Absence,Correct,True Negative
+PT-M01-0041,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),71,Female,Lower Risk,0.2464,Absence,Correct,True Negative
+PT-M01-0042,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),52,Male,Higher Risk,0.7446,Disease Present,Correct,True Positive
+PT-M01-0043,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),64,Female,Lower Risk,0.3104,Absence,Correct,True Negative
+PT-M01-0044,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),67,Female,Lower Risk,0.4255,Absence,Correct,True Negative
+PT-M01-0045,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),48,Male,Lower Risk,0.1926,Absence,Correct,True Negative
+PT-M01-0046,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),51,Male,Higher Risk,0.9601,Disease Present,Correct,True Positive
+PT-M01-0047,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),64,Male,Lower Risk,0.4277,Absence,Correct,True Negative
+PT-M01-0048,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),69,Female,Lower Risk,0.2178,Absence,Correct,True Negative
+PT-M01-0049,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),57,Male,Lower Risk,0.3613,Absence,Correct,True Negative
+PT-M01-0050,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),71,Female,Lower Risk,0.1832,Absence,Correct,True Negative
+PT-M01-0051,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),66,Female,Lower Risk,0.2447,Absence,Correct,True Negative
+PT-M01-0052,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),61,Male,Higher Risk,0.8161,Disease Present,Correct,True Positive
+PT-M01-0053,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),55,Female,Higher Risk,0.9164,Disease Present,Correct,True Positive
+PT-M01-0054,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),64,Male,Higher Risk,0.8545,Disease Present,Correct,True Positive
+PT-M01-0055,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),50,Male,Higher Risk,0.8706,Disease Present,Correct,True Positive
+PT-M01-0056,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),66,Male,Higher Risk,0.7319,Disease Present,Correct,True Positive
+PT-M01-0057,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),52,Male,Lower Risk,0.4857,Disease Present,Incorrect,False Negative
+PT-M01-0058,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),62,Male,Higher Risk,0.7955,Disease Present,Correct,True Positive
+PT-M01-0059,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),62,Female,Lower Risk,0.3225,Absence,Correct,True Negative
+PT-M01-0060,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),54,Male,Lower Risk,0.2483,Absence,Correct,True Negative
+PT-M01-0061,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),42,Male,Lower Risk,0.0852,Absence,Correct,True Negative
+PT-M01-0062,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),62,Male,Higher Risk,0.8444,Absence,Incorrect,False Positive
+PT-M01-0063,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),43,Female,Higher Risk,0.918,Disease Present,Correct,True Positive
+PT-M01-0064,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),43,Male,Lower Risk,0.1978,Absence,Correct,True Negative
+PT-M01-0065,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),37,Male,Lower Risk,0.1883,Absence,Correct,True Negative
+PT-M01-0066,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),52,Male,Lower Risk,0.2194,Absence,Correct,True Negative
+PT-M01-0067,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),57,Male,Higher Risk,0.6153,Absence,Incorrect,False Positive
+PT-M01-0068,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),45,Female,Lower Risk,0.3076,Absence,Correct,True Negative
+PT-M01-0069,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),45,Female,Lower Risk,0.3076,Absence,Correct,True Negative
+PT-M01-0070,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),48,Male,Higher Risk,0.7988,Disease Present,Correct,True Positive
+PT-M01-0071,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),60,Female,Lower Risk,0.1362,Absence,Correct,True Negative
+PT-M01-0072,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),71,Female,Lower Risk,0.1794,Absence,Correct,True Negative
+PT-M01-0073,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),66,Male,Higher Risk,0.7331,Disease Present,Correct,True Positive
+PT-M01-0074,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),67,Male,Higher Risk,0.7621,Disease Present,Correct,True Positive
+PT-M01-0075,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),60,Female,Lower Risk,0.1972,Absence,Correct,True Negative
+PT-M01-0076,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),58,Female,Lower Risk,0.2359,Absence,Correct,True Negative
+PT-M01-0077,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),50,Male,Higher Risk,0.8961,Disease Present,Correct,True Positive
+PT-M01-0078,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),47,Male,Lower Risk,0.1952,Absence,Correct,True Negative
+PT-M01-0079,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),51,Male,Lower Risk,0.2034,Absence,Correct,True Negative
+PT-M01-0080,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),51,Male,Lower Risk,0.4933,Absence,Correct,True Negative
+PT-M01-0081,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),51,Male,Lower Risk,0.1971,Absence,Correct,True Negative
+PT-M01-0082,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),58,Male,Higher Risk,0.7969,Disease Present,Correct,True Positive
+PT-M01-0083,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),60,Female,Lower Risk,0.1679,Absence,Correct,True Negative
+PT-M01-0084,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),58,Female,Lower Risk,0.1964,Absence,Correct,True Negative
+PT-M01-0085,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),58,Male,Higher Risk,0.6112,Disease Present,Correct,True Positive
+PT-M01-0086,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),54,Male,Higher Risk,0.8393,Disease Present,Correct,True Positive
+PT-M01-0087,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),43,Male,Lower Risk,0.2222,Absence,Correct,True Negative
+PT-M01-0088,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),63,Female,Lower Risk,0.1418,Absence,Correct,True Negative
+PT-M01-0089,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),59,Male,Lower Risk,0.353,Disease Present,Incorrect,False Negative
+PT-M01-0090,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),66,Female,Lower Risk,0.2511,Absence,Correct,True Negative
+PT-M01-0091,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),66,Female,Lower Risk,0.2234,Absence,Correct,True Negative
+PT-M01-0092,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),56,Male,Lower Risk,0.0747,Absence,Correct,True Negative
+PT-M01-0093,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),46,Female,Lower Risk,0.3096,Absence,Correct,True Negative
+PT-M01-0094,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),51,Male,Higher Risk,0.9588,Disease Present,Correct,True Positive
+PT-M01-0095,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),39,Male,Lower Risk,0.1125,Absence,Correct,True Negative
+PT-M01-0096,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),51,Female,Lower Risk,0.1498,Absence,Correct,True Negative
+PT-M01-0097,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),51,Male,Lower Risk,0.4933,Absence,Correct,True Negative
+PT-M01-0098,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),60,Female,Lower Risk,0.3866,Disease Present,Incorrect,False Negative
+PT-M01-0099,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),52,Male,Lower Risk,0.0531,Absence,Correct,True Negative
+PT-M01-0100,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),53,Male,Lower Risk,0.0997,Absence,Correct,True Negative
+PT-M01-0101,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),44,Male,Higher Risk,0.5684,Disease Present,Correct,True Positive
+PT-M01-0102,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),51,Female,Lower Risk,0.0544,Absence,Correct,True Negative
+PT-M01-0103,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),57,Male,Higher Risk,0.9564,Disease Present,Correct,True Positive
+PT-M01-0104,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),48,Male,Higher Risk,0.702,Disease Present,Correct,True Positive
+PT-M01-0105,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),58,Male,Higher Risk,0.8037,Disease Present,Correct,True Positive
+PT-M01-0106,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),65,Female,Higher Risk,0.8962,Disease Present,Correct,True Positive
+PT-M01-0107,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),59,Male,Lower Risk,0.3118,Absence,Correct,True Negative
+PT-M01-0108,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),57,Female,Lower Risk,0.4182,Disease Present,Incorrect,False Negative
+PT-M01-0109,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),60,Female,Higher Risk,0.9072,Disease Present,Correct,True Positive
+PT-M01-0110,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),44,Male,Higher Risk,0.6708,Disease Present,Correct,True Positive
+PT-M01-0111,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),52,Male,Lower Risk,0.0788,Absence,Correct,True Negative
+PT-M01-0112,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),62,Male,Higher Risk,0.7955,Disease Present,Correct,True Positive
+PT-M01-0113,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),45,Female,Lower Risk,0.0765,Absence,Correct,True Negative
+PT-M01-0114,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),44,Male,Higher Risk,0.5641,Disease Present,Correct,True Positive
+PT-M01-0115,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),54,Male,Lower Risk,0.3652,Absence,Correct,True Negative
+PT-M01-0116,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),68,Male,Higher Risk,0.887,Disease Present,Correct,True Positive
+PT-M01-0117,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),62,Female,Lower Risk,0.1823,Absence,Correct,True Negative
+PT-M01-0118,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),58,Male,Higher Risk,0.8163,Disease Present,Correct,True Positive
+PT-M01-0119,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),59,Male,Higher Risk,0.9501,Disease Present,Correct,True Positive
+PT-M01-0120,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),69,Male,Higher Risk,0.5213,Absence,Incorrect,False Positive
+PT-M01-0121,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),46,Female,Lower Risk,0.1265,Absence,Correct,True Negative
+PT-M01-0122,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),57,Male,Higher Risk,0.9366,Disease Present,Correct,True Positive
+PT-M01-0123,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),61,Male,Higher Risk,0.9235,Disease Present,Correct,True Positive
+PT-M01-0124,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),53,Female,Lower Risk,0.0999,Absence,Correct,True Negative
+PT-M01-0125,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),51,Male,Lower Risk,0.2034,Absence,Correct,True Negative
+PT-M01-0126,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),44,Male,Higher Risk,0.5641,Disease Present,Correct,True Positive
+PT-M01-0127,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),58,Male,Lower Risk,0.494,Absence,Correct,True Negative
+PT-M01-0128,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),52,Male,Lower Risk,0.0781,Absence,Correct,True Negative
+PT-M01-0129,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),57,Male,Lower Risk,0.3616,Absence,Correct,True Negative
+PT-M01-0130,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),50,Male,Lower Risk,0.0637,Absence,Correct,True Negative
+PT-M01-0131,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),59,Male,Higher Risk,0.9545,Disease Present,Correct,True Positive
+PT-M01-0132,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),51,Male,Lower Risk,0.2597,Absence,Correct,True Negative
+PT-M01-0133,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),54,Male,Higher Risk,0.8393,Disease Present,Correct,True Positive
+PT-M01-0134,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),63,Female,Lower Risk,0.27,Absence,Correct,True Negative
+PT-M01-0135,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),42,Female,Lower Risk,0.1884,Absence,Correct,True Negative
+PT-M01-0136,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),58,Female,Lower Risk,0.1333,Absence,Correct,True Negative
+PT-M01-0137,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),60,Male,Higher Risk,0.9897,Disease Present,Correct,True Positive
+PT-M01-0138,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),60,Male,Lower Risk,0.2803,Disease Present,Incorrect,False Negative
+PT-M01-0139,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),49,Male,Lower Risk,0.395,Disease Present,Incorrect,False Negative
+PT-M01-0140,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),60,Male,Higher Risk,0.9171,Disease Present,Correct,True Positive
+PT-M01-0141,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),47,Male,Lower Risk,0.148,Disease Present,Incorrect,False Negative
+PT-M01-0142,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),62,Female,Higher Risk,0.629,Disease Present,Correct,True Positive
+PT-M01-0143,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),63,Female,Lower Risk,0.269,Absence,Correct,True Negative
+PT-M01-0144,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),70,Male,Lower Risk,0.281,Absence,Correct,True Negative
+PT-M01-0145,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),45,Male,Lower Risk,0.4015,Absence,Correct,True Negative
+PT-M01-0146,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),41,Female,Lower Risk,0.1561,Absence,Correct,True Negative
+PT-M01-0147,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),53,Female,Lower Risk,0.1286,Absence,Correct,True Negative
+PT-M01-0148,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),58,Male,Higher Risk,0.8103,Disease Present,Correct,True Positive
+PT-M01-0149,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),62,Female,Higher Risk,0.5647,Disease Present,Correct,True Positive
+PT-M01-0150,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),71,Female,Lower Risk,0.2153,Absence,Correct,True Negative
+PT-M01-0151,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),58,Male,Lower Risk,0.3625,Disease Present,Incorrect,False Negative
+PT-M01-0152,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),60,Female,Lower Risk,0.1972,Absence,Correct,True Negative
+PT-M01-0153,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),60,Female,Higher Risk,0.9094,Disease Present,Correct,True Positive
+PT-M01-0154,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),61,Female,Higher Risk,0.9091,Disease Present,Correct,True Positive
+PT-M01-0155,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),67,Male,Higher Risk,0.7662,Disease Present,Correct,True Positive
+PT-M01-0156,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),55,Male,Lower Risk,0.0934,Absence,Correct,True Negative
+PT-M01-0157,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),54,Female,Lower Risk,0.0609,Absence,Correct,True Negative
+PT-M01-0158,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),43,Male,Higher Risk,0.815,Disease Present,Correct,True Positive
+PT-M01-0159,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),54,Female,Lower Risk,0.052,Absence,Correct,True Negative
+PT-M01-0160,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),55,Male,Lower Risk,0.0927,Absence,Correct,True Negative
+PT-M01-0161,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),57,Female,Lower Risk,0.4122,Disease Present,Incorrect,False Negative
+PT-M01-0162,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),71,Female,Lower Risk,0.181,Absence,Correct,True Negative
+PT-M01-0163,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),58,Female,Lower Risk,0.235,Absence,Correct,True Negative
+PT-M01-0164,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),50,Female,Lower Risk,0.085,Absence,Correct,True Negative
+PT-M01-0165,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),53,Male,Higher Risk,0.9612,Disease Present,Correct,True Positive
+PT-M01-0166,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),65,Female,Lower Risk,0.2115,Absence,Correct,True Negative
+PT-M01-0167,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),56,Female,Lower Risk,0.1472,Absence,Correct,True Negative
+PT-M01-0168,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),50,Male,Higher Risk,0.8983,Disease Present,Correct,True Positive
+PT-M01-0169,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),42,Male,Lower Risk,0.0852,Absence,Correct,True Negative
+PT-M01-0170,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),52,Male,Lower Risk,0.4599,Absence,Correct,True Negative
+PT-M01-0171,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),34,Male,Lower Risk,0.0961,Absence,Correct,True Negative
+PT-M01-0172,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),51,Male,Lower Risk,0.4222,Absence,Correct,True Negative
+PT-M01-0173,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),51,Male,Lower Risk,0.2597,Absence,Correct,True Negative
+PT-M01-0174,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),67,Male,Higher Risk,0.897,Disease Present,Correct,True Positive
+PT-M01-0175,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),44,Male,Lower Risk,0.1365,Absence,Correct,True Negative
+PT-M01-0176,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),57,Male,Higher Risk,0.9164,Disease Present,Correct,True Positive
+PT-M01-0177,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),42,Male,Lower Risk,0.1498,Absence,Correct,True Negative
+PT-M01-0178,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),45,Male,Higher Risk,0.607,Disease Present,Correct,True Positive
+PT-M01-0179,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),41,Male,Lower Risk,0.3984,Absence,Correct,True Negative
+PT-M01-0180,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),59,Female,Lower Risk,0.4649,Disease Present,Incorrect,False Negative
+PT-M01-0181,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),49,Female,Lower Risk,0.0919,Absence,Correct,True Negative
+PT-M01-0182,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),61,Male,Higher Risk,0.9745,Disease Present,Correct,True Positive
+PT-M01-0183,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),56,Male,Higher Risk,0.9014,Disease Present,Correct,True Positive
+PT-M01-0184,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),68,Male,Lower Risk,0.4517,Absence,Correct,True Negative
+PT-M01-0185,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),58,Male,Higher Risk,0.8163,Disease Present,Correct,True Positive
+PT-M01-0186,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),44,Male,Lower Risk,0.0858,Absence,Correct,True Negative
+PT-M01-0187,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),37,Male,Lower Risk,0.1875,Absence,Correct,True Negative
+PT-M01-0188,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),54,Female,Lower Risk,0.0631,Absence,Correct,True Negative
+PT-M01-0189,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),48,Male,Lower Risk,0.1723,Absence,Correct,True Negative
+PT-M01-0190,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),65,Female,Higher Risk,0.8962,Disease Present,Correct,True Positive
+PT-M01-0191,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),42,Male,Lower Risk,0.3278,Absence,Correct,True Negative
+PT-M01-0192,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),67,Male,Higher Risk,0.5122,Disease Present,Correct,True Positive
+PT-M01-0193,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),47,Male,Lower Risk,0.153,Disease Present,Incorrect,False Negative
+PT-M01-0194,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),67,Male,Higher Risk,0.5095,Disease Present,Correct,True Positive
+PT-M01-0195,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),47,Male,Higher Risk,0.8029,Disease Present,Correct,True Positive
+PT-M01-0196,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),59,Male,Higher Risk,0.9501,Disease Present,Correct,True Positive
+PT-M01-0197,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),39,Male,Lower Risk,0.1333,Absence,Correct,True Negative
+PT-M01-0198,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),55,Female,Lower Risk,0.0949,Absence,Correct,True Negative
+PT-M01-0199,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),54,Male,Lower Risk,0.3808,Absence,Correct,True Negative
+PT-M01-0200,Month 1,1,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),64,Male,Higher Risk,0.7536,Absence,Incorrect,False Positive
+PT-M02-0001,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),67,Female,Lower Risk,0.3438,Absence,Correct,True Negative
+PT-M02-0002,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),61,Male,Higher Risk,0.5337,Disease Present,Correct,True Positive
+PT-M02-0003,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),48,Male,Lower Risk,0.1433,Absence,Correct,True Negative
+PT-M02-0004,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),49,Female,Lower Risk,0.1114,Absence,Correct,True Negative
+PT-M02-0005,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),62,Female,Higher Risk,0.7519,Disease Present,Correct,True Positive
+PT-M02-0006,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),58,Male,Higher Risk,0.7476,Disease Present,Correct,True Positive
+PT-M02-0007,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),65,Male,Higher Risk,0.7283,Disease Present,Correct,True Positive
+PT-M02-0008,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),58,Male,Higher Risk,0.822,Disease Present,Correct,True Positive
+PT-M02-0009,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),44,Female,Lower Risk,0.1695,Absence,Correct,True Negative
+PT-M02-0010,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),47,Male,Higher Risk,0.8244,Disease Present,Correct,True Positive
+PT-M02-0011,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),52,Male,Lower Risk,0.1985,Absence,Correct,True Negative
+PT-M02-0012,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),52,Male,Lower Risk,0.08,Absence,Correct,True Negative
+PT-M02-0013,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),44,Male,Lower Risk,0.069,Absence,Correct,True Negative
+PT-M02-0014,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),55,Male,Lower Risk,0.1355,Absence,Correct,True Negative
+PT-M02-0015,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),67,Male,Higher Risk,0.7641,Disease Present,Correct,True Positive
+PT-M02-0016,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),43,Male,Lower Risk,0.2407,Absence,Correct,True Negative
+PT-M02-0017,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),67,Male,Higher Risk,0.7554,Disease Present,Correct,True Positive
+PT-M02-0018,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),60,Male,Higher Risk,0.9105,Disease Present,Correct,True Positive
+PT-M02-0019,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),61,Female,Higher Risk,0.9124,Disease Present,Correct,True Positive
+PT-M02-0020,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),44,Female,Lower Risk,0.1753,Absence,Correct,True Negative
+PT-M02-0021,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),46,Female,Lower Risk,0.322,Absence,Correct,True Negative
+PT-M02-0022,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),59,Male,Lower Risk,0.2062,Absence,Correct,True Negative
+PT-M02-0023,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),54,Male,Higher Risk,0.9683,Disease Present,Correct,True Positive
+PT-M02-0024,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),63,Female,Lower Risk,0.4597,Disease Present,Incorrect,False Negative
+PT-M02-0025,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),64,Female,Lower Risk,0.3417,Absence,Correct,True Negative
+PT-M02-0026,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),49,Male,Higher Risk,0.7859,Disease Present,Correct,True Positive
+PT-M02-0027,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),54,Female,Lower Risk,0.3049,Absence,Correct,True Negative
+PT-M02-0028,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),44,Male,Lower Risk,0.0721,Absence,Correct,True Negative
+PT-M02-0029,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),59,Male,Lower Risk,0.2343,Absence,Correct,True Negative
+PT-M02-0030,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),45,Male,Higher Risk,0.618,Disease Present,Correct,True Positive
+PT-M02-0031,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),61,Male,Higher Risk,0.5337,Disease Present,Correct,True Positive
+PT-M02-0032,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),44,Male,Lower Risk,0.0892,Absence,Correct,True Negative
+PT-M02-0033,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),61,Male,Lower Risk,0.4674,Absence,Correct,True Negative
+PT-M02-0034,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),45,Female,Lower Risk,0.3389,Absence,Correct,True Negative
+PT-M02-0035,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),61,Male,Higher Risk,0.9833,Disease Present,Correct,True Positive
+PT-M02-0036,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),46,Female,Lower Risk,0.3279,Absence,Correct,True Negative
+PT-M02-0037,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),63,Female,Higher Risk,0.7276,Disease Present,Correct,True Positive
+PT-M02-0038,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),53,Male,Higher Risk,0.6397,Absence,Incorrect,False Positive
+PT-M02-0039,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),52,Male,Lower Risk,0.2396,Absence,Correct,True Negative
+PT-M02-0040,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),53,Female,Lower Risk,0.1787,Absence,Correct,True Negative
+PT-M02-0041,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),59,Male,Higher Risk,0.5013,Disease Present,Correct,True Positive
+PT-M02-0042,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),59,Male,Higher Risk,0.9742,Disease Present,Correct,True Positive
+PT-M02-0043,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),35,Male,Lower Risk,0.0501,Absence,Correct,True Negative
+PT-M02-0044,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),39,Female,Lower Risk,0.0315,Absence,Correct,True Negative
+PT-M02-0045,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),60,Male,Higher Risk,0.8758,Disease Present,Correct,True Positive
+PT-M02-0046,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),59,Male,Lower Risk,0.3745,Disease Present,Incorrect,False Negative
+PT-M02-0047,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),34,Male,Lower Risk,0.094,Absence,Correct,True Negative
+PT-M02-0048,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),60,Male,Higher Risk,0.9921,Disease Present,Correct,True Positive
+PT-M02-0049,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),43,Female,Lower Risk,0.0604,Absence,Correct,True Negative
+PT-M02-0050,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),67,Male,Higher Risk,0.8343,Disease Present,Correct,True Positive
+PT-M02-0051,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),71,Female,Lower Risk,0.212,Absence,Correct,True Negative
+PT-M02-0052,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),47,Male,Higher Risk,0.8061,Disease Present,Correct,True Positive
+PT-M02-0053,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),68,Female,Lower Risk,0.2367,Absence,Correct,True Negative
+PT-M02-0054,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),41,Female,Lower Risk,0.0674,Absence,Correct,True Negative
+PT-M02-0055,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),42,Male,Lower Risk,0.3571,Absence,Correct,True Negative
+PT-M02-0056,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),43,Male,Higher Risk,0.8162,Disease Present,Correct,True Positive
+PT-M02-0057,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),59,Male,Higher Risk,0.523,Disease Present,Correct,True Positive
+PT-M02-0058,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),60,Female,Lower Risk,0.1955,Absence,Correct,True Negative
+PT-M02-0059,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),51,Female,Lower Risk,0.1737,Absence,Correct,True Negative
+PT-M02-0060,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),66,Female,Lower Risk,0.2643,Absence,Correct,True Negative
+PT-M02-0061,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),69,Male,Higher Risk,0.5276,Absence,Incorrect,False Positive
+PT-M02-0062,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),45,Male,Lower Risk,0.1929,Absence,Correct,True Negative
+PT-M02-0063,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),44,Male,Lower Risk,0.4902,Disease Present,Incorrect,False Negative
+PT-M02-0064,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),56,Female,Higher Risk,0.9511,Disease Present,Correct,True Positive
+PT-M02-0065,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),53,Male,Lower Risk,0.279,Absence,Correct,True Negative
+PT-M02-0066,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),69,Male,Higher Risk,0.5221,Absence,Incorrect,False Positive
+PT-M02-0067,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),39,Female,Lower Risk,0.0323,Absence,Correct,True Negative
+PT-M02-0068,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),60,Male,Lower Risk,0.3145,Disease Present,Incorrect,False Negative
+PT-M02-0069,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),41,Male,Lower Risk,0.131,Absence,Correct,True Negative
+PT-M02-0070,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),58,Male,Higher Risk,0.6212,Disease Present,Correct,True Positive
+PT-M02-0071,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),54,Male,Lower Risk,0.3108,Absence,Correct,True Negative
+PT-M02-0072,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),62,Male,Higher Risk,0.9623,Disease Present,Correct,True Positive
+PT-M02-0073,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),41,Male,Lower Risk,0.3958,Absence,Correct,True Negative
+PT-M02-0074,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),43,Male,Higher Risk,0.8144,Disease Present,Correct,True Positive
+PT-M02-0075,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),57,Male,Higher Risk,0.9119,Disease Present,Correct,True Positive
+PT-M02-0076,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),76,Female,Lower Risk,0.1667,Absence,Correct,True Negative
+PT-M02-0077,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),58,Male,Higher Risk,0.6245,Disease Present,Correct,True Positive
+PT-M02-0078,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),60,Male,Higher Risk,0.99,Disease Present,Correct,True Positive
+PT-M02-0079,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),45,Male,Lower Risk,0.4562,Absence,Correct,True Negative
+PT-M02-0080,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),37,Male,Lower Risk,0.1899,Absence,Correct,True Negative
+PT-M02-0081,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),49,Male,Lower Risk,0.3786,Disease Present,Incorrect,False Negative
+PT-M02-0082,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),40,Male,Higher Risk,0.5416,Disease Present,Correct,True Positive
+PT-M02-0083,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),45,Female,Lower Risk,0.0989,Absence,Correct,True Negative
+PT-M02-0084,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),51,Female,Higher Risk,0.8942,Disease Present,Correct,True Positive
+PT-M02-0085,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),46,Female,Lower Risk,0.3351,Absence,Correct,True Negative
+PT-M02-0086,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),70,Male,Higher Risk,0.7582,Disease Present,Correct,True Positive
+PT-M02-0087,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),60,Male,Higher Risk,0.9872,Disease Present,Correct,True Positive
+PT-M02-0088,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),58,Female,Lower Risk,0.1531,Absence,Correct,True Negative
+PT-M02-0089,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),57,Female,Lower Risk,0.4176,Absence,Correct,True Negative
+PT-M02-0090,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),57,Male,Lower Risk,0.4507,Disease Present,Incorrect,False Negative
+PT-M02-0091,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),54,Male,Higher Risk,0.9754,Disease Present,Correct,True Positive
+PT-M02-0092,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),42,Male,Higher Risk,0.7831,Disease Present,Correct,True Positive
+PT-M02-0093,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),64,Male,Higher Risk,0.8495,Disease Present,Correct,True Positive
+PT-M02-0094,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),60,Female,Lower Risk,0.4011,Disease Present,Incorrect,False Negative
+PT-M02-0095,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),47,Male,Higher Risk,0.8058,Disease Present,Correct,True Positive
+PT-M02-0096,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),64,Male,Higher Risk,0.8524,Disease Present,Correct,True Positive
+PT-M02-0097,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),43,Male,Higher Risk,0.815,Disease Present,Correct,True Positive
+PT-M02-0098,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),41,Female,Lower Risk,0.1146,Absence,Correct,True Negative
+PT-M02-0099,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),55,Male,Higher Risk,0.9603,Disease Present,Correct,True Positive
+PT-M02-0100,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),41,Male,Lower Risk,0.4176,Absence,Correct,True Negative
+PT-M02-0101,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),58,Female,Higher Risk,0.8488,Disease Present,Correct,True Positive
+PT-M02-0102,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),55,Male,Higher Risk,0.9784,Disease Present,Correct,True Positive
+PT-M02-0103,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),46,Female,Lower Risk,0.3279,Absence,Correct,True Negative
+PT-M02-0104,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),67,Female,Lower Risk,0.443,Absence,Correct,True Negative
+PT-M02-0105,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),58,Male,Lower Risk,0.3422,Disease Present,Incorrect,False Negative
+PT-M02-0106,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),58,Male,Lower Risk,0.3422,Disease Present,Incorrect,False Negative
+PT-M02-0107,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),65,Female,Lower Risk,0.1731,Absence,Correct,True Negative
+PT-M02-0108,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),59,Female,Lower Risk,0.4745,Disease Present,Incorrect,False Negative
+PT-M02-0109,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),59,Male,Lower Risk,0.3904,Disease Present,Incorrect,False Negative
+PT-M02-0110,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),44,Male,Higher Risk,0.5238,Disease Present,Correct,True Positive
+PT-M02-0111,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),46,Female,Lower Risk,0.1456,Absence,Correct,True Negative
+PT-M02-0112,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),65,Male,Higher Risk,0.7181,Disease Present,Correct,True Positive
+PT-M02-0113,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),58,Female,Lower Risk,0.2115,Absence,Correct,True Negative
+PT-M02-0114,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),51,Female,Lower Risk,0.1655,Absence,Correct,True Negative
+PT-M02-0115,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),57,Female,Lower Risk,0.3957,Disease Present,Incorrect,False Negative
+PT-M02-0116,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),61,Male,Higher Risk,0.9806,Disease Present,Correct,True Positive
+PT-M02-0117,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),51,Female,Lower Risk,0.0687,Absence,Correct,True Negative
+PT-M02-0118,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),51,Male,Higher Risk,0.5277,Absence,Incorrect,False Positive
+PT-M02-0119,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),50,Male,Higher Risk,0.899,Disease Present,Correct,True Positive
+PT-M02-0120,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),61,Male,Higher Risk,0.9402,Disease Present,Correct,True Positive
+PT-M02-0121,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),45,Female,Lower Risk,0.0775,Absence,Correct,True Negative
+PT-M02-0122,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),58,Male,Higher Risk,0.991,Disease Present,Correct,True Positive
+PT-M02-0123,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),71,Female,Lower Risk,0.2493,Absence,Correct,True Negative
+PT-M02-0124,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),49,Male,Lower Risk,0.3746,Disease Present,Incorrect,False Negative
+PT-M02-0125,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),59,Male,Higher Risk,0.7731,Disease Present,Correct,True Positive
+PT-M02-0126,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),68,Male,Higher Risk,0.8876,Disease Present,Correct,True Positive
+PT-M02-0127,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),59,Male,Higher Risk,0.8438,Disease Present,Correct,True Positive
+PT-M02-0128,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),58,Male,Lower Risk,0.3422,Disease Present,Incorrect,False Negative
+PT-M02-0129,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),59,Female,Lower Risk,0.4728,Disease Present,Incorrect,False Negative
+PT-M02-0130,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),55,Female,Higher Risk,0.934,Disease Present,Correct,True Positive
+PT-M02-0131,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),41,Female,Lower Risk,0.1613,Absence,Correct,True Negative
+PT-M02-0132,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),62,Female,Higher Risk,0.8898,Disease Present,Correct,True Positive
+PT-M02-0133,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),63,Female,Lower Risk,0.2681,Absence,Correct,True Negative
+PT-M02-0134,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),57,Male,Lower Risk,0.4094,Absence,Correct,True Negative
+PT-M02-0135,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),52,Male,Lower Risk,0.2015,Absence,Correct,True Negative
+PT-M02-0136,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),58,Male,Higher Risk,0.9878,Disease Present,Correct,True Positive
+PT-M02-0137,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),58,Male,Higher Risk,0.9243,Disease Present,Correct,True Positive
+PT-M02-0138,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),68,Male,Higher Risk,0.5588,Absence,Incorrect,False Positive
+PT-M02-0139,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),58,Female,Lower Risk,0.2252,Absence,Correct,True Negative
+PT-M02-0140,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),47,Male,Higher Risk,0.8041,Disease Present,Correct,True Positive
+PT-M02-0141,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),59,Male,Higher Risk,0.6457,Absence,Incorrect,False Positive
+PT-M02-0142,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),70,Male,Higher Risk,0.8765,Disease Present,Correct,True Positive
+PT-M02-0143,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),47,Male,Higher Risk,0.8215,Disease Present,Correct,True Positive
+PT-M02-0144,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),62,Female,Higher Risk,0.6332,Disease Present,Correct,True Positive
+PT-M02-0145,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),58,Male,Higher Risk,0.5882,Absence,Incorrect,False Positive
+PT-M02-0146,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),52,Male,Lower Risk,0.0614,Absence,Correct,True Negative
+PT-M02-0147,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),60,Female,Lower Risk,0.1691,Absence,Correct,True Negative
+PT-M02-0148,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),55,Female,Lower Risk,0.1061,Absence,Correct,True Negative
+PT-M02-0149,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),66,Female,Lower Risk,0.3075,Absence,Correct,True Negative
+PT-M02-0150,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),51,Female,Lower Risk,0.1829,Absence,Correct,True Negative
+PT-M02-0151,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),52,Male,Lower Risk,0.1069,Absence,Correct,True Negative
+PT-M02-0152,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),71,Female,Lower Risk,0.2082,Absence,Correct,True Negative
+PT-M02-0153,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),64,Female,Lower Risk,0.3852,Absence,Correct,True Negative
+PT-M02-0154,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),54,Male,Higher Risk,0.8003,Disease Present,Correct,True Positive
+PT-M02-0155,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),45,Female,Lower Risk,0.0756,Absence,Correct,True Negative
+PT-M02-0156,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),41,Male,Lower Risk,0.1359,Absence,Correct,True Negative
+PT-M02-0157,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),70,Male,Higher Risk,0.8774,Disease Present,Correct,True Positive
+PT-M02-0158,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),63,Female,Lower Risk,0.4676,Disease Present,Incorrect,False Negative
+PT-M02-0159,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),57,Female,Lower Risk,0.2912,Absence,Correct,True Negative
+PT-M02-0160,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),55,Female,Higher Risk,0.6316,Disease Present,Correct,True Positive
+PT-M02-0161,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),59,Male,Lower Risk,0.3751,Disease Present,Incorrect,False Negative
+PT-M02-0162,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),52,Male,Lower Risk,0.4355,Disease Present,Incorrect,False Negative
+PT-M02-0163,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),60,Female,Lower Risk,0.1778,Absence,Correct,True Negative
+PT-M02-0164,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),50,Male,Higher Risk,0.6713,Disease Present,Correct,True Positive
+PT-M02-0165,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),65,Male,Higher Risk,0.7264,Disease Present,Correct,True Positive
+PT-M02-0166,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),60,Female,Lower Risk,0.1651,Absence,Correct,True Negative
+PT-M02-0167,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),45,Male,Lower Risk,0.1858,Absence,Correct,True Negative
+PT-M02-0168,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),56,Male,Lower Risk,0.1276,Absence,Correct,True Negative
+PT-M02-0169,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),66,Male,Higher Risk,0.7142,Disease Present,Correct,True Positive
+PT-M02-0170,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),47,Male,Lower Risk,0.1327,Disease Present,Incorrect,False Negative
+PT-M02-0171,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),48,Male,Higher Risk,0.8076,Disease Present,Correct,True Positive
+PT-M02-0172,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),44,Male,Lower Risk,0.1216,Absence,Correct,True Negative
+PT-M02-0173,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),52,Female,Lower Risk,0.0442,Absence,Correct,True Negative
+PT-M02-0174,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),58,Male,Higher Risk,0.9254,Disease Present,Correct,True Positive
+PT-M02-0175,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),44,Male,Lower Risk,0.3234,Absence,Correct,True Negative
+PT-M02-0176,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),61,Female,Lower Risk,0.372,Disease Present,Incorrect,False Negative
+PT-M02-0177,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),61,Female,Lower Risk,0.3635,Disease Present,Incorrect,False Negative
+PT-M02-0178,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),60,Female,Lower Risk,0.1651,Absence,Correct,True Negative
+PT-M02-0179,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),61,Male,Higher Risk,0.9402,Disease Present,Correct,True Positive
+PT-M02-0180,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),65,Female,Lower Risk,0.2299,Absence,Correct,True Negative
+PT-M02-0181,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),65,Female,Lower Risk,0.169,Absence,Correct,True Negative
+PT-M02-0182,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),60,Male,Higher Risk,0.9946,Disease Present,Correct,True Positive
+PT-M02-0183,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),55,Female,Lower Risk,0.1163,Absence,Correct,True Negative
+PT-M02-0184,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),59,Male,Higher Risk,0.9509,Disease Present,Correct,True Positive
+PT-M02-0185,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),66,Male,Higher Risk,0.721,Disease Present,Correct,True Positive
+PT-M02-0186,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),58,Male,Higher Risk,0.6163,Disease Present,Correct,True Positive
+PT-M02-0187,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),60,Female,Lower Risk,0.1651,Absence,Correct,True Negative
+PT-M02-0188,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),66,Male,Higher Risk,0.7181,Disease Present,Correct,True Positive
+PT-M02-0189,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),67,Male,Higher Risk,0.8927,Disease Present,Correct,True Positive
+PT-M02-0190,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),58,Male,Lower Risk,0.1572,Absence,Correct,True Negative
+PT-M02-0191,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),42,Male,Lower Risk,0.1491,Absence,Correct,True Negative
+PT-M02-0192,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),54,Male,Higher Risk,0.852,Disease Present,Correct,True Positive
+PT-M02-0193,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),62,Female,Higher Risk,0.5727,Disease Present,Correct,True Positive
+PT-M02-0194,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),50,Male,Higher Risk,0.9079,Disease Present,Correct,True Positive
+PT-M02-0195,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),60,Female,Lower Risk,0.2032,Absence,Correct,True Negative
+PT-M02-0196,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),58,Male,Lower Risk,0.1619,Absence,Correct,True Negative
+PT-M02-0197,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),63,Female,Lower Risk,0.4629,Disease Present,Incorrect,False Negative
+PT-M02-0198,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),54,Male,Lower Risk,0.3197,Absence,Correct,True Negative
+PT-M02-0199,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),35,Male,Higher Risk,0.6688,Disease Present,Correct,True Positive
+PT-M02-0200,Month 2,2,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),62,Female,Higher Risk,0.8854,Disease Present,Correct,True Positive
+PT-M03-0001,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),60,Female,Lower Risk,0.198,Absence,Correct,True Negative
+PT-M03-0002,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),70,Female,Lower Risk,0.1743,Absence,Correct,True Negative
+PT-M03-0003,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),64,Male,Higher Risk,0.7321,Disease Present,Correct,True Positive
+PT-M03-0004,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),73,Male,Lower Risk,0.2859,Absence,Correct,True Negative
+PT-M03-0005,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),57,Female,Higher Risk,0.9484,Disease Present,Correct,True Positive
+PT-M03-0006,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),59,Male,Lower Risk,0.1506,Absence,Correct,True Negative
+PT-M03-0007,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),80,Female,Lower Risk,0.2338,Absence,Correct,True Negative
+PT-M03-0008,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),72,Female,Lower Risk,0.3344,Absence,Correct,True Negative
+PT-M03-0009,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),68,Female,Lower Risk,0.1292,Absence,Correct,True Negative
+PT-M03-0010,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),58,Male,Lower Risk,0.4063,Absence,Correct,True Negative
+PT-M03-0011,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),59,Male,Higher Risk,0.8958,Disease Present,Correct,True Positive
+PT-M03-0012,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),57,Male,Lower Risk,0.1747,Absence,Correct,True Negative
+PT-M03-0013,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),56,Male,Lower Risk,0.1727,Absence,Correct,True Negative
+PT-M03-0014,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),70,Male,Higher Risk,0.7433,Disease Present,Correct,True Positive
+PT-M03-0015,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),60,Male,Higher Risk,0.9845,Disease Present,Correct,True Positive
+PT-M03-0016,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),71,Male,Higher Risk,0.8866,Disease Present,Correct,True Positive
+PT-M03-0017,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),75,Female,Lower Risk,0.191,Absence,Correct,True Negative
+PT-M03-0018,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),66,Female,Higher Risk,0.8869,Disease Present,Correct,True Positive
+PT-M03-0019,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),47,Female,Lower Risk,0.2631,Absence,Correct,True Negative
+PT-M03-0020,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),76,Female,Lower Risk,0.3336,Absence,Correct,True Negative
+PT-M03-0021,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),56,Male,Higher Risk,0.8924,Disease Present,Correct,True Positive
+PT-M03-0022,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),69,Female,Lower Risk,0.219,Absence,Correct,True Negative
+PT-M03-0023,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),60,Male,Lower Risk,0.1804,Absence,Correct,True Negative
+PT-M03-0024,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),45,Male,Lower Risk,0.3253,Absence,Correct,True Negative
+PT-M03-0025,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),71,Male,Higher Risk,0.7421,Disease Present,Correct,True Positive
+PT-M03-0026,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),63,Male,Higher Risk,0.5573,Absence,Incorrect,False Positive
+PT-M03-0027,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),53,Female,Lower Risk,0.1022,Absence,Correct,True Negative
+PT-M03-0028,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),59,Male,Higher Risk,0.8958,Disease Present,Correct,True Positive
+PT-M03-0029,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),59,Female,Higher Risk,0.9503,Disease Present,Correct,True Positive
+PT-M03-0030,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),63,Male,Higher Risk,0.8643,Disease Present,Correct,True Positive
+PT-M03-0031,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),67,Male,Higher Risk,0.9402,Disease Present,Correct,True Positive
+PT-M03-0032,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),61,Male,Lower Risk,0.1697,Absence,Correct,True Negative
+PT-M03-0033,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),51,Male,Higher Risk,0.6771,Disease Present,Correct,True Positive
+PT-M03-0034,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),63,Male,Higher Risk,0.7866,Disease Present,Correct,True Positive
+PT-M03-0035,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),60,Male,Higher Risk,0.765,Disease Present,Correct,True Positive
+PT-M03-0036,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),63,Female,Lower Risk,0.1837,Absence,Correct,True Negative
+PT-M03-0037,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),68,Male,Higher Risk,0.7248,Disease Present,Correct,True Positive
+PT-M03-0038,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),53,Female,Lower Risk,0.108,Absence,Correct,True Negative
+PT-M03-0039,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),74,Male,Higher Risk,0.8658,Disease Present,Correct,True Positive
+PT-M03-0040,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),65,Female,Higher Risk,0.5119,Disease Present,Correct,True Positive
+PT-M03-0041,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),64,Male,Higher Risk,0.5621,Disease Present,Correct,True Positive
+PT-M03-0042,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),49,Female,Lower Risk,0.1077,Absence,Correct,True Negative
+PT-M03-0043,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),46,Female,Lower Risk,0.0669,Absence,Correct,True Negative
+PT-M03-0044,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),59,Male,Higher Risk,0.9011,Disease Present,Correct,True Positive
+PT-M03-0045,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),65,Female,Lower Risk,0.3457,Disease Present,Incorrect,False Negative
+PT-M03-0046,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),51,Male,Higher Risk,0.5001,Disease Present,Correct,True Positive
+PT-M03-0047,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),72,Male,Higher Risk,0.8717,Disease Present,Correct,True Positive
+PT-M03-0048,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),59,Male,Higher Risk,0.6114,Disease Present,Correct,True Positive
+PT-M03-0049,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),69,Female,Lower Risk,0.1295,Absence,Correct,True Negative
+PT-M03-0050,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),61,Female,Lower Risk,0.3224,Absence,Correct,True Negative
+PT-M03-0051,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),64,Male,Higher Risk,0.7076,Disease Present,Correct,True Positive
+PT-M03-0052,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),60,Male,Higher Risk,0.9487,Disease Present,Correct,True Positive
+PT-M03-0053,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),64,Male,Lower Risk,0.3213,Disease Present,Incorrect,False Negative
+PT-M03-0054,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),70,Female,Lower Risk,0.1787,Absence,Correct,True Negative
+PT-M03-0055,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),60,Male,Higher Risk,0.9473,Disease Present,Correct,True Positive
+PT-M03-0056,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),60,Male,Higher Risk,0.8708,Disease Present,Correct,True Positive
+PT-M03-0057,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),80,Female,Lower Risk,0.2338,Absence,Correct,True Negative
+PT-M03-0058,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),69,Female,Higher Risk,0.8844,Disease Present,Correct,True Positive
+PT-M03-0059,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),71,Female,Lower Risk,0.3322,Absence,Correct,True Negative
+PT-M03-0060,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),71,Male,Lower Risk,0.4462,Absence,Correct,True Negative
+PT-M03-0061,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),65,Female,Lower Risk,0.3284,Absence,Correct,True Negative
+PT-M03-0062,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),60,Male,Higher Risk,0.6655,Absence,Incorrect,False Positive
+PT-M03-0063,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),66,Female,Higher Risk,0.8785,Disease Present,Correct,True Positive
+PT-M03-0064,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),56,Male,Higher Risk,0.8998,Disease Present,Correct,True Positive
+PT-M03-0065,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),65,Female,Higher Risk,0.8611,Disease Present,Correct,True Positive
+PT-M03-0066,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),42,Female,Lower Risk,0.1004,Absence,Correct,True Negative
+PT-M03-0067,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),49,Male,Lower Risk,0.156,Absence,Correct,True Negative
+PT-M03-0068,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),63,Male,Higher Risk,0.9868,Disease Present,Correct,True Positive
+PT-M03-0069,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),63,Female,Lower Risk,0.3834,Absence,Correct,True Negative
+PT-M03-0070,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),65,Male,Higher Risk,0.9319,Disease Present,Correct,True Positive
+PT-M03-0071,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),72,Male,Higher Risk,0.5941,Absence,Incorrect,False Positive
+PT-M03-0072,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),63,Male,Higher Risk,0.8527,Disease Present,Correct,True Positive
+PT-M03-0073,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),49,Male,Lower Risk,0.1455,Absence,Correct,True Negative
+PT-M03-0074,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),62,Male,Lower Risk,0.329,Absence,Correct,True Negative
+PT-M03-0075,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),61,Male,Lower Risk,0.4129,Absence,Correct,True Negative
+PT-M03-0076,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),53,Female,Lower Risk,0.0668,Absence,Correct,True Negative
+PT-M03-0077,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),59,Male,Lower Risk,0.2126,Absence,Correct,True Negative
+PT-M03-0078,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),54,Male,Lower Risk,0.0907,Absence,Correct,True Negative
+PT-M03-0079,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),42,Female,Lower Risk,0.0405,Absence,Correct,True Negative
+PT-M03-0080,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),67,Male,Higher Risk,0.8478,Disease Present,Correct,True Positive
+PT-M03-0081,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),40,Male,Lower Risk,0.0842,Absence,Correct,True Negative
+PT-M03-0082,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),72,Male,Higher Risk,0.7437,Disease Present,Correct,True Positive
+PT-M03-0083,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),75,Female,Lower Risk,0.2605,Absence,Correct,True Negative
+PT-M03-0084,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),62,Male,Higher Risk,0.5923,Absence,Incorrect,False Positive
+PT-M03-0085,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),64,Male,Higher Risk,0.984,Disease Present,Correct,True Positive
+PT-M03-0086,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),66,Male,Higher Risk,0.8609,Disease Present,Correct,True Positive
+PT-M03-0087,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),62,Male,Lower Risk,0.204,Absence,Correct,True Negative
+PT-M03-0088,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),68,Male,Higher Risk,0.9689,Disease Present,Correct,True Positive
+PT-M03-0089,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),62,Male,Lower Risk,0.3245,Absence,Correct,True Negative
+PT-M03-0090,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),71,Female,Lower Risk,0.4816,Absence,Correct,True Negative
+PT-M03-0091,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),66,Female,Lower Risk,0.2269,Absence,Correct,True Negative
+PT-M03-0092,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),56,Male,Lower Risk,0.0984,Absence,Correct,True Negative
+PT-M03-0093,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),55,Male,Lower Risk,0.2794,Absence,Correct,True Negative
+PT-M03-0094,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),59,Male,Higher Risk,0.6127,Disease Present,Correct,True Positive
+PT-M03-0095,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),55,Female,Lower Risk,0.1187,Absence,Correct,True Negative
+PT-M03-0096,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),67,Female,Lower Risk,0.2222,Absence,Correct,True Negative
+PT-M03-0097,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),60,Male,Lower Risk,0.4789,Disease Present,Incorrect,False Negative
+PT-M03-0098,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),71,Male,Higher Risk,0.665,Disease Present,Correct,True Positive
+PT-M03-0099,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),65,Male,Lower Risk,0.248,Absence,Correct,True Negative
+PT-M03-0100,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),53,Male,Lower Risk,0.2147,Absence,Correct,True Negative
+PT-M03-0101,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),58,Male,Higher Risk,0.7838,Disease Present,Correct,True Positive
+PT-M03-0102,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),62,Male,Lower Risk,0.4301,Disease Present,Incorrect,False Negative
+PT-M03-0103,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),46,Female,Lower Risk,0.2631,Absence,Correct,True Negative
+PT-M03-0104,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),61,Female,Lower Risk,0.1705,Absence,Correct,True Negative
+PT-M03-0105,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),72,Female,Lower Risk,0.2605,Absence,Correct,True Negative
+PT-M03-0106,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),57,Female,Lower Risk,0.141,Absence,Correct,True Negative
+PT-M03-0107,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),57,Female,Lower Risk,0.142,Absence,Correct,True Negative
+PT-M03-0108,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),63,Male,Higher Risk,0.9347,Disease Present,Correct,True Positive
+PT-M03-0109,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),60,Male,Higher Risk,0.9473,Disease Present,Correct,True Positive
+PT-M03-0110,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),63,Male,Lower Risk,0.225,Absence,Correct,True Negative
+PT-M03-0111,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),49,Male,Lower Risk,0.3909,Disease Present,Incorrect,False Negative
+PT-M03-0112,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),63,Male,Higher Risk,0.8157,Disease Present,Correct,True Positive
+PT-M03-0113,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),65,Male,Higher Risk,0.616,Disease Present,Correct,True Positive
+PT-M03-0114,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),62,Male,Lower Risk,0.4282,Disease Present,Incorrect,False Negative
+PT-M03-0115,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),63,Male,Higher Risk,0.9053,Disease Present,Correct,True Positive
+PT-M03-0116,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),67,Female,Higher Risk,0.8611,Disease Present,Correct,True Positive
+PT-M03-0117,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),58,Male,Higher Risk,0.9011,Disease Present,Correct,True Positive
+PT-M03-0118,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),63,Male,Higher Risk,0.8474,Disease Present,Correct,True Positive
+PT-M03-0119,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),67,Male,Lower Risk,0.3665,Absence,Correct,True Negative
+PT-M03-0120,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),66,Male,Higher Risk,0.8605,Disease Present,Correct,True Positive
+PT-M03-0121,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),62,Male,Higher Risk,0.8157,Disease Present,Correct,True Positive
+PT-M03-0122,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),67,Female,Lower Risk,0.4614,Disease Present,Incorrect,False Negative
+PT-M03-0123,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),57,Male,Higher Risk,0.9537,Disease Present,Correct,True Positive
+PT-M03-0124,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),56,Female,Lower Risk,0.1037,Absence,Correct,True Negative
+PT-M03-0125,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),45,Male,Higher Risk,0.6989,Disease Present,Correct,True Positive
+PT-M03-0126,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),60,Male,Higher Risk,0.9403,Disease Present,Correct,True Positive
+PT-M03-0127,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),60,Male,Higher Risk,0.5264,Absence,Incorrect,False Positive
+PT-M03-0128,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),77,Female,Lower Risk,0.408,Absence,Correct,True Negative
+PT-M03-0129,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),55,Male,Higher Risk,0.5939,Absence,Incorrect,False Positive
+PT-M03-0130,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),58,Male,Higher Risk,0.9011,Disease Present,Correct,True Positive
+PT-M03-0131,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),60,Male,Lower Risk,0.2281,Absence,Correct,True Negative
+PT-M03-0132,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),66,Male,Higher Risk,0.9363,Disease Present,Correct,True Positive
+PT-M03-0133,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),45,Male,Lower Risk,0.1462,Absence,Correct,True Negative
+PT-M03-0134,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),65,Female,Lower Risk,0.3592,Disease Present,Incorrect,False Negative
+PT-M03-0135,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),63,Male,Higher Risk,0.9138,Disease Present,Correct,True Positive
+PT-M03-0136,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),74,Female,Lower Risk,0.2605,Absence,Correct,True Negative
+PT-M03-0137,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),60,Male,Higher Risk,0.9761,Disease Present,Correct,True Positive
+PT-M03-0138,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),60,Female,Higher Risk,0.8511,Disease Present,Correct,True Positive
+PT-M03-0139,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),68,Male,Higher Risk,0.5513,Disease Present,Correct,True Positive
+PT-M03-0140,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),41,Female,Lower Risk,0.0496,Absence,Correct,True Negative
+PT-M03-0141,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),41,Male,Lower Risk,0.1345,Absence,Correct,True Negative
+PT-M03-0142,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),59,Male,Higher Risk,0.946,Disease Present,Correct,True Positive
+PT-M03-0143,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),60,Male,Higher Risk,0.946,Disease Present,Correct,True Positive
+PT-M03-0144,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),65,Male,Lower Risk,0.2327,Absence,Correct,True Negative
+PT-M03-0145,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),58,Male,Higher Risk,0.9807,Disease Present,Correct,True Positive
+PT-M03-0146,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),61,Male,Lower Risk,0.4896,Absence,Correct,True Negative
+PT-M03-0147,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),57,Male,Lower Risk,0.2479,Absence,Correct,True Negative
+PT-M03-0148,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),47,Female,Lower Risk,0.0775,Absence,Correct,True Negative
+PT-M03-0149,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),65,Male,Lower Risk,0.493,Absence,Correct,True Negative
+PT-M03-0150,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),58,Female,Higher Risk,0.9116,Disease Present,Correct,True Positive
+PT-M03-0151,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),35,Female,Lower Risk,0.1142,Absence,Correct,True Negative
+PT-M03-0152,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),45,Male,Lower Risk,0.0537,Absence,Correct,True Negative
+PT-M03-0153,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),63,Female,Lower Risk,0.176,Absence,Correct,True Negative
+PT-M03-0154,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),65,Male,Higher Risk,0.5156,Absence,Incorrect,False Positive
+PT-M03-0155,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),59,Male,Higher Risk,0.8988,Disease Present,Correct,True Positive
+PT-M03-0156,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),65,Female,Higher Risk,0.7131,Disease Present,Correct,True Positive
+PT-M03-0157,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),62,Male,Higher Risk,0.9214,Disease Present,Correct,True Positive
+PT-M03-0158,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),66,Male,Lower Risk,0.4138,Absence,Correct,True Negative
+PT-M03-0159,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),70,Female,Lower Risk,0.2725,Absence,Correct,True Negative
+PT-M03-0160,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),59,Male,Higher Risk,0.8668,Disease Present,Correct,True Positive
+PT-M03-0161,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),71,Female,Lower Risk,0.221,Absence,Correct,True Negative
+PT-M03-0162,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),63,Male,Higher Risk,0.8118,Disease Present,Correct,True Positive
+PT-M03-0163,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),57,Male,Higher Risk,0.8873,Disease Present,Correct,True Positive
+PT-M03-0164,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),69,Female,Lower Risk,0.3965,Absence,Correct,True Negative
+PT-M03-0165,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),64,Female,Higher Risk,0.693,Disease Present,Correct,True Positive
+PT-M03-0166,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),64,Male,Higher Risk,0.8677,Disease Present,Correct,True Positive
+PT-M03-0167,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),61,Male,Lower Risk,0.2188,Absence,Correct,True Negative
+PT-M03-0168,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),46,Female,Lower Risk,0.3667,Absence,Correct,True Negative
+PT-M03-0169,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),65,Female,Higher Risk,0.6073,Disease Present,Correct,True Positive
+PT-M03-0170,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),65,Female,Lower Risk,0.176,Absence,Correct,True Negative
+PT-M03-0171,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),67,Male,Higher Risk,0.9346,Disease Present,Correct,True Positive
+PT-M03-0172,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),61,Female,Higher Risk,0.9568,Disease Present,Correct,True Positive
+PT-M03-0173,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),69,Male,Higher Risk,0.7416,Disease Present,Correct,True Positive
+PT-M03-0174,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),61,Male,Lower Risk,0.2296,Absence,Correct,True Negative
+PT-M03-0175,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),44,Male,Lower Risk,0.3571,Absence,Correct,True Negative
+PT-M03-0176,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),43,Male,Lower Risk,0.092,Absence,Correct,True Negative
+PT-M03-0177,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),57,Male,Higher Risk,0.5207,Absence,Incorrect,False Positive
+PT-M03-0178,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),58,Female,Lower Risk,0.3582,Disease Present,Incorrect,False Negative
+PT-M03-0179,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),67,Female,Lower Risk,0.3191,Absence,Correct,True Negative
+PT-M03-0180,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),60,Male,Higher Risk,0.946,Disease Present,Correct,True Positive
+PT-M03-0181,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),59,Male,Higher Risk,0.9473,Disease Present,Correct,True Positive
+PT-M03-0182,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),57,Male,Lower Risk,0.406,Absence,Correct,True Negative
+PT-M03-0183,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),68,Female,Higher Risk,0.8904,Disease Present,Correct,True Positive
+PT-M03-0184,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),63,Male,Higher Risk,0.5178,Disease Present,Correct,True Positive
+PT-M03-0185,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),64,Female,Higher Risk,0.6139,Disease Present,Correct,True Positive
+PT-M03-0186,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),64,Male,Higher Risk,0.9611,Disease Present,Correct,True Positive
+PT-M03-0187,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),65,Female,Lower Risk,0.3562,Disease Present,Incorrect,False Negative
+PT-M03-0188,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),62,Male,Higher Risk,0.996,Disease Present,Correct,True Positive
+PT-M03-0189,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),69,Male,Higher Risk,0.8826,Disease Present,Correct,True Positive
+PT-M03-0190,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),58,Male,Higher Risk,0.946,Disease Present,Correct,True Positive
+PT-M03-0191,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),65,Female,Higher Risk,0.8781,Disease Present,Correct,True Positive
+PT-M03-0192,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),44,Male,Lower Risk,0.4521,Absence,Correct,True Negative
+PT-M03-0193,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),49,Male,Lower Risk,0.225,Absence,Correct,True Negative
+PT-M03-0194,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),54,Male,Lower Risk,0.2676,Absence,Correct,True Negative
+PT-M03-0195,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),57,Female,Higher Risk,0.9178,Disease Present,Correct,True Positive
+PT-M03-0196,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),65,Female,Higher Risk,0.8638,Disease Present,Correct,True Positive
+PT-M03-0197,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),60,Male,Lower Risk,0.4159,Absence,Correct,True Negative
+PT-M03-0198,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),45,Male,Lower Risk,0.1422,Absence,Correct,True Negative
+PT-M03-0199,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),54,Male,Lower Risk,0.3492,Absence,Correct,True Negative
+PT-M03-0200,Month 3,3,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),70,Female,Lower Risk,0.3099,Absence,Correct,True Negative
+PT-M04-0001,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),50,Male,Higher Risk,0.8739,Disease Present,Correct,True Positive
+PT-M04-0002,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),44,Male,Lower Risk,0.4936,Disease Present,Incorrect,False Negative
+PT-M04-0003,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),61,Male,Higher Risk,0.5156,Disease Present,Correct,True Positive
+PT-M04-0004,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),44,Female,Lower Risk,0.0468,Absence,Correct,True Negative
+PT-M04-0005,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),51,Female,Higher Risk,0.7038,Disease Present,Correct,True Positive
+PT-M04-0006,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),74,Female,Lower Risk,0.3587,Absence,Correct,True Negative
+PT-M04-0007,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),56,Female,Higher Risk,0.9582,Disease Present,Correct,True Positive
+PT-M04-0008,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),57,Female,Lower Risk,0.4163,Disease Present,Incorrect,False Negative
+PT-M04-0009,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),67,Female,Lower Risk,0.4302,Absence,Correct,True Negative
+PT-M04-0010,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),64,Female,Lower Risk,0.3248,Absence,Correct,True Negative
+PT-M04-0011,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),51,Male,Higher Risk,0.9601,Disease Present,Correct,True Positive
+PT-M04-0012,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),57,Female,Lower Risk,0.2702,Absence,Correct,True Negative
+PT-M04-0013,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),57,Female,Lower Risk,0.4151,Absence,Correct,True Negative
+PT-M04-0014,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),47,Male,Higher Risk,0.8063,Disease Present,Correct,True Positive
+PT-M04-0015,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),70,Male,Higher Risk,0.8746,Disease Present,Correct,True Positive
+PT-M04-0016,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),51,Female,Lower Risk,0.1513,Absence,Correct,True Negative
+PT-M04-0017,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),62,Female,Lower Risk,0.1931,Absence,Correct,True Negative
+PT-M04-0018,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),57,Male,Higher Risk,0.9725,Disease Present,Correct,True Positive
+PT-M04-0019,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),44,Male,Higher Risk,0.5513,Disease Present,Correct,True Positive
+PT-M04-0020,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),55,Female,Higher Risk,0.6006,Disease Present,Correct,True Positive
+PT-M04-0021,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),65,Female,Higher Risk,0.8962,Disease Present,Correct,True Positive
+PT-M04-0022,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),62,Female,Higher Risk,0.5046,Disease Present,Correct,True Positive
+PT-M04-0023,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),46,Female,Lower Risk,0.342,Absence,Correct,True Negative
+PT-M04-0024,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),58,Male,Higher Risk,0.9866,Disease Present,Correct,True Positive
+PT-M04-0025,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),74,Female,Lower Risk,0.3622,Absence,Correct,True Negative
+PT-M04-0026,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),55,Female,Higher Risk,0.9305,Disease Present,Correct,True Positive
+PT-M04-0027,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),43,Female,Lower Risk,0.0447,Absence,Correct,True Negative
+PT-M04-0028,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),53,Female,Lower Risk,0.1102,Absence,Correct,True Negative
+PT-M04-0029,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),46,Male,Lower Risk,0.3717,Disease Present,Incorrect,False Negative
+PT-M04-0030,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),46,Male,Lower Risk,0.3717,Disease Present,Incorrect,False Negative
+PT-M04-0031,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),52,Male,Lower Risk,0.106,Absence,Correct,True Negative
+PT-M04-0032,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),64,Male,Lower Risk,0.277,Disease Present,Incorrect,False Negative
+PT-M04-0033,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),57,Female,Lower Risk,0.2703,Absence,Correct,True Negative
+PT-M04-0034,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),42,Male,Lower Risk,0.1816,Absence,Correct,True Negative
+PT-M04-0035,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),60,Male,Lower Risk,0.3052,Disease Present,Incorrect,False Negative
+PT-M04-0036,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),49,Male,Lower Risk,0.0654,Absence,Correct,True Negative
+PT-M04-0037,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),64,Female,Lower Risk,0.3823,Absence,Correct,True Negative
+PT-M04-0038,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),62,Female,Lower Risk,0.4897,Disease Present,Incorrect,False Negative
+PT-M04-0039,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),57,Male,Higher Risk,0.9752,Disease Present,Correct,True Positive
+PT-M04-0040,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),51,Female,Lower Risk,0.0638,Absence,Correct,True Negative
+PT-M04-0041,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),68,Female,Lower Risk,0.1722,Absence,Correct,True Negative
+PT-M04-0042,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),43,Male,Lower Risk,0.4193,Absence,Correct,True Negative
+PT-M04-0043,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),45,Male,Lower Risk,0.1821,Absence,Correct,True Negative
+PT-M04-0044,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),60,Male,Higher Risk,0.9814,Disease Present,Correct,True Positive
+PT-M04-0045,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),64,Female,Higher Risk,0.5082,Absence,Incorrect,False Positive
+PT-M04-0046,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),76,Female,Lower Risk,0.1852,Absence,Correct,True Negative
+PT-M04-0047,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),52,Male,Higher Risk,0.7579,Disease Present,Correct,True Positive
+PT-M04-0048,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),65,Female,Lower Risk,0.2115,Absence,Correct,True Negative
+PT-M04-0049,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),62,Male,Higher Risk,0.8467,Absence,Incorrect,False Positive
+PT-M04-0050,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),54,Male,Higher Risk,0.83,Disease Present,Correct,True Positive
+PT-M04-0051,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),29,Male,Lower Risk,0.09,Absence,Correct,True Negative
+PT-M04-0052,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),58,Female,Lower Risk,0.2311,Absence,Correct,True Negative
+PT-M04-0053,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),61,Male,Lower Risk,0.4189,Absence,Correct,True Negative
+PT-M04-0054,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),62,Female,Higher Risk,0.7498,Disease Present,Correct,True Positive
+PT-M04-0055,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),71,Female,Lower Risk,0.1743,Absence,Correct,True Negative
+PT-M04-0056,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),50,Female,Lower Risk,0.0845,Absence,Correct,True Negative
+PT-M04-0057,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),41,Female,Lower Risk,0.1065,Absence,Correct,True Negative
+PT-M04-0058,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),71,Female,Lower Risk,0.2153,Absence,Correct,True Negative
+PT-M04-0059,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),45,Female,Lower Risk,0.0866,Absence,Correct,True Negative
+PT-M04-0060,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),58,Male,Lower Risk,0.1916,Absence,Correct,True Negative
+PT-M04-0061,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),46,Female,Lower Risk,0.3316,Absence,Correct,True Negative
+PT-M04-0062,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),47,Male,Higher Risk,0.8093,Disease Present,Correct,True Positive
+PT-M04-0063,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),57,Male,Higher Risk,0.9366,Disease Present,Correct,True Positive
+PT-M04-0064,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),35,Female,Lower Risk,0.1244,Absence,Correct,True Negative
+PT-M04-0065,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),66,Male,Higher Risk,0.5713,Absence,Incorrect,False Positive
+PT-M04-0066,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),52,Male,Lower Risk,0.0997,Absence,Correct,True Negative
+PT-M04-0067,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),35,Male,Lower Risk,0.05,Absence,Correct,True Negative
+PT-M04-0068,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),67,Male,Higher Risk,0.9722,Disease Present,Correct,True Positive
+PT-M04-0069,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),57,Female,Lower Risk,0.4151,Absence,Correct,True Negative
+PT-M04-0070,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),55,Female,Lower Risk,0.1082,Absence,Correct,True Negative
+PT-M04-0071,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),64,Female,Lower Risk,0.3108,Absence,Correct,True Negative
+PT-M04-0072,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),58,Female,Lower Risk,0.2311,Absence,Correct,True Negative
+PT-M04-0073,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),58,Male,Higher Risk,0.9712,Disease Present,Correct,True Positive
+PT-M04-0074,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),56,Female,Higher Risk,0.7862,Disease Present,Correct,True Positive
+PT-M04-0075,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),55,Female,Lower Risk,0.4271,Disease Present,Incorrect,False Negative
+PT-M04-0076,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),62,Female,Lower Risk,0.1943,Absence,Correct,True Negative
+PT-M04-0077,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),66,Male,Higher Risk,0.7158,Disease Present,Correct,True Positive
+PT-M04-0078,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),53,Female,Lower Risk,0.1716,Absence,Correct,True Negative
+PT-M04-0079,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),45,Female,Lower Risk,0.3416,Absence,Correct,True Negative
+PT-M04-0080,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),34,Female,Lower Risk,0.0219,Absence,Correct,True Negative
+PT-M04-0081,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),57,Male,Higher Risk,0.6354,Absence,Incorrect,False Positive
+PT-M04-0082,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),53,Female,Lower Risk,0.1596,Absence,Correct,True Negative
+PT-M04-0083,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),64,Male,Lower Risk,0.2881,Disease Present,Incorrect,False Negative
+PT-M04-0084,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),65,Female,Lower Risk,0.2115,Absence,Correct,True Negative
+PT-M04-0085,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),59,Male,Higher Risk,0.9501,Disease Present,Correct,True Positive
+PT-M04-0086,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),63,Female,Lower Risk,0.1439,Absence,Correct,True Negative
+PT-M04-0087,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),41,Female,Lower Risk,0.0492,Absence,Correct,True Negative
+PT-M04-0088,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),42,Male,Lower Risk,0.095,Absence,Correct,True Negative
+PT-M04-0089,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),53,Female,Lower Risk,0.1102,Absence,Correct,True Negative
+PT-M04-0090,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),63,Female,Lower Risk,0.3011,Disease Present,Incorrect,False Negative
+PT-M04-0091,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),61,Male,Higher Risk,0.8033,Disease Present,Correct,True Positive
+PT-M04-0092,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),61,Female,Lower Risk,0.2285,Disease Present,Incorrect,False Negative
+PT-M04-0093,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),46,Male,Lower Risk,0.3717,Disease Present,Incorrect,False Negative
+PT-M04-0094,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),40,Male,Higher Risk,0.5287,Disease Present,Correct,True Positive
+PT-M04-0095,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),59,Male,Higher Risk,0.9739,Disease Present,Correct,True Positive
+PT-M04-0096,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),56,Male,Lower Risk,0.2788,Absence,Correct,True Negative
+PT-M04-0097,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),65,Female,Lower Risk,0.1744,Absence,Correct,True Negative
+PT-M04-0098,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),66,Female,Higher Risk,0.7031,Disease Present,Correct,True Positive
+PT-M04-0099,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),62,Female,Higher Risk,0.8907,Disease Present,Correct,True Positive
+PT-M04-0100,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),41,Female,Lower Risk,0.096,Absence,Correct,True Negative
+PT-M04-0101,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),67,Male,Higher Risk,0.7696,Disease Present,Correct,True Positive
+PT-M04-0102,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),42,Male,Higher Risk,0.786,Disease Present,Correct,True Positive
+PT-M04-0103,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),68,Male,Higher Risk,0.7636,Disease Present,Correct,True Positive
+PT-M04-0104,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),71,Female,Lower Risk,0.2153,Absence,Correct,True Negative
+PT-M04-0105,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),60,Male,Higher Risk,0.8838,Disease Present,Correct,True Positive
+PT-M04-0106,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),54,Male,Higher Risk,0.6017,Disease Present,Correct,True Positive
+PT-M04-0107,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),74,Female,Lower Risk,0.3434,Absence,Correct,True Negative
+PT-M04-0108,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),52,Male,Higher Risk,0.7702,Disease Present,Correct,True Positive
+PT-M04-0109,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),65,Female,Lower Risk,0.1744,Absence,Correct,True Negative
+PT-M04-0110,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),58,Male,Higher Risk,0.7537,Disease Present,Correct,True Positive
+PT-M04-0111,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),63,Female,Higher Risk,0.7547,Disease Present,Correct,True Positive
+PT-M04-0112,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),60,Female,Higher Risk,0.9081,Disease Present,Correct,True Positive
+PT-M04-0113,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),69,Male,Higher Risk,0.5212,Absence,Incorrect,False Positive
+PT-M04-0114,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),41,Female,Lower Risk,0.0504,Absence,Correct,True Negative
+PT-M04-0115,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),58,Female,Lower Risk,0.1423,Absence,Correct,True Negative
+PT-M04-0116,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),57,Male,Lower Risk,0.3974,Absence,Correct,True Negative
+PT-M04-0117,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),43,Male,Lower Risk,0.1868,Absence,Correct,True Negative
+PT-M04-0118,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),66,Female,Lower Risk,0.2579,Absence,Correct,True Negative
+PT-M04-0119,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),41,Male,Lower Risk,0.0604,Absence,Correct,True Negative
+PT-M04-0120,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),44,Male,Higher Risk,0.6772,Disease Present,Correct,True Positive
+PT-M04-0121,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),63,Female,Lower Risk,0.2757,Absence,Correct,True Negative
+PT-M04-0122,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),44,Male,Lower Risk,0.1526,Absence,Correct,True Negative
+PT-M04-0123,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),62,Female,Higher Risk,0.7706,Disease Present,Correct,True Positive
+PT-M04-0124,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),64,Male,Higher Risk,0.8528,Disease Present,Correct,True Positive
+PT-M04-0125,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),39,Female,Lower Risk,0.0321,Absence,Correct,True Negative
+PT-M04-0126,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),59,Male,Lower Risk,0.3854,Disease Present,Incorrect,False Negative
+PT-M04-0127,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),64,Female,Higher Risk,0.5105,Absence,Incorrect,False Positive
+PT-M04-0128,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),51,Female,Lower Risk,0.0555,Absence,Correct,True Negative
+PT-M04-0129,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),61,Male,Higher Risk,0.8015,Disease Present,Correct,True Positive
+PT-M04-0130,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),62,Female,Higher Risk,0.6831,Disease Present,Correct,True Positive
+PT-M04-0131,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),51,Female,Lower Risk,0.0555,Absence,Correct,True Negative
+PT-M04-0132,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),48,Male,Higher Risk,0.7066,Disease Present,Correct,True Positive
+PT-M04-0133,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),46,Female,Lower Risk,0.0226,Absence,Correct,True Negative
+PT-M04-0134,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),39,Female,Lower Risk,0.0991,Absence,Correct,True Negative
+PT-M04-0135,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),59,Male,Higher Risk,0.9501,Disease Present,Correct,True Positive
+PT-M04-0136,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),58,Female,Lower Risk,0.2519,Disease Present,Incorrect,False Negative
+PT-M04-0137,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),35,Male,Higher Risk,0.6358,Disease Present,Correct,True Positive
+PT-M04-0138,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),68,Male,Lower Risk,0.4727,Absence,Correct,True Negative
+PT-M04-0139,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),51,Female,Higher Risk,0.7101,Disease Present,Correct,True Positive
+PT-M04-0140,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),48,Male,Higher Risk,0.5061,Disease Present,Correct,True Positive
+PT-M04-0141,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),60,Female,Higher Risk,0.7681,Disease Present,Correct,True Positive
+PT-M04-0142,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),59,Female,Lower Risk,0.3159,Disease Present,Incorrect,False Negative
+PT-M04-0143,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),64,Female,Lower Risk,0.3248,Absence,Correct,True Negative
+PT-M04-0144,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),63,Female,Lower Risk,0.1452,Absence,Correct,True Negative
+PT-M04-0145,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),65,Female,Lower Risk,0.1744,Absence,Correct,True Negative
+PT-M04-0146,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),41,Female,Lower Risk,0.1611,Absence,Correct,True Negative
+PT-M04-0147,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),59,Male,Lower Risk,0.2094,Absence,Correct,True Negative
+PT-M04-0148,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),60,Female,Higher Risk,0.7175,Disease Present,Correct,True Positive
+PT-M04-0149,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),50,Female,Lower Risk,0.156,Absence,Correct,True Negative
+PT-M04-0150,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),63,Female,Higher Risk,0.877,Disease Present,Correct,True Positive
+PT-M04-0151,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),62,Female,Higher Risk,0.8907,Disease Present,Correct,True Positive
+PT-M04-0152,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),51,Female,Lower Risk,0.0568,Absence,Correct,True Negative
+PT-M04-0153,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),50,Female,Lower Risk,0.1296,Absence,Correct,True Negative
+PT-M04-0154,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),50,Female,Lower Risk,0.0402,Absence,Correct,True Negative
+PT-M04-0155,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),56,Male,Lower Risk,0.2833,Absence,Correct,True Negative
+PT-M04-0156,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),64,Male,Lower Risk,0.4277,Absence,Correct,True Negative
+PT-M04-0157,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),50,Female,Lower Risk,0.0835,Absence,Correct,True Negative
+PT-M04-0158,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),65,Male,Lower Risk,0.464,Absence,Correct,True Negative
+PT-M04-0159,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),52,Male,Lower Risk,0.1985,Absence,Correct,True Negative
+PT-M04-0160,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),62,Female,Lower Risk,0.1871,Absence,Correct,True Negative
+PT-M04-0161,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),62,Female,Lower Risk,0.3389,Absence,Correct,True Negative
+PT-M04-0162,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),57,Male,Lower Risk,0.1824,Absence,Correct,True Negative
+PT-M04-0163,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),69,Male,Higher Risk,0.5212,Absence,Incorrect,False Positive
+PT-M04-0164,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),64,Female,Higher Risk,0.5082,Absence,Incorrect,False Positive
+PT-M04-0165,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),40,Male,Higher Risk,0.5287,Disease Present,Correct,True Positive
+PT-M04-0166,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),64,Female,Lower Risk,0.3823,Absence,Correct,True Negative
+PT-M04-0167,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),60,Female,Higher Risk,0.7188,Disease Present,Correct,True Positive
+PT-M04-0168,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),54,Female,Lower Risk,0.1519,Absence,Correct,True Negative
+PT-M04-0169,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),59,Male,Lower Risk,0.3854,Disease Present,Incorrect,False Negative
+PT-M04-0170,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),58,Male,Higher Risk,0.6046,Disease Present,Correct,True Positive
+PT-M04-0171,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),48,Female,Lower Risk,0.0703,Absence,Correct,True Negative
+PT-M04-0172,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),52,Male,Lower Risk,0.433,Disease Present,Incorrect,False Negative
+PT-M04-0173,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),62,Female,Higher Risk,0.8907,Disease Present,Correct,True Positive
+PT-M04-0174,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),65,Female,Lower Risk,0.2115,Absence,Correct,True Negative
+PT-M04-0175,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),58,Male,Higher Risk,0.9254,Disease Present,Correct,True Positive
+PT-M04-0176,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),68,Female,Lower Risk,0.1756,Absence,Correct,True Negative
+PT-M04-0177,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),58,Female,Lower Risk,0.145,Absence,Correct,True Negative
+PT-M04-0178,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),62,Female,Lower Risk,0.3409,Absence,Correct,True Negative
+PT-M04-0179,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),58,Female,Higher Risk,0.6883,Disease Present,Correct,True Positive
+PT-M04-0180,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),48,Male,Lower Risk,0.2031,Absence,Correct,True Negative
+PT-M04-0181,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),43,Female,Lower Risk,0.0451,Absence,Correct,True Negative
+PT-M04-0182,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),53,Female,Lower Risk,0.1778,Absence,Correct,True Negative
+PT-M04-0183,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),55,Female,Lower Risk,0.1068,Absence,Correct,True Negative
+PT-M04-0184,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),64,Female,Lower Risk,0.3371,Absence,Correct,True Negative
+PT-M04-0185,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),62,Female,Higher Risk,0.7706,Disease Present,Correct,True Positive
+PT-M04-0186,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),41,Male,Lower Risk,0.0649,Absence,Correct,True Negative
+PT-M04-0187,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),50,Female,Lower Risk,0.0403,Absence,Correct,True Negative
+PT-M04-0188,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),55,Male,Higher Risk,0.9034,Disease Present,Correct,True Positive
+PT-M04-0189,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),54,Male,Lower Risk,0.3808,Absence,Correct,True Negative
+PT-M04-0190,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),57,Female,Lower Risk,0.4119,Absence,Correct,True Negative
+PT-M04-0191,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),49,Male,Higher Risk,0.7928,Disease Present,Correct,True Positive
+PT-M04-0192,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),51,Male,Lower Risk,0.4933,Absence,Correct,True Negative
+PT-M04-0193,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),65,Female,Lower Risk,0.1678,Absence,Correct,True Negative
+PT-M04-0194,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),41,Female,Lower Risk,0.096,Absence,Correct,True Negative
+PT-M04-0195,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),39,Female,Lower Risk,0.0991,Absence,Correct,True Negative
+PT-M04-0196,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),54,Female,Lower Risk,0.0569,Absence,Correct,True Negative
+PT-M04-0197,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),35,Female,Lower Risk,0.1515,Absence,Correct,True Negative
+PT-M04-0198,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),57,Female,Higher Risk,0.6085,Disease Present,Correct,True Positive
+PT-M04-0199,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),61,Male,Higher Risk,0.8033,Disease Present,Correct,True Positive
+PT-M04-0200,Month 4,4,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),58,Male,Higher Risk,0.5459,Absence,Incorrect,False Positive
+PT-M05-0001,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),65,Male,Higher Risk,0.9663,Disease Present,Correct,True Positive
+PT-M05-0002,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),49,Male,Lower Risk,0.2369,Absence,Correct,True Negative
+PT-M05-0003,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),69,Male,Higher Risk,0.7665,Absence,Incorrect,False Positive
+PT-M05-0004,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),65,Male,Lower Risk,0.2978,Disease Present,Incorrect,False Negative
+PT-M05-0005,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),76,Male,Higher Risk,0.7494,Disease Present,Correct,True Positive
+PT-M05-0006,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),52,Female,Lower Risk,0.149,Absence,Correct,True Negative
+PT-M05-0007,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),62,Female,Lower Risk,0.3149,Absence,Correct,True Negative
+PT-M05-0008,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),73,Male,Higher Risk,0.8768,Disease Present,Correct,True Positive
+PT-M05-0009,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),49,Female,Lower Risk,0.0927,Absence,Correct,True Negative
+PT-M05-0010,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),59,Male,Lower Risk,0.4608,Disease Present,Incorrect,False Negative
+PT-M05-0011,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),61,Male,Higher Risk,0.6193,Absence,Incorrect,False Positive
+PT-M05-0012,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),71,Male,Higher Risk,0.7467,Disease Present,Correct,True Positive
+PT-M05-0013,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),61,Female,Lower Risk,0.4697,Absence,Correct,True Negative
+PT-M05-0014,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),68,Female,Lower Risk,0.2621,Absence,Correct,True Negative
+PT-M05-0015,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),64,Male,Higher Risk,0.7058,Disease Present,Correct,True Positive
+PT-M05-0016,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),74,Male,Higher Risk,0.8552,Disease Present,Correct,True Positive
+PT-M05-0017,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),58,Male,Higher Risk,0.8753,Disease Present,Correct,True Positive
+PT-M05-0018,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),78,Male,Higher Risk,0.5492,Absence,Incorrect,False Positive
+PT-M05-0019,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),65,Female,Higher Risk,0.9284,Disease Present,Correct,True Positive
+PT-M05-0020,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),63,Female,Higher Risk,0.8923,Disease Present,Correct,True Positive
+PT-M05-0021,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),76,Male,Higher Risk,0.7494,Disease Present,Correct,True Positive
+PT-M05-0022,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),69,Male,Lower Risk,0.4597,Absence,Correct,True Negative
+PT-M05-0023,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),69,Female,Lower Risk,0.2282,Absence,Correct,True Negative
+PT-M05-0024,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),62,Male,Higher Risk,0.664,Absence,Incorrect,False Positive
+PT-M05-0025,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),67,Female,Higher Risk,0.8855,Disease Present,Correct,True Positive
+PT-M05-0026,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),52,Male,Lower Risk,0.1047,Absence,Correct,True Negative
+PT-M05-0027,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),66,Male,Higher Risk,0.9059,Disease Present,Correct,True Positive
+PT-M05-0028,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),69,Male,Higher Risk,0.9404,Disease Present,Correct,True Positive
+PT-M05-0029,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),67,Female,Higher Risk,0.8836,Disease Present,Correct,True Positive
+PT-M05-0030,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),73,Male,Higher Risk,0.8651,Disease Present,Correct,True Positive
+PT-M05-0031,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),60,Male,Higher Risk,0.8508,Disease Present,Correct,True Positive
+PT-M05-0032,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),66,Male,Higher Risk,0.8319,Disease Present,Correct,True Positive
+PT-M05-0033,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),59,Male,Higher Risk,0.6034,Absence,Incorrect,False Positive
+PT-M05-0034,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),72,Male,Higher Risk,0.8651,Disease Present,Correct,True Positive
+PT-M05-0035,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),69,Male,Higher Risk,0.7338,Disease Present,Correct,True Positive
+PT-M05-0036,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),70,Female,Higher Risk,0.6601,Disease Present,Correct,True Positive
+PT-M05-0037,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),55,Male,Lower Risk,0.1803,Absence,Correct,True Negative
+PT-M05-0038,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),50,Female,Lower Risk,0.2894,Absence,Correct,True Negative
+PT-M05-0039,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),76,Male,Higher Risk,0.7494,Disease Present,Correct,True Positive
+PT-M05-0040,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),69,Male,Lower Risk,0.4881,Absence,Correct,True Negative
+PT-M05-0041,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),69,Female,Higher Risk,0.6084,Disease Present,Correct,True Positive
+PT-M05-0042,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),46,Male,Higher Risk,0.5266,Disease Present,Correct,True Positive
+PT-M05-0043,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),71,Male,Higher Risk,0.7494,Disease Present,Correct,True Positive
+PT-M05-0044,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),66,Male,Higher Risk,0.8659,Disease Present,Correct,True Positive
+PT-M05-0045,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),63,Female,Lower Risk,0.1892,Absence,Correct,True Negative
+PT-M05-0046,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),63,Female,Lower Risk,0.3679,Absence,Correct,True Negative
+PT-M05-0047,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),61,Male,Higher Risk,0.9392,Disease Present,Correct,True Positive
+PT-M05-0048,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),61,Male,Higher Risk,0.8543,Disease Present,Correct,True Positive
+PT-M05-0049,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),60,Male,Higher Risk,0.6116,Disease Present,Correct,True Positive
+PT-M05-0050,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),60,Female,Lower Risk,0.2047,Absence,Correct,True Negative
+PT-M05-0051,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),66,Male,Higher Risk,0.6586,Disease Present,Correct,True Positive
+PT-M05-0052,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),49,Male,Lower Risk,0.2795,Absence,Correct,True Negative
+PT-M05-0053,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),60,Female,Higher Risk,0.9442,Disease Present,Correct,True Positive
+PT-M05-0054,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),57,Female,Higher Risk,0.945,Disease Present,Correct,True Positive
+PT-M05-0055,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),46,Female,Lower Risk,0.1471,Absence,Correct,True Negative
+PT-M05-0056,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),61,Male,Higher Risk,0.547,Disease Present,Correct,True Positive
+PT-M05-0057,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),42,Male,Lower Risk,0.2213,Absence,Correct,True Negative
+PT-M05-0058,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),71,Male,Higher Risk,0.743,Disease Present,Correct,True Positive
+PT-M05-0059,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),45,Male,Higher Risk,0.8959,Disease Present,Correct,True Positive
+PT-M05-0060,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),49,Female,Lower Risk,0.057,Absence,Correct,True Negative
+PT-M05-0061,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),67,Male,Higher Risk,0.8542,Disease Present,Correct,True Positive
+PT-M05-0062,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),59,Female,Higher Risk,0.6697,Disease Present,Correct,True Positive
+PT-M05-0063,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),65,Female,Higher Risk,0.8638,Disease Present,Correct,True Positive
+PT-M05-0064,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),60,Male,Higher Risk,0.9224,Disease Present,Correct,True Positive
+PT-M05-0065,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),42,Male,Lower Risk,0.1769,Absence,Correct,True Negative
+PT-M05-0066,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),69,Female,Higher Risk,0.9003,Disease Present,Correct,True Positive
+PT-M05-0067,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),64,Male,Higher Risk,0.7141,Disease Present,Correct,True Positive
+PT-M05-0068,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),69,Male,Lower Risk,0.4984,Disease Present,Incorrect,False Negative
+PT-M05-0069,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),64,Female,Higher Risk,0.5284,Disease Present,Correct,True Positive
+PT-M05-0070,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),53,Female,Lower Risk,0.1929,Absence,Correct,True Negative
+PT-M05-0071,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),45,Male,Lower Risk,0.2759,Absence,Correct,True Negative
+PT-M05-0072,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),46,Male,Higher Risk,0.9006,Disease Present,Correct,True Positive
+PT-M05-0073,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),71,Male,Higher Risk,0.7386,Disease Present,Correct,True Positive
+PT-M05-0074,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),64,Male,Higher Risk,0.8573,Disease Present,Correct,True Positive
+PT-M05-0075,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),69,Male,Lower Risk,0.3273,Disease Present,Incorrect,False Negative
+PT-M05-0076,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),57,Male,Lower Risk,0.4206,Absence,Correct,True Negative
+PT-M05-0077,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),59,Female,Lower Risk,0.4666,Absence,Correct,True Negative
+PT-M05-0078,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),64,Male,Higher Risk,0.8525,Disease Present,Correct,True Positive
+PT-M05-0079,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),47,Female,Lower Risk,0.0822,Absence,Correct,True Negative
+PT-M05-0080,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),68,Female,Lower Risk,0.2123,Absence,Correct,True Negative
+PT-M05-0081,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),68,Female,Lower Risk,0.1601,Absence,Correct,True Negative
+PT-M05-0082,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),66,Male,Higher Risk,0.8063,Disease Present,Correct,True Positive
+PT-M05-0083,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),65,Male,Higher Risk,0.892,Disease Present,Correct,True Positive
+PT-M05-0084,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),60,Male,Higher Risk,0.5551,Disease Present,Correct,True Positive
+PT-M05-0085,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),64,Male,Higher Risk,0.8142,Disease Present,Correct,True Positive
+PT-M05-0086,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),62,Male,Higher Risk,0.547,Disease Present,Correct,True Positive
+PT-M05-0087,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),58,Female,Lower Risk,0.2067,Absence,Correct,True Negative
+PT-M05-0088,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),55,Male,Higher Risk,0.6361,Absence,Incorrect,False Positive
+PT-M05-0089,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),71,Female,Higher Risk,0.5571,Absence,Incorrect,False Positive
+PT-M05-0090,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),68,Female,Lower Risk,0.1743,Absence,Correct,True Negative
+PT-M05-0091,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),63,Male,Higher Risk,0.9277,Disease Present,Correct,True Positive
+PT-M05-0092,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),63,Male,Higher Risk,0.8129,Disease Present,Correct,True Positive
+PT-M05-0093,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),72,Male,Higher Risk,0.7381,Disease Present,Correct,True Positive
+PT-M05-0094,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),63,Female,Lower Risk,0.3226,Absence,Correct,True Negative
+PT-M05-0095,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),66,Male,Higher Risk,0.5441,Disease Present,Correct,True Positive
+PT-M05-0096,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),77,Male,Higher Risk,0.8545,Disease Present,Correct,True Positive
+PT-M05-0097,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),62,Male,Higher Risk,0.5455,Disease Present,Correct,True Positive
+PT-M05-0098,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),47,Male,Lower Risk,0.1718,Absence,Correct,True Negative
+PT-M05-0099,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),57,Male,Lower Risk,0.368,Absence,Correct,True Negative
+PT-M05-0100,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),71,Female,Higher Risk,0.9025,Disease Present,Correct,True Positive
+PT-M05-0101,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),61,Female,Higher Risk,0.5166,Disease Present,Correct,True Positive
+PT-M05-0102,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),64,Female,Lower Risk,0.3772,Absence,Correct,True Negative
+PT-M05-0103,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),64,Female,Higher Risk,0.5172,Disease Present,Correct,True Positive
+PT-M05-0104,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),68,Female,Higher Risk,0.5799,Absence,Incorrect,False Positive
+PT-M05-0105,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),66,Male,Higher Risk,0.9788,Disease Present,Correct,True Positive
+PT-M05-0106,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),48,Male,Lower Risk,0.2535,Absence,Correct,True Negative
+PT-M05-0107,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),62,Female,Lower Risk,0.3785,Disease Present,Incorrect,False Negative
+PT-M05-0108,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),63,Male,Higher Risk,0.9416,Disease Present,Correct,True Positive
+PT-M05-0109,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),69,Female,Higher Risk,0.5518,Absence,Incorrect,False Positive
+PT-M05-0110,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),69,Male,Lower Risk,0.2899,Disease Present,Incorrect,False Negative
+PT-M05-0111,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),46,Male,Lower Risk,0.4965,Absence,Correct,True Negative
+PT-M05-0112,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),75,Female,Lower Risk,0.2447,Absence,Correct,True Negative
+PT-M05-0113,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),46,Female,Lower Risk,0.1423,Absence,Correct,True Negative
+PT-M05-0114,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),65,Male,Higher Risk,0.9735,Disease Present,Correct,True Positive
+PT-M05-0115,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),71,Female,Lower Risk,0.2254,Absence,Correct,True Negative
+PT-M05-0116,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),40,Female,Lower Risk,0.1652,Absence,Correct,True Negative
+PT-M05-0117,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),57,Male,Lower Risk,0.2774,Absence,Correct,True Negative
+PT-M05-0118,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),48,Male,Lower Risk,0.1171,Absence,Correct,True Negative
+PT-M05-0119,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),67,Female,Lower Risk,0.2064,Absence,Correct,True Negative
+PT-M05-0120,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),72,Male,Higher Risk,0.8266,Disease Present,Correct,True Positive
+PT-M05-0121,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),49,Male,Higher Risk,0.8697,Disease Present,Correct,True Positive
+PT-M05-0122,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),70,Male,Higher Risk,0.9329,Disease Present,Correct,True Positive
+PT-M05-0123,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),45,Female,Lower Risk,0.0787,Absence,Correct,True Negative
+PT-M05-0124,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),64,Male,Higher Risk,0.9201,Disease Present,Correct,True Positive
+PT-M05-0125,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),64,Male,Higher Risk,0.9068,Disease Present,Correct,True Positive
+PT-M05-0126,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),60,Female,Lower Risk,0.3229,Absence,Correct,True Negative
+PT-M05-0127,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),63,Male,Higher Risk,0.979,Disease Present,Correct,True Positive
+PT-M05-0128,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),62,Male,Higher Risk,0.9842,Disease Present,Correct,True Positive
+PT-M05-0129,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),64,Male,Higher Risk,0.8693,Disease Present,Correct,True Positive
+PT-M05-0130,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),51,Male,Higher Risk,0.7303,Disease Present,Correct,True Positive
+PT-M05-0131,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),66,Female,Lower Risk,0.1831,Absence,Correct,True Negative
+PT-M05-0132,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),61,Female,Higher Risk,0.5163,Disease Present,Correct,True Positive
+PT-M05-0133,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),64,Female,Higher Risk,0.6811,Disease Present,Correct,True Positive
+PT-M05-0134,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),62,Male,Lower Risk,0.2554,Absence,Correct,True Negative
+PT-M05-0135,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),65,Female,Lower Risk,0.1613,Absence,Correct,True Negative
+PT-M05-0136,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),58,Male,Higher Risk,0.814,Disease Present,Correct,True Positive
+PT-M05-0137,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),60,Male,Higher Risk,0.6447,Absence,Incorrect,False Positive
+PT-M05-0138,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),49,Male,Higher Risk,0.5465,Absence,Incorrect,False Positive
+PT-M05-0139,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),50,Male,Lower Risk,0.2076,Absence,Correct,True Negative
+PT-M05-0140,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),71,Female,Lower Risk,0.1714,Absence,Correct,True Negative
+PT-M05-0141,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),74,Male,Higher Risk,0.5492,Absence,Incorrect,False Positive
+PT-M05-0142,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),53,Male,Lower Risk,0.261,Absence,Correct,True Negative
+PT-M05-0143,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),48,Male,Higher Risk,0.91,Disease Present,Correct,True Positive
+PT-M05-0144,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),51,Female,Lower Risk,0.2383,Absence,Correct,True Negative
+PT-M05-0145,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),55,Male,Higher Risk,0.7176,Disease Present,Correct,True Positive
+PT-M05-0146,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),49,Male,Lower Risk,0.1973,Absence,Correct,True Negative
+PT-M05-0147,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),63,Male,Higher Risk,0.9237,Disease Present,Correct,True Positive
+PT-M05-0148,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),47,Female,Lower Risk,0.4507,Absence,Correct,True Negative
+PT-M05-0149,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),67,Male,Higher Risk,0.9404,Disease Present,Correct,True Positive
+PT-M05-0150,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),73,Male,Higher Risk,0.7441,Disease Present,Correct,True Positive
+PT-M05-0151,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),54,Male,Lower Risk,0.1736,Absence,Correct,True Negative
+PT-M05-0152,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),60,Female,Lower Risk,0.2403,Absence,Correct,True Negative
+PT-M05-0153,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),58,Female,Lower Risk,0.1728,Absence,Correct,True Negative
+PT-M05-0154,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),78,Male,Higher Risk,0.8529,Disease Present,Correct,True Positive
+PT-M05-0155,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),58,Male,Higher Risk,0.5256,Absence,Incorrect,False Positive
+PT-M05-0156,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),68,Male,Higher Risk,0.9506,Disease Present,Correct,True Positive
+PT-M05-0157,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),66,Female,Higher Risk,0.5897,Absence,Incorrect,False Positive
+PT-M05-0158,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),67,Female,Lower Risk,0.374,Absence,Correct,True Negative
+PT-M05-0159,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),70,Male,Higher Risk,0.7323,Disease Present,Correct,True Positive
+PT-M05-0160,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),58,Male,Higher Risk,0.8091,Disease Present,Correct,True Positive
+PT-M05-0161,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),77,Female,Lower Risk,0.4048,Absence,Correct,True Negative
+PT-M05-0162,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),67,Female,Lower Risk,0.464,Disease Present,Incorrect,False Negative
+PT-M05-0163,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),37,Female,Lower Risk,0.0363,Absence,Correct,True Negative
+PT-M05-0164,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),63,Female,Lower Risk,0.1997,Absence,Correct,True Negative
+PT-M05-0165,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),75,Female,Lower Risk,0.2201,Absence,Correct,True Negative
+PT-M05-0166,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),71,Male,Higher Risk,0.8291,Disease Present,Correct,True Positive
+PT-M05-0167,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),53,Male,Lower Risk,0.3833,Absence,Correct,True Negative
+PT-M05-0168,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),61,Female,Lower Risk,0.2212,Absence,Correct,True Negative
+PT-M05-0169,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),59,Male,Higher Risk,0.8419,Disease Present,Correct,True Positive
+PT-M05-0170,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),60,Male,Higher Risk,0.9399,Disease Present,Correct,True Positive
+PT-M05-0171,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),39,Female,Lower Risk,0.0723,Absence,Correct,True Negative
+PT-M05-0172,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),73,Male,Lower Risk,0.3038,Disease Present,Incorrect,False Negative
+PT-M05-0173,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),54,Male,Lower Risk,0.1218,Absence,Correct,True Negative
+PT-M05-0174,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),70,Female,Lower Risk,0.1679,Absence,Correct,True Negative
+PT-M05-0175,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),54,Female,Lower Risk,0.1907,Absence,Correct,True Negative
+PT-M05-0176,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),74,Male,Higher Risk,0.8153,Disease Present,Correct,True Positive
+PT-M05-0177,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),67,Male,Higher Risk,0.8629,Absence,Incorrect,False Positive
+PT-M05-0178,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),59,Male,Lower Risk,0.2879,Absence,Correct,True Negative
+PT-M05-0179,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),58,Female,Higher Risk,0.934,Disease Present,Correct,True Positive
+PT-M05-0180,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),46,Female,Lower Risk,0.1068,Absence,Correct,True Negative
+PT-M05-0181,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),75,Male,Lower Risk,0.3625,Absence,Correct,True Negative
+PT-M05-0182,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),48,Female,Higher Risk,0.9215,Disease Present,Correct,True Positive
+PT-M05-0183,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),58,Male,Higher Risk,0.6196,Disease Present,Correct,True Positive
+PT-M05-0184,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),74,Female,Lower Risk,0.1714,Absence,Correct,True Negative
+PT-M05-0185,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),76,Female,Lower Risk,0.2567,Absence,Correct,True Negative
+PT-M05-0186,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),58,Male,Higher Risk,0.9693,Disease Present,Correct,True Positive
+PT-M05-0187,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),61,Female,Lower Risk,0.3807,Absence,Correct,True Negative
+PT-M05-0188,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),71,Male,Higher Risk,0.9138,Disease Present,Correct,True Positive
+PT-M05-0189,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),62,Female,Higher Risk,0.5203,Disease Present,Correct,True Positive
+PT-M05-0190,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),56,Male,Higher Risk,0.85,Disease Present,Correct,True Positive
+PT-M05-0191,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),65,Female,Lower Risk,0.1787,Absence,Correct,True Negative
+PT-M05-0192,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),69,Female,Lower Risk,0.3005,Absence,Correct,True Negative
+PT-M05-0193,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),69,Female,Higher Risk,0.5518,Absence,Incorrect,False Positive
+PT-M05-0194,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),70,Female,Higher Risk,0.5329,Disease Present,Correct,True Positive
+PT-M05-0195,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),55,Male,Higher Risk,0.9477,Disease Present,Correct,True Positive
+PT-M05-0196,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),49,Female,Lower Risk,0.0559,Absence,Correct,True Negative
+PT-M05-0197,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),72,Male,Higher Risk,0.5897,Absence,Incorrect,False Positive
+PT-M05-0198,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),46,Male,Higher Risk,0.9204,Disease Present,Correct,True Positive
+PT-M05-0199,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),66,Male,Higher Risk,0.5615,Absence,Incorrect,False Positive
+PT-M05-0200,Month 5,5,SIMULATED_MONITORING_DATA (EDUCATIONAL_USE_ONLY),76,Male,Higher Risk,0.5442,Absence,Incorrect,False Positive
