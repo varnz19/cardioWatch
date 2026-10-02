@@ -1,22 +1,17 @@
 import React from 'react';
 
-export default function Navbar({ activePage, currentDatasetName, onQuickSample, onUploadClick, loading }) {
-  const titles = {
-    upload: 'Dataset Ingestion & Validation',
-    dashboard: 'Executive Surveillance Command Hub',
-    dataset: 'Dataset Profile & Distributions',
-    performance: 'Model Performance & Diagnostic Error Decay',
-    drift: 'Covariate Shift & Kolmogorov-Smirnov Drift',
-    fairness: 'Demographic Subgroup Fairness & Disparity',
-    prediction: 'Individual Patient Risk Scoring',
-    simulation: 'Longitudinal Multi-Period Simulated Monitoring',
-    export: 'Tableau Data Exchange & Extract Generator'
-  };
-
+export default function Navbar({ currentDatasetName, onQuickSample, onUploadClick, loading }) {
   return (
     <header className="top-navbar">
-      <div className="page-breadcrumb">
-        <h2 className="page-title">{titles[activePage] || 'Surveillance Dashboard'}</h2>
+      <div className="navbar-brand-group">
+        <div className="brand-text">
+          <h1>
+            CardioWatch
+            <span className="brand-badge">SYS</span>
+          </h1>
+          <p>Clinical ML Surveillance</p>
+        </div>
+
         {currentDatasetName && (
           <div className="active-dataset-tag">
             Active: {currentDatasetName}
@@ -26,6 +21,7 @@ export default function Navbar({ activePage, currentDatasetName, onQuickSample, 
 
       <div className="top-actions">
         <button
+          type="button"
           className="btn-secondary"
           onClick={() => onQuickSample('stable')}
           disabled={loading}
@@ -34,6 +30,7 @@ export default function Navbar({ activePage, currentDatasetName, onQuickSample, 
         </button>
 
         <button
+          type="button"
           className="btn-secondary"
           onClick={() => onQuickSample('drifted')}
           disabled={loading}
@@ -42,6 +39,7 @@ export default function Navbar({ activePage, currentDatasetName, onQuickSample, 
         </button>
 
         <button
+          type="button"
           className="btn-primary"
           onClick={onUploadClick}
         >
