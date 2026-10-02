@@ -1,28 +1,16 @@
 import React from 'react';
-import {
-  Activity,
-  UploadCloud,
-  LayoutDashboard,
-  Database,
-  LineChart,
-  GitCommit,
-  Scale,
-  UserCheck,
-  Calendar,
-  FileSpreadsheet
-} from 'lucide-react';
 
-export default function Sidebar({ activePage, setActivePage, hasAnalysis }) {
+export default function Sidebar({ activePage, setActivePage, onOpenLegal }) {
   const navItems = [
-    { id: 'upload', label: 'Upload & Ingest', icon: UploadCloud, section: 'DATA PIPELINE' },
-    { id: 'dashboard', label: 'Surveillance Hub', icon: LayoutDashboard, section: 'MONITORING' },
-    { id: 'dataset', label: 'Dataset Overview', icon: Database, section: 'MONITORING' },
-    { id: 'performance', label: 'Model Performance', icon: LineChart, section: 'ANALYTICS' },
-    { id: 'drift', label: 'Data Drift (KS-Test)', icon: GitCommit, section: 'ANALYTICS' },
-    { id: 'fairness', label: 'Demographic Fairness', icon: Scale, section: 'ANALYTICS' },
-    { id: 'prediction', label: 'Patient Risk Scoring', icon: UserCheck, section: 'CLINICAL TOOLS' },
-    { id: 'simulation', label: 'Simulated 5-Mo Cohorts', icon: Calendar, section: 'CLINICAL TOOLS' },
-    { id: 'export', label: 'Export for Tableau', icon: FileSpreadsheet, section: 'BI EXPORTS' },
+    { id: 'upload', label: 'Upload & Ingest', section: 'DATA PIPELINE' },
+    { id: 'dashboard', label: 'Surveillance Hub', section: 'MONITORING' },
+    { id: 'dataset', label: 'Dataset Overview', section: 'MONITORING' },
+    { id: 'performance', label: 'Model Performance', section: 'ANALYTICS' },
+    { id: 'drift', label: 'Data Drift (KS-Test)', section: 'ANALYTICS' },
+    { id: 'fairness', label: 'Demographic Fairness', section: 'ANALYTICS' },
+    { id: 'prediction', label: 'Patient Risk Scoring', section: 'CLINICAL TOOLS' },
+    { id: 'simulation', label: 'Simulated 5-Mo Cohorts', section: 'CLINICAL TOOLS' },
+    { id: 'export', label: 'Export for Tableau', section: 'BI EXPORTS' },
   ];
 
   let currentSection = '';
@@ -30,13 +18,10 @@ export default function Sidebar({ activePage, setActivePage, hasAnalysis }) {
   return (
     <aside className="sidebar">
       <div className="sidebar-header">
-        <div className="logo-icon-box">
-          <Activity size={22} />
-        </div>
         <div className="brand-text">
           <h1>
             CardioWatch
-            <span className="brand-badge">v1.0</span>
+            <span className="brand-badge">SYS</span>
           </h1>
           <p>Clinical ML Surveillance</p>
         </div>
@@ -54,8 +39,7 @@ export default function Sidebar({ activePage, setActivePage, hasAnalysis }) {
                 className={`nav-item ${activePage === item.id ? 'active' : ''}`}
                 onClick={() => setActivePage(item.id)}
               >
-                <item.icon size={18} />
-                <span>{item.label}</span>
+                {item.label}
               </button>
             </React.Fragment>
           );
@@ -67,9 +51,14 @@ export default function Sidebar({ activePage, setActivePage, hasAnalysis }) {
           className="btn-tableau-export"
           onClick={() => setActivePage('export')}
         >
-          <FileSpreadsheet size={16} />
-          <span>Export for Tableau</span>
+          Export for Tableau
         </button>
+
+        <div className="footer-links">
+          <button type="button" onClick={() => onOpenLegal('privacy')}>Privacy Policy</button>
+          <span>|</span>
+          <button type="button" onClick={() => onOpenLegal('terms')}>Terms of Service</button>
+        </div>
       </div>
     </aside>
   );

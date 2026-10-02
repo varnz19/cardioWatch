@@ -18,16 +18,15 @@ export default function App() {
   const [analysis, setAnalysis] = useState(null);
   const [loading, setLoading] = useState(false);
   const [globalError, setGlobalError] = useState('');
+  const [legalModal, setLegalModal] = useState(null); // 'terms' | 'privacy' | null
 
-  // Initial load: check for current analysis or trigger baseline analysis
   useEffect(() => {
     async function initApp() {
       try {
         setLoading(true);
-        // Attempt to load existing analysis or default reference analysis
         let current = await getCurrentAnalysis();
         if (!current) {
-          current = await analyzeDataset(); // Analyzes reference dataset
+          current = await analyzeDataset();
         }
         setAnalysis(current);
       } catch (err) {
@@ -45,7 +44,7 @@ export default function App() {
     try {
       const result = await analyzeDataset({ file, sampleName });
       setAnalysis(result);
-      setActivePage('dashboard'); // Automatically take user to dashboard after successful analysis
+      setActivePage('dashboard');
     } catch (err) {
       setGlobalError(err.message || 'Analysis processing failed.');
     } finally {
@@ -63,7 +62,7 @@ export default function App() {
       <Sidebar
         activePage={activePage}
         setActivePage={setActivePage}
-        hasAnalysis={!!analysis}
+        onOpenLegal={setLegalModal}
       />
 
       {/* Main Content Area */}
@@ -76,87 +75,125 @@ export default function App() {
           loading={loading}
         />
 
-        {loading && (
-          <div style={{
-            background: 'rgba(14, 165, 233, 0.15)',
-            borderBottom: '1px solid rgba(14, 165, 233, 0.3)',
-            padding: '10px 32px',
-            fontSize: '0.85rem',
-            color: 'var(--accent-cyan)',
-            display: 'flex',
-            alignItems: 'center',
-            gap: 10
-          }}>
-            <span style={{ display: 'inline-block', width: 12, height: 12, borderRadius: '50%', border: '2px solid var(--accent-cyan)', borderTopColor: 'transparent', animation: 'spin 0.8s linear infinite' }} />
-            <span>Executing clinical model inference, Kolmogorov-Smirnov drift tests, and demographic fairness audits...</span>
-          </div>
-        )}
-
         {globalError && (
           <div style={{
-            background: 'rgba(239, 68, 68, 0.15)',
-            borderBottom: '1px solid rgba(239, 68, 68, 0.3)',
-            padding: '10px 32px',
-            fontSize: '0.85rem',
-            color: '#fca5a5'
+            background: 'var(--bg-subtle)',
+            borderBottom: '1px solid #da3633',
+            padding: '8px 24px',
+            fontSize: '0.78rem',
+            color: '#f85149'
           }}>
             <strong>Error:</strong> {globalError}
           </div>
         )}
 
         <main className="page-container">
-          {activePage === 'upload' && (
-            <Home
-              onAnalysisComplete={handleAnalysisRequest}
-              onSelectSample={handleQuickSample}
-              loading={loading}
-            />
-          )}
+          {/* Skeleton Loaders during data processing (Item 21) */}
+          {loading ? (
+            <div className="skeleton-container">
+              <div className="skeleton-box skeleton-kpi" />
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 12 }}>
+                <div className="skeleton-box" style={{ height: 70 }} />
+                <div className="skeleton-box" style={{ height: 70 }} />
+                <div className="skeleton-box" style={{ height: 70 }} />
+                <div className="skeleton-box" style={{ height: 70 }} />
+              </div>
+              <div className="skeleton-box skeleton-chart" />
+              <div className="skeleton-box" style={{ height: 160 }} />
+            </div>
+          ) : (
+            <>
+              {activePage === 'upload' && (
+                <Home
+                  onAnalysisComplete={handleAnalysisRequest}
+                  onSelectSample={handleQuickSample}
+                  loading={loading}
+                />
+              )}
 
-          {activePage === 'dashboard' && (
-            <Dashboard
-              analysis={analysis}
-              onNavigate={setActivePage}
-            />
-          )}
+              {activePage === 'dashboard' && (
+                <Dashboard
+                  analysis={analysis}
+                  onNavigate={setActivePage}
+                />
+              )}
 
-          {activePage === 'dataset' && (
-            <Dataset
-              analysis={analysis}
-            />
-          )}
+              {activePage === 'dataset' && (
+                <Dataset
+                  analysis={analysis}
+                />
+              )}
 
-          {activePage === 'performance' && (
-            <Performance
-              analysis={analysis}
-            />
-          )}
+              {activePage === 'performance' && (
+                <Performance
+                  analysis={analysis}
+                />
+              )}
 
-          {activePage === 'drift' && (
-            <Drift
-              analysis={analysis}
-            />
-          )}
+              {activePage === 'drift' && (
+                <Drift
+                  analysis={analysis}
+                />
+              )}
 
-          {activePage === 'fairness' && (
-            <Fairness
-              analysis={analysis}
-            />
-          )}
+              {activePage === 'fairness' && (
+                <Fairness
+                  analysis={analysis}
+                />
+              )}
 
-          {activePage === 'prediction' && (
-            <Prediction />
-          )}
+              {activePage === 'prediction' && (
+                <Prediction />
+              )}
 
-          {activePage === 'simulation' && (
-            <Simulation />
-          )}
+              {activePage === 'simulation' && (
+                <Simulation />
+              )}
 
-          {activePage === 'export' && (
-            <Export />
+              {activePage === 'export' && (
+                <Export />
+              )}
+            </>
           )}
         </main>
       </div>
+
+      {/* Terms of Service & Privacy Policy Modals (Items 26, 27) */}
+      {legalModal && (
+        <div className="modal-overlay" onClick={() => setLegalModal(null)}>
+          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 12, borderBottom: '1px solid var(--border-default)', paddingBottom: 8 }}>
+              <h3 style={{ fontSize: '0.95rem', fontWeight: 700, textTransform: 'uppercase' }}>
+                {legalModal === 'privacy' ? 'Privacy Policy & Data Governance' : 'Terms of Service'}
+              </h3>
+              <button
+                type="button"
+                className="btn-secondary"
+                style={{ padding: '2px 8px' }}
+                onClick={() => setLegalModal(null)}
+              >
+                Close
+              </button>
+            </div>
+
+            <div style={{ fontSize: '0.78rem', color: 'var(--text-secondary)', lineHeight: 1.6 }}>
+              {legalModal === 'privacy' ? (
+                <>
+                  <p><strong>1. Clinical Data Handling:</strong> CardioWatch processes tabular clinical biomarkers locally in-memory. Uploaded datasets are never transmitted to external third-party cloud services or telemetry trackers.</p>
+                  <p style={{ marginTop: 8 }}><strong>2. Patient De-Identification:</strong> All sample records conform to HIPAA Safe Harbor guidelines; direct patient identifiers (names, SSNs, MRNs) are excluded. Only anonymized physiological parameters are stored.</p>
+                  <p style={{ marginTop: 8 }}><strong>3. Local Retention:</strong> Exported CSV files reside strictly within the local filesystem directory for downstream Tableau consumption.</p>
+                </>
+              ) : (
+                <>
+                  <p><strong>1. Academic & Research Purpose:</strong> CardioWatch is designed strictly for academic coursework, machine learning monitoring research, and visual analytics laboratory evaluation.</p>
+                  <p style={{ marginTop: 8 }}><strong>2. No Diagnostic Warranty:</strong> Predictions generated by this system are statistical outputs and must never be interpreted as clinical diagnoses or medical advice. Licensed clinical evaluation is mandatory for any patient care decision.</p>
+                  <p style={{ marginTop: 8 }}><strong>3. Model Limitations:</strong> Drift metrics reflect statistical distribution shifts ($P(X)$) and do not guarantee causal clinical outcomes.</p>
+                </>
+              )}
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

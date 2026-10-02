@@ -2,15 +2,6 @@ import React, { useState } from 'react';
 import MetricCard from '../components/MetricCard';
 import StatusBadge from '../components/StatusBadge';
 import {
-  Scale,
-  Users,
-  AlertTriangle,
-  Info,
-  CheckCircle2,
-  ShieldCheck,
-  HelpCircle
-} from 'lucide-react';
-import {
   BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, Legend
 } from 'recharts';
 
@@ -20,12 +11,10 @@ export default function Fairness({ analysis }) {
 
   if (!fairness || fairness.has_fairness_analysis === false) {
     return (
-      <div className="card" style={{ padding: 40, textAlign: 'center' }}>
-        <HelpCircle size={40} color="var(--accent-cyan)" style={{ margin: '0 auto 16px' }} />
+      <div className="card" style={{ padding: 24, textAlign: 'center' }}>
         <h3>Subgroup Fairness Evaluation Unavailable</h3>
-        <p style={{ color: 'var(--text-muted)', maxWidth: 500, margin: '8px auto' }}>
-          Ground-truth outcomes are required to audit demographic sensitivity and false negative rate disparities.
-          Upload a labeled dataset or load a sample dataset to view subgroup audits.
+        <p style={{ color: 'var(--text-secondary)', maxWidth: 500, margin: '8px auto', fontSize: '0.8rem' }}>
+          Ground-truth target column absent. Ingest a labeled dataset or select a sample cohort to audit demographic sensitivity.
         </p>
       </div>
     );
@@ -35,7 +24,6 @@ export default function Fairness({ analysis }) {
   const audits = fairness.audits || [];
   const selectedAudit = audits.find(a => a.attribute_type === activeTab) || audits[0];
 
-  // Prepare chart comparison data
   const chartData = selectedAudit ? selectedAudit.subgroups.map(sub => ({
     name: sub.group,
     Recall: Number((sub.recall * 100).toFixed(1)),
@@ -46,162 +34,132 @@ export default function Fairness({ analysis }) {
 
   return (
     <div>
-      {/* Objective Clinical Language Banner */}
-      <div style={{
-        background: 'rgba(99, 102, 241, 0.08)',
-        border: '1px solid rgba(99, 102, 241, 0.25)',
-        borderRadius: 'var(--radius-lg)',
-        padding: '18px 24px',
-        display: 'flex',
-        alignItems: 'flex-start',
-        gap: 14,
-        marginBottom: 24
-      }}>
-        <Scale size={22} color="var(--accent-indigo)" style={{ flexShrink: 0, marginTop: 2 }} />
-        <div>
-          <h4 style={{ fontSize: '0.95rem', fontWeight: 700, color: '#fff' }}>
-            Objective Subgroup Performance Auditing
-          </h4>
-          <p style={{ fontSize: '0.82rem', color: 'var(--text-muted)', marginTop: 4, lineHeight: 1.5 }}>
-            CardioWatch reports measurable diagnostic disparities across demographic cohorts without subjective bias claims.
-            In clinical cardiology, symptom presentation in female patients often differs markedly from standard clinical archetypes (e.g., higher frequency of atypical angina), which can manifest as an elevated <strong>False Negative Rate (FNR)</strong>.
-          </p>
-        </div>
+      {/* Policy Notice */}
+      <div className="notice-box" style={{ marginTop: 0, marginBottom: 20 }}>
+        <strong>Subgroup Disparity Auditing:</strong> Performance metrics are audited across cohorts to verify sensitivity consistency. Measurable differences in diagnostic recall or false-negative rates reflect potential presentation shifts without subjective bias claims.
       </div>
 
       {/* Fairness Status Strip */}
-      <div className="kpi-grid">
+      <div className="kpi-grid" style={{ gridTemplateColumns: 'repeat(4, 1fr)' }}>
         <MetricCard
-          label="Overall Fairness Health"
+          label="Fairness Status"
           value={fairness.overall_status}
           subtext="Subgroup parity status"
-          icon={Scale}
           status={fairness.overall_status}
         />
         <MetricCard
           label="Peak FNR Disparity Gap"
           value={`${fairness.max_fnr_gap_points}%`}
-          subtext="Worst-case subgroup sensitivity gap"
-          icon={AlertTriangle}
+          subtext="Subgroup sensitivity divergence"
           status={fairness.max_fnr_gap_points > 12 ? 'Attention' : 'Normal'}
         />
         <MetricCard
           label="Demographic Slices"
           value={audits.length}
-          subtext="Biological Sex & Age Bracket"
-          icon={Users}
+          subtext="Sex &amp; Age Brackets"
           status="Normal"
         />
         <MetricCard
-          label="Equal Opportunity Standard"
+          label="Parity Standard"
           value="Recall Parity"
-          subtext="True Positive Rate equality"
-          icon={ShieldCheck}
+          subtext="Equal Opportunity Metric"
           status="Normal"
         />
       </div>
 
-      {/* Interactive Subgroup Selector Tabs */}
-      <div style={{ display: 'flex', gap: 12, marginBottom: 20 }}>
+      {/* Selector Tabs */}
+      <div style={{ display: 'flex', gap: 8, marginBottom: 16 }}>
         {audits.map((a) => (
           <button
             key={a.attribute_type}
             className={`btn-secondary ${activeTab === a.attribute_type ? 'active' : ''}`}
             style={{
-              padding: '10px 20px',
-              fontSize: '0.88rem',
-              backgroundColor: activeTab === a.attribute_type ? 'rgba(14, 165, 233, 0.15)' : undefined,
-              borderColor: activeTab === a.attribute_type ? 'var(--accent-cyan)' : undefined,
-              color: activeTab === a.attribute_type ? '#fff' : undefined
+              backgroundColor: activeTab === a.attribute_type ? 'var(--bg-subtle)' : undefined,
+              borderColor: activeTab === a.attribute_type ? 'var(--border-focus)' : undefined
             }}
             onClick={() => setActiveTab(a.attribute_type)}
           >
-            <strong>{a.attribute_type}</strong>
-            <span style={{ marginLeft: 8, fontSize: '0.75rem', opacity: 0.8 }}>({a.gap_percentage_points}% Gap)</span>
+            {a.attribute_type} ({a.gap_percentage_points}% Gap)
           </button>
         ))}
       </div>
 
       {/* Grid: Bar Chart & Disparity Metrics */}
       <div className="grid-2">
-        {/* Chart Comparison */}
         <div className="card">
           <div className="card-header">
             <div className="card-title-group">
-              <h3>{activeTab}: Sensitivity & Error Rates</h3>
-              <p>Recall vs False Negative Rate across cohorts</p>
+              <h3>{activeTab}: Sensitivity and Error Comparison</h3>
+              <p>Recall versus False Negative Rate across cohorts</p>
             </div>
           </div>
           <div className="card-body">
-            <div style={{ height: 260 }}>
+            <div style={{ height: 230 }}>
               <ResponsiveContainer width="100%" height="100%">
-                <BarChart data={chartData} margin={{ top: 15, right: 20, left: 10, bottom: 15 }}>
-                  <XAxis dataKey="name" tick={{ fill: '#f1f5f9', fontSize: 12 }} />
-                  <YAxis label={{ value: 'Percentage (%)', angle: -90, position: 'insideLeft', fill: '#94a3b8', fontSize: 11 }} tick={{ fill: '#94a3b8', fontSize: 11 }} domain={[0, 100]} />
-                  <Tooltip contentStyle={{ backgroundColor: '#0d131f', borderColor: '#334155', borderRadius: 8 }} />
-                  <Legend wrapperStyle={{ paddingTop: 10 }} />
-                  <Bar dataKey="Recall" name="Recall / Sensitivity (%)" fill="#10B981" radius={[4, 4, 0, 0]} />
-                  <Bar dataKey="FNR" name="False Negative Rate (%)" fill="#EF4444" radius={[4, 4, 0, 0]} />
-                  <Bar dataKey="Accuracy" name="Accuracy (%)" fill="#0EA5E9" radius={[4, 4, 0, 0]} />
+                <BarChart data={chartData} margin={{ top: 10, right: 10, left: 0, bottom: 10 }}>
+                  <XAxis dataKey="name" tick={{ fill: '#e6edf3', fontSize: 11 }} />
+                  <YAxis tick={{ fill: '#8b949e', fontSize: 11 }} domain={[0, 100]} />
+                  <Tooltip contentStyle={{ backgroundColor: '#161b22', borderColor: '#30363d', borderRadius: 2 }} />
+                  <Legend />
+                  <Bar dataKey="Recall" name="Recall / Sensitivity (%)" fill="#238636" />
+                  <Bar dataKey="FNR" name="False Negative Rate (%)" fill="#da3633" />
+                  <Bar dataKey="Accuracy" name="Accuracy (%)" fill="#1f6feb" />
                 </BarChart>
               </ResponsiveContainer>
             </div>
           </div>
         </div>
 
-        {/* Cohort Detail Cards */}
         <div className="card">
           <div className="card-header">
             <div className="card-title-group">
               <h3>Audited Subgroup Breakdown</h3>
-              <p>Disparity Gap: <strong>{selectedAudit?.gap_percentage_points} percentage points</strong></p>
+              <p>Disparity Gap: {selectedAudit?.gap_percentage_points} percentage points</p>
             </div>
             <StatusBadge status={selectedAudit?.status} />
           </div>
           <div className="card-body">
-            <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
               {selectedAudit?.subgroups.map((sub, idx) => (
                 <div key={idx} style={{
-                  padding: 16,
-                  background: 'rgba(255, 255, 255, 0.02)',
-                  border: '1px solid var(--border-subtle)',
-                  borderRadius: 'var(--radius-md)'
+                  padding: 10,
+                  backgroundColor: 'var(--bg-subtle)',
+                  border: '1px solid var(--border-default)',
+                  borderRadius: 'var(--radius-sharp)'
                 }}>
-                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 10 }}>
-                    <h4 style={{ fontSize: '0.95rem', color: '#fff', fontWeight: 700 }}>Cohort: {sub.group}</h4>
-                    <span style={{ fontSize: '0.75rem', color: 'var(--text-dim)' }}>Sample Size: <strong>{sub.sample_size}</strong></span>
+                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 6 }}>
+                    <h4 style={{ fontSize: '0.85rem', color: 'var(--text-primary)', fontWeight: 600 }}>Cohort: {sub.group}</h4>
+                    <span style={{ fontSize: '0.72rem', color: 'var(--text-muted)' }}>Sample: {sub.sample_size}</span>
                   </div>
 
-                  <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 10, textAlign: 'center' }}>
-                    <div style={{ background: 'rgba(255, 255, 255, 0.02)', padding: 8, borderRadius: 6 }}>
-                      <span style={{ fontSize: '0.7rem', color: 'var(--text-dim)', textTransform: 'uppercase' }}>Recall</span>
-                      <p style={{ fontSize: '1.05rem', fontWeight: 700, color: '#10B981' }}>{(sub.recall * 100).toFixed(1)}%</p>
+                  <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 8, textAlign: 'center' }}>
+                    <div>
+                      <span style={{ fontSize: '0.68rem', color: 'var(--text-muted)', textTransform: 'uppercase' }}>Recall</span>
+                      <p style={{ fontSize: '0.95rem', fontWeight: 700, color: 'var(--state-normal-text)' }}>{(sub.recall * 100).toFixed(1)}%</p>
                     </div>
-                    <div style={{ background: 'rgba(255, 255, 255, 0.02)', padding: 8, borderRadius: 6 }}>
-                      <span style={{ fontSize: '0.7rem', color: 'var(--text-dim)', textTransform: 'uppercase' }}>FNR</span>
-                      <p style={{ fontSize: '1.05rem', fontWeight: 700, color: sub.fnr > 0.20 ? '#EF4444' : '#fff' }}>{(sub.fnr * 100).toFixed(1)}%</p>
+                    <div>
+                      <span style={{ fontSize: '0.68rem', color: 'var(--text-muted)', textTransform: 'uppercase' }}>FNR</span>
+                      <p style={{ fontSize: '0.95rem', fontWeight: 700, color: sub.fnr > 0.20 ? 'var(--state-attention-text)' : 'inherit' }}>{(sub.fnr * 100).toFixed(1)}%</p>
                     </div>
-                    <div style={{ background: 'rgba(255, 255, 255, 0.02)', padding: 8, borderRadius: 6 }}>
-                      <span style={{ fontSize: '0.7rem', color: 'var(--text-dim)', textTransform: 'uppercase' }}>Precision</span>
-                      <p style={{ fontSize: '1.05rem', fontWeight: 700, color: '#38BDF8' }}>{(sub.precision * 100).toFixed(1)}%</p>
+                    <div>
+                      <span style={{ fontSize: '0.68rem', color: 'var(--text-muted)', textTransform: 'uppercase' }}>Precision</span>
+                      <p style={{ fontSize: '0.95rem', fontWeight: 700, color: '#388bfd' }}>{(sub.precision * 100).toFixed(1)}%</p>
                     </div>
-                    <div style={{ background: 'rgba(255, 255, 255, 0.02)', padding: 8, borderRadius: 6 }}>
-                      <span style={{ fontSize: '0.7rem', color: 'var(--text-dim)', textTransform: 'uppercase' }}>Accuracy</span>
-                      <p style={{ fontSize: '1.05rem', fontWeight: 700, color: '#fff' }}>{(sub.accuracy * 100).toFixed(1)}%</p>
+                    <div>
+                      <span style={{ fontSize: '0.68rem', color: 'var(--text-muted)', textTransform: 'uppercase' }}>Accuracy</span>
+                      <p style={{ fontSize: '0.95rem', fontWeight: 700 }}>{(sub.accuracy * 100).toFixed(1)}%</p>
                     </div>
                   </div>
                 </div>
               ))}
 
               <div style={{
-                fontSize: '0.8rem',
-                color: 'var(--text-muted)',
-                lineHeight: 1.5,
-                background: 'rgba(255, 255, 255, 0.02)',
-                padding: 12,
-                borderRadius: 8
+                fontSize: '0.75rem',
+                color: 'var(--text-secondary)',
+                padding: '8px 10px',
+                border: '1px solid var(--border-muted)'
               }}>
-                <strong>Monitoring Finding:</strong> {selectedAudit?.observation}
+                Observation: {selectedAudit?.observation}
               </div>
             </div>
           </div>

@@ -1,5 +1,4 @@
 import React from 'react';
-import { Database, RefreshCw, UploadCloud, CheckCircle } from 'lucide-react';
 
 export default function Navbar({ activePage, currentDatasetName, onQuickSample, onUploadClick, loading }) {
   const titles = {
@@ -20,8 +19,7 @@ export default function Navbar({ activePage, currentDatasetName, onQuickSample, 
         <h2 className="page-title">{titles[activePage] || 'Surveillance Dashboard'}</h2>
         {currentDatasetName && (
           <div className="active-dataset-tag">
-            <Database size={13} />
-            <span>Active: <strong>{currentDatasetName}</strong></span>
+            Active: {currentDatasetName}
           </div>
         )}
       </div>
@@ -31,28 +29,23 @@ export default function Navbar({ activePage, currentDatasetName, onQuickSample, 
           className="btn-secondary"
           onClick={() => onQuickSample('stable')}
           disabled={loading}
-          title="Analyze 200 patients with stable distribution"
         >
-          <CheckCircle size={14} color="#10B981" />
-          <span>Load Stable Sample</span>
+          Load Stable Sample
         </button>
 
         <button
           className="btn-secondary"
           onClick={() => onQuickSample('drifted')}
           disabled={loading}
-          title="Analyze 200 patients with demographic & clinical drift"
         >
-          <RefreshCw size={14} color="#F59E0B" />
-          <span>Load Drifted Sample</span>
+          Load Drifted Sample
         </button>
 
         <button
           className="btn-primary"
           onClick={onUploadClick}
         >
-          <UploadCloud size={14} />
-          <span>Upload CSV</span>
+          Upload CSV
         </button>
       </div>
     </header>

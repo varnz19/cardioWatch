@@ -1,15 +1,6 @@
 import React, { useState } from 'react';
 import StatusBadge from '../components/StatusBadge';
 import {
-  GitCommit,
-  AlertTriangle,
-  HelpCircle,
-  TrendingUp,
-  Info,
-  Layers,
-  ArrowUpDown
-} from 'lucide-react';
-import {
   BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, Legend
 } from 'recharts';
 
@@ -24,34 +15,16 @@ export default function Drift({ analysis }) {
 
   return (
     <div>
-      {/* Educational Concept Distinction Banner */}
-      <div style={{
-        background: 'rgba(14, 165, 233, 0.08)',
-        border: '1px solid rgba(14, 165, 233, 0.25)',
-        borderRadius: 'var(--radius-lg)',
-        padding: '18px 24px',
-        display: 'flex',
-        alignItems: 'flex-start',
-        gap: 14,
-        marginBottom: 24
-      }}>
-        <Info size={22} color="var(--accent-cyan)" style={{ flexShrink: 0, marginTop: 2 }} />
-        <div>
-          <h4 style={{ fontSize: '0.95rem', fontWeight: 700, color: '#fff' }}>
-            Data/Covariate Drift vs. Model Performance Decay
-          </h4>
-          <p style={{ fontSize: '0.82rem', color: 'var(--text-muted)', marginTop: 4, lineHeight: 1.5 }}>
-            <strong>Data Drift:</strong> Quantifies statistical changes in patient physiological distributions ($P(X)$) compared to the baseline training population.
-            Continuous features are audited using the <strong>Two-Sample Kolmogorov-Smirnov (KS) Test</strong> (D = sup |F_curr(x) - F_ref(x)|), and categorical features via the <strong>Population Stability Index (PSI)</strong>.
-          </p>
-        </div>
+      {/* Notice Banner */}
+      <div className="notice-box" style={{ marginTop: 0, marginBottom: 20 }}>
+        <strong>Data Drift vs Model Decay:</strong> Data drift denotes statistical divergence in patient biomarker distributions (P(X)) relative to the baseline training population. Continuous features are audited via the Two-Sample Kolmogorov-Smirnov (KS) test, and categorical features via the Population Stability Index (PSI).
       </div>
 
       {/* Drift Status KPIs */}
-      <div className="kpi-grid">
+      <div className="kpi-grid" style={{ gridTemplateColumns: 'repeat(4, 1fr)' }}>
         <div className="metric-card">
           <div className="metric-header">
-            <span className="metric-label">Overall Population Health</span>
+            <span className="metric-label">Population Health</span>
             <StatusBadge status={drift.overall_status} />
           </div>
           <div className="metric-value">{drift.overall_status}</div>
@@ -61,32 +34,29 @@ export default function Drift({ analysis }) {
         <div className="metric-card">
           <div className="metric-header">
             <span className="metric-label">High Drift Features</span>
-            <div className="metric-icon-box" style={{ color: '#EF4444' }}><AlertTriangle size={16} /></div>
           </div>
-          <div className="metric-value" style={{ color: drift.high_drift_count > 0 ? '#EF4444' : '#fff' }}>
+          <div className="metric-value" style={{ color: drift.high_drift_count > 0 ? 'var(--state-attention-text)' : 'inherit' }}>
             {drift.high_drift_count}
           </div>
-          <div className="metric-subtext">KS ≥ 0.20 or PSI ≥ 0.25</div>
+          <div className="metric-subtext">KS &ge; 0.20 or PSI &ge; 0.25</div>
         </div>
 
         <div className="metric-card">
           <div className="metric-header">
             <span className="metric-label">Moderate Drift Features</span>
-            <div className="metric-icon-box" style={{ color: '#F59E0B' }}><TrendingUp size={16} /></div>
           </div>
-          <div className="metric-value" style={{ color: drift.medium_drift_count > 0 ? '#F59E0B' : '#fff' }}>
+          <div className="metric-value" style={{ color: drift.medium_drift_count > 0 ? 'var(--state-monitor-text)' : 'inherit' }}>
             {drift.medium_drift_count}
           </div>
-          <div className="metric-subtext">0.10 ≤ KS &lt; 0.20</div>
+          <div className="metric-subtext">0.10 &le; KS &lt; 0.20</div>
         </div>
 
         <div className="metric-card">
           <div className="metric-header">
             <span className="metric-label">Biomarkers Tested</span>
-            <div className="metric-icon-box"><Layers size={16} /></div>
           </div>
           <div className="metric-value">{drift.features_analyzed_count}</div>
-          <div className="metric-subtext">Continuous & categorical</div>
+          <div className="metric-subtext">Continuous &amp; categorical</div>
         </div>
       </div>
 
@@ -94,14 +64,14 @@ export default function Drift({ analysis }) {
       <div className="card">
         <div className="card-header">
           <div className="card-title-group">
-            <h3>Reference vs. Uploaded Cohort Distribution Comparison</h3>
-            <p>Select any clinical biomarker to visualize population shifts across frequency bins</p>
+            <h3>Reference vs Current Cohort Distributions</h3>
+            <p>Select a biomarker to inspect cohort frequency shifts</p>
           </div>
-          <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
-            <span style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>Selected Feature:</span>
+          <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+            <span style={{ fontSize: '0.75rem', color: 'var(--text-secondary)' }}>Biomarker:</span>
             <select
               className="form-control"
-              style={{ padding: '6px 12px', fontSize: '0.85rem', width: 170 }}
+              style={{ width: 160 }}
               value={selectedFeature}
               onChange={(e) => setSelectedFeature(e.target.value)}
             >
@@ -114,15 +84,15 @@ export default function Drift({ analysis }) {
           </div>
         </div>
         <div className="card-body">
-          <div style={{ height: 260 }}>
+          <div style={{ height: 230 }}>
             <ResponsiveContainer width="100%" height="100%">
-              <BarChart data={selectedDist} margin={{ top: 15, right: 20, left: 10, bottom: 15 }}>
-                <XAxis dataKey="bin_label" tick={{ fill: '#94a3b8', fontSize: 11 }} />
-                <YAxis label={{ value: 'Cohort Proportion (%)', angle: -90, position: 'insideLeft', fill: '#94a3b8', fontSize: 11 }} tick={{ fill: '#94a3b8', fontSize: 11 }} />
-                <Tooltip contentStyle={{ backgroundColor: '#0d131f', borderColor: '#334155', borderRadius: 8 }} />
-                <Legend wrapperStyle={{ paddingTop: 10 }} />
-                <Bar dataKey="reference_pct" name="Reference Baseline Cohort (%)" fill="#0284C7" radius={[4, 4, 0, 0]} />
-                <Bar dataKey="current_pct" name="Uploaded Current Cohort (%)" fill="#F59E0B" radius={[4, 4, 0, 0]} />
+              <BarChart data={selectedDist} margin={{ top: 10, right: 10, left: 0, bottom: 10 }}>
+                <XAxis dataKey="bin_label" tick={{ fill: '#8b949e', fontSize: 11 }} />
+                <YAxis tick={{ fill: '#8b949e', fontSize: 11 }} />
+                <Tooltip contentStyle={{ backgroundColor: '#161b22', borderColor: '#30363d', borderRadius: 2 }} />
+                <Legend />
+                <Bar dataKey="reference_pct" name="Reference Baseline Cohort (%)" fill="#30363d" />
+                <Bar dataKey="current_pct" name="Uploaded Current Cohort (%)" fill="#1f6feb" />
               </BarChart>
             </ResponsiveContainer>
           </div>
@@ -133,8 +103,8 @@ export default function Drift({ analysis }) {
       <div className="card">
         <div className="card-header">
           <div className="card-title-group">
-            <h3>Complete Feature Drift Scorecard</h3>
-            <p>Statistical hypothesis testing against historical baseline</p>
+            <h3>Feature Drift Scorecard</h3>
+            <p>Hypothesis testing against historical reference baseline</p>
           </div>
         </div>
         <div className="card-body" style={{ padding: 0 }}>
@@ -157,20 +127,21 @@ export default function Drift({ analysis }) {
                 {features.map((item, i) => (
                   <tr key={i}>
                     <td><strong>{item.feature}</strong></td>
-                    <td style={{ color: 'var(--text-dim)' }}>{item.feature_type}</td>
-                    <td><code style={{ fontSize: '0.78rem', color: 'var(--accent-cyan)' }}>{item.drift_method}</code></td>
+                    <td>{item.feature_type}</td>
+                    <td>{item.drift_method}</td>
                     <td>
                       <span style={{
-                        fontWeight: 700,
-                        color: item.status === 'HIGH' ? '#EF4444' : item.status === 'MEDIUM' ? '#F59E0B' : '#10B981'
+                        color: item.status === 'HIGH' ? 'var(--state-attention-text)' :
+                               item.status === 'MEDIUM' ? 'var(--state-monitor-text)' :
+                               'var(--state-normal-text)'
                       }}>
                         {item.drift_score.toFixed(4)}
                       </span>
                     </td>
-                    <td style={{ color: 'var(--text-muted)' }}>{item.p_value}</td>
+                    <td>{item.p_value}</td>
                     <td>{item.reference_mean}</td>
                     <td>{item.current_mean}</td>
-                    <td style={{ color: item.mean_difference > 0 ? '#F59E0B' : item.mean_difference < 0 ? '#38BDF8' : 'var(--text-dim)' }}>
+                    <td>
                       {item.mean_difference > 0 ? `+${item.mean_difference}` : item.mean_difference}
                     </td>
                     <td>

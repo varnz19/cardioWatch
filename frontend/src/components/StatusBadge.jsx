@@ -14,7 +14,6 @@ export default function StatusBadge({ status = 'Normal', label = null }) {
 
   return (
     <span className={`status-badge ${badgeClass}`}>
-      <span className="badge-dot" />
       {displayText}
     </span>
   );

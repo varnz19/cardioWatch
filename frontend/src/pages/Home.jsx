@@ -1,5 +1,4 @@
 import React, { useState, useRef } from 'react';
-import { UploadCloud, FileText, CheckCircle2, AlertTriangle, ArrowRight, ShieldCheck, Database, Play } from 'lucide-react';
 import { uploadDataset } from '../services/api';
 
 export default function Home({ onAnalysisComplete, onSelectSample, loading }) {
@@ -37,7 +36,7 @@ export default function Home({ onAnalysisComplete, onSelectSample, loading }) {
 
   const processSelectedFile = async (file) => {
     if (!file.name.endsWith('.csv')) {
-      setErrorMsg('Please select a valid CSV file.');
+      setErrorMsg('Invalid file type. Please select a valid CSV file.');
       return;
     }
     setErrorMsg('');
@@ -63,36 +62,27 @@ export default function Home({ onAnalysisComplete, onSelectSample, loading }) {
 
   return (
     <div className="upload-hero">
-      <div style={{ marginBottom: 32 }}>
-        <h1 style={{ fontSize: '2.2rem', fontWeight: 800, color: '#fff', letterSpacing: '-0.03em', lineHeight: 1.2 }}>
-          CARDIOWATCH
+      <div style={{ marginBottom: 24 }}>
+        <h1 style={{ fontSize: '1.4rem', fontWeight: 700, color: 'var(--text-primary)', letterSpacing: '0.02em' }}>
+          CARDIOWATCH: DATASET INGESTION &amp; AUDIT PIPELINE
         </h1>
-        <p style={{ fontSize: '1.1rem', color: 'var(--accent-cyan)', fontWeight: 600, marginTop: 6 }}>
-          Clinical Machine Learning Drift & Subgroup Fairness Surveillance
-        </p>
-        <p style={{ fontSize: '0.92rem', color: 'var(--text-muted)', maxWidth: 640, margin: '14px auto 0', lineHeight: 1.6 }}>
-          A continuous quality assurance system for cardiovascular clinical decision models. Ingest routine diagnostic telemetry,
-          monitor statistical distribution drift via Kolmogorov-Smirnov tests, and audit clinical subgroup equity across biological sex and age cohorts.
+        <p style={{ fontSize: '0.82rem', color: 'var(--text-secondary)', marginTop: 6, lineHeight: 1.5 }}>
+          Machine learning surveillance system for cardiovascular risk models. Ingest patient telemetry,
+          compute Kolmogorov-Smirnov distribution drift, and audit subgroup sensitivity parity across biological sex and age cohorts.
         </p>
       </div>
 
       {errorMsg && (
         <div style={{
-          backgroundColor: 'rgba(239, 68, 68, 0.1)',
-          border: '1px solid rgba(239, 68, 68, 0.3)',
-          color: '#fca5a5',
-          borderRadius: 'var(--radius-md)',
-          padding: '14px 18px',
-          marginBottom: 20,
-          textAlign: 'left',
-          display: 'flex',
-          alignItems: 'center',
-          gap: 12
+          backgroundColor: 'var(--bg-subtle)',
+          border: '1px solid #da3633',
+          color: '#f85149',
+          padding: '12px 14px',
+          marginBottom: 16,
+          fontSize: '0.8rem',
+          lineHeight: 1.4
         }}>
-          <AlertTriangle size={20} color="#EF4444" style={{ flexShrink: 0 }} />
-          <div>
-            <strong>Dataset Validation Error:</strong> {errorMsg}
-          </div>
+          <strong>Dataset Validation Failure:</strong> {errorMsg}
         </div>
       )}
 
@@ -112,78 +102,71 @@ export default function Home({ onAnalysisComplete, onSelectSample, loading }) {
           style={{ display: 'none' }}
           onChange={handleChange}
         />
-        <div className="upload-icon-circle">
-          <UploadCloud size={32} />
+        <div style={{ fontSize: '0.9rem', fontWeight: 600, color: 'var(--text-primary)' }}>
+          {selectedFile ? selectedFile.name : 'Select or Drop Clinical Heart Disease CSV'}
         </div>
-        <h3 style={{ fontSize: '1.15rem', color: '#fff', fontWeight: 700 }}>
-          {selectedFile ? selectedFile.name : 'Drag & drop heart disease CSV dataset here'}
-        </h3>
-        <p style={{ fontSize: '0.85rem', color: 'var(--text-dim)', marginTop: 6 }}>
-          Compatible with UCI Cleveland / Heart Disease formats (age, sex, chest pain, blood pressure, cholesterol, max HR, etc.)
+        <p style={{ fontSize: '0.75rem', color: 'var(--text-muted)', marginTop: 4 }}>
+          Accepted format: UCI Cleveland / Heart Disease schema (age, sex, chest pain, blood pressure, cholesterol, max HR)
         </p>
 
         {isUploading && (
-          <p style={{ marginTop: 12, color: 'var(--accent-cyan)', fontSize: '0.85rem', fontWeight: 600 }}>
-            Validating dataset schema against clinical benchmarks...
+          <p style={{ marginTop: 8, color: 'var(--accent-hover)', fontSize: '0.78rem' }}>
+            Validating schema against clinical constraints...
           </p>
         )}
       </div>
 
-      {/* Upload Diagnostics Card */}
+      {/* Upload Metadata */}
       {uploadMetadata && (
-        <div className="card" style={{ textAlign: 'left', marginTop: 16 }}>
+        <div className="card">
           <div className="card-header">
             <div className="card-title-group">
-              <h3>Dataset Ingestion Diagnostics</h3>
-              <p>Validation passed. Ready for machine learning inference and drift testing.</p>
+              <h3>Ingestion Diagnostics</h3>
+              <p>Validation complete. Schema compatible with inference pipeline.</p>
             </div>
-            <span className="status-badge normal">
-              <span className="badge-dot" /> Validated
-            </span>
+            <span className="status-badge normal">Validated</span>
           </div>
           <div className="card-body">
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 16, marginBottom: 20 }}>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 12, marginBottom: 16 }}>
               <div>
-                <span style={{ fontSize: '0.75rem', color: 'var(--text-dim)', textTransform: 'uppercase' }}>Rows</span>
-                <p style={{ fontSize: '1.25rem', fontWeight: 700, color: '#fff' }}>{uploadMetadata.total_rows}</p>
+                <span style={{ fontSize: '0.7rem', color: 'var(--text-muted)', textTransform: 'uppercase' }}>Rows</span>
+                <p style={{ fontSize: '1.1rem', fontWeight: 700, color: 'var(--text-primary)' }}>{uploadMetadata.total_rows}</p>
               </div>
               <div>
-                <span style={{ fontSize: '0.75rem', color: 'var(--text-dim)', textTransform: 'uppercase' }}>Columns</span>
-                <p style={{ fontSize: '1.25rem', fontWeight: 700, color: '#fff' }}>{uploadMetadata.total_columns}</p>
+                <span style={{ fontSize: '0.7rem', color: 'var(--text-muted)', textTransform: 'uppercase' }}>Columns</span>
+                <p style={{ fontSize: '1.1rem', fontWeight: 700, color: 'var(--text-primary)' }}>{uploadMetadata.total_columns}</p>
               </div>
               <div>
-                <span style={{ fontSize: '0.75rem', color: 'var(--text-dim)', textTransform: 'uppercase' }}>Missing Values</span>
-                <p style={{ fontSize: '1.25rem', fontWeight: 700, color: '#fff' }}>{uploadMetadata.missing_cells}</p>
+                <span style={{ fontSize: '0.7rem', color: 'var(--text-muted)', textTransform: 'uppercase' }}>Missing Values</span>
+                <p style={{ fontSize: '1.1rem', fontWeight: 700, color: 'var(--text-primary)' }}>{uploadMetadata.missing_cells}</p>
               </div>
               <div>
-                <span style={{ fontSize: '0.75rem', color: 'var(--text-dim)', textTransform: 'uppercase' }}>Ground Truth Target</span>
-                <p style={{ fontSize: '1.25rem', fontWeight: 700, color: uploadMetadata.has_target ? 'var(--status-normal)' : 'var(--text-muted)' }}>
-                  {uploadMetadata.has_target ? 'Present (Supervised)' : 'Absent (Inference Only)'}
+                <span style={{ fontSize: '0.7rem', color: 'var(--text-muted)', textTransform: 'uppercase' }}>Supervision Target</span>
+                <p style={{ fontSize: '1.1rem', fontWeight: 700, color: uploadMetadata.has_target ? 'var(--state-normal-text)' : 'var(--text-muted)' }}>
+                  {uploadMetadata.has_target ? 'Present' : 'Absent (Inference Mode)'}
                 </p>
               </div>
             </div>
 
             <button
               className="btn-primary"
-              style={{ width: '100%', padding: '14px', fontSize: '0.95rem', justifyContent: 'center' }}
+              style={{ width: '100%', padding: '10px', fontSize: '0.85rem' }}
               onClick={handleAnalyzeClick}
               disabled={loading}
             >
-              <Play size={18} />
-              <span>{loading ? 'Executing ML Inference & Drift Engine...' : 'Execute CardioWatch Surveillance Analysis'}</span>
+              {loading ? 'Processing ML Inference & Drift...' : 'Execute CardioWatch Surveillance Analysis'}
             </button>
           </div>
         </div>
       )}
 
-      {/* Quick Test Samples */}
+      {/* Demonstration Datasets */}
       <div className="sample-selector-card">
-        <h4 style={{ fontSize: '0.9rem', color: '#fff', fontWeight: 600, display: 'flex', alignItems: 'center', gap: 8 }}>
-          <Database size={15} color="var(--accent-cyan)" />
-          <span>Quick Demonstration Datasets (1-Click Test)</span>
+        <h4 style={{ fontSize: '0.82rem', color: 'var(--text-primary)', fontWeight: 600 }}>
+          Demonstration Datasets (Single-Click Ingestion)
         </h4>
-        <p style={{ fontSize: '0.8rem', color: 'var(--text-dim)', marginTop: 4 }}>
-          Don't have a CSV on hand? Load pre-configured clinical cohorts to observe model stability vs. demographic drift.
+        <p style={{ fontSize: '0.75rem', color: 'var(--text-muted)', marginTop: 2 }}>
+          Evaluate model stability and demographic shift with standardized test cohorts:
         </p>
 
         <div className="sample-buttons-row">
@@ -193,7 +176,7 @@ export default function Home({ onAnalysisComplete, onSelectSample, loading }) {
             disabled={loading}
           >
             <strong>Cohort A: Stable Intake (n=200)</strong>
-            <span>Low drift across all features. Model accuracy ~88%, balanced female sensitivity.</span>
+            <span>Nominal drift across continuous features. Balanced baseline sensitivity.</span>
           </button>
 
           <button
@@ -201,17 +184,14 @@ export default function Home({ onAnalysisComplete, onSelectSample, loading }) {
             onClick={() => onSelectSample('drifted')}
             disabled={loading}
           >
-            <strong style={{ color: '#FCD34D' }}>Cohort B: Drifted Intake (n=200)</strong>
+            <strong>Cohort B: Drifted Intake (n=200)</strong>
             <span>Demographic aging, elevated cholesterol/BP, and female atypical angina presentation.</span>
           </button>
         </div>
       </div>
 
-      <div className="disclaimer-box" style={{ textAlign: 'left' }}>
-        <ShieldCheck size={20} style={{ flexShrink: 0 }} />
-        <span>
-          <strong>Educational Demonstration:</strong> CardioWatch is designed for machine learning monitoring coursework and clinical decision support research. Not certified for patient diagnosis.
-        </span>
+      <div className="notice-box">
+        <strong>Regulatory Notice:</strong> CardioWatch is designed for data visualization laboratory coursework and clinical decision support research. Predictions are for academic demonstration and not certified for diagnostic medical use.
       </div>
     </div>
   );
