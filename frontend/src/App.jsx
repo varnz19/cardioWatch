@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Navbar from './components/Navbar';
-import SubNavbar from './components/SubNavbar';
+import BottomNav from './components/BottomNav';
 import Footer from './components/Footer';
 import Home from './pages/Home';
 import Dashboard from './pages/Dashboard';
@@ -65,12 +65,6 @@ export default function App() {
         onQuickSample={handleQuickSample}
         onUploadClick={() => setActivePage('upload')}
         loading={loading}
-      />
-
-      {/* Sub Navbar: Options Bar resting directly below the top navbar */}
-      <SubNavbar
-        activePage={activePage}
-        setActivePage={setActivePage}
       />
 
       {globalError && (
@@ -154,6 +148,12 @@ export default function App() {
           </>
         )}
       </main>
+
+      {/* Floating Bottom Navigation Dock (like the reference screenshot) */}
+      <BottomNav
+        activePage={activePage}
+        setActivePage={setActivePage}
+      />
 
       {/* Institutional Footer with Legal & Regulatory links */}
       <Footer onOpenLegal={setLegalModal} />
