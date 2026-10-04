@@ -6,7 +6,25 @@ import {
 } from 'recharts';
 
 export default function Surveillance({ analysis, onNavigateToExport }) {
-  if (!analysis) return null;
+  if (!analysis) {
+    return (
+      <div className="card" style={{ padding: 48, textAlign: 'center' }}>
+        <h3 style={{ fontSize: '1.2rem', textTransform: 'uppercase', marginBottom: 10, letterSpacing: '-0.01em' }}>
+          NO ACTIVE PATIENT COHORT INGESTED
+        </h3>
+        <p style={{ color: 'var(--text-secondary)', maxWidth: 520, margin: '0 auto 24px auto', fontSize: '0.85rem', lineHeight: 1.6 }}>
+          All surveillance metrics—including Kolmogorov-Smirnov drift statistics, confusion matrix false negative rates, and demographic equity audits—are calculated live. Please ingest a patient CSV or load the Cleveland benchmark cohort.
+        </p>
+        <button
+          type="button"
+          className="btn-primary"
+          onClick={() => window.location.reload()}
+        >
+          GO TO INGESTION / BENCHMARK →
+        </button>
+      </div>
+    );
+  }
 
   const { performance, drift, fairness } = analysis;
 
@@ -35,8 +53,8 @@ export default function Surveillance({ analysis, onNavigateToExport }) {
   }));
 
   const getBarColor = (status) => {
-    if (status === 'HIGH') return '#EF4444';
-    if (status === 'MEDIUM') return '#F59E0B';
+    if (status === 'HIGH') return '#DC2626';
+    if (status === 'MEDIUM') return '#D97706';
     return '#DFE104';
   };
 
@@ -69,33 +87,33 @@ export default function Surveillance({ analysis, onNavigateToExport }) {
         <div className="card-header">
           <div className="card-title-group">
             <h3>Pillar 1: Model Performance & Confusion Matrix</h3>
-            <p>Evaluation against patient ground-truth diagnostic targets</p>
+            <p>Live Scikit-Learn evaluation against patient ground-truth diagnostic targets</p>
           </div>
           <StatusBadge status={hasPerf && performance.false_negative_rate > 0.15 ? 'Attention' : 'Normal'} label={`FNR: ${fnr}`} />
         </div>
         <div className="card-body">
           <div className="cm-container" style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 12 }}>
-            <div className="cm-cell" style={{ padding: 14, backgroundColor: 'var(--bg-subtle)', border: '1px solid var(--border-default)', borderRadius: 'var(--radius-sm)' }}>
-              <div style={{ fontSize: '0.72rem', color: 'var(--text-secondary)', textTransform: 'uppercase' }}>True Positive (TP)</div>
-              <div style={{ fontSize: '1.4rem', fontWeight: 700, color: 'var(--text-primary)', margin: '4px 0' }}>{cm.true_positive}</div>
+            <div className="cm-cell" style={{ padding: 14, backgroundColor: '#FFFFFF', border: '2px solid var(--border)' }}>
+              <div style={{ fontSize: '0.72rem', color: 'var(--text-secondary)', textTransform: 'uppercase', fontWeight: 700 }}>True Positive (TP)</div>
+              <div style={{ fontSize: '1.6rem', fontWeight: 700, color: 'var(--text-primary)', margin: '4px 0' }}>{cm.true_positive}</div>
               <div style={{ fontSize: '0.72rem', color: 'var(--text-muted)' }}>{tpPct}% of patients (Correct Disease Detection)</div>
             </div>
 
-            <div className="cm-cell" style={{ padding: 14, backgroundColor: 'var(--bg-subtle)', border: '1px solid var(--border-default)', borderRadius: 'var(--radius-sm)' }}>
-              <div style={{ fontSize: '0.72rem', color: 'var(--state-monitor-text)', textTransform: 'uppercase' }}>False Positive (FP)</div>
-              <div style={{ fontSize: '1.4rem', fontWeight: 700, color: 'var(--state-monitor-text)', margin: '4px 0' }}>{cm.false_positive}</div>
+            <div className="cm-cell" style={{ padding: 14, backgroundColor: '#FFFFFF', border: '2px solid var(--border)' }}>
+              <div style={{ fontSize: '0.72rem', color: 'var(--state-monitor-text)', textTransform: 'uppercase', fontWeight: 700 }}>False Positive (FP)</div>
+              <div style={{ fontSize: '1.6rem', fontWeight: 700, color: 'var(--state-monitor-text)', margin: '4px 0' }}>{cm.false_positive}</div>
               <div style={{ fontSize: '0.72rem', color: 'var(--text-muted)' }}>{fpPct}% of patients (Unnecessary Triage)</div>
             </div>
 
-            <div className="cm-cell" style={{ padding: 14, backgroundColor: 'rgba(179, 66, 58, 0.1)', border: '1px solid #b3423a', borderRadius: 'var(--radius-sm)' }}>
-              <div style={{ fontSize: '0.72rem', color: '#b3423a', fontWeight: 700, textTransform: 'uppercase' }}>False Negative (FN)</div>
-              <div style={{ fontSize: '1.4rem', fontWeight: 800, color: '#b3423a', margin: '4px 0' }}>{cm.false_negative}</div>
-              <div style={{ fontSize: '0.72rem', color: '#b3423a' }}>{fnPct}% missed active cardiac risk (Critical Safety Risk)</div>
+            <div className="cm-cell" style={{ padding: 14, backgroundColor: '#FEE2E2', border: '2px solid var(--state-attention)' }}>
+              <div style={{ fontSize: '0.72rem', color: '#991B1B', fontWeight: 700, textTransform: 'uppercase' }}>False Negative (FN)</div>
+              <div style={{ fontSize: '1.6rem', fontWeight: 800, color: '#DC2626', margin: '4px 0' }}>{cm.false_negative}</div>
+              <div style={{ fontSize: '0.72rem', color: '#991B1B', fontWeight: 600 }}>{fnPct}% missed cardiac risk (Critical Safety Concern)</div>
             </div>
 
-            <div className="cm-cell" style={{ padding: 14, backgroundColor: 'var(--bg-subtle)', border: '1px solid var(--border-default)', borderRadius: 'var(--radius-sm)' }}>
-              <div style={{ fontSize: '0.72rem', color: 'var(--text-secondary)', textTransform: 'uppercase' }}>True Negative (TN)</div>
-              <div style={{ fontSize: '1.4rem', fontWeight: 700, color: 'var(--text-primary)', margin: '4px 0' }}>{cm.true_negative}</div>
+            <div className="cm-cell" style={{ padding: 14, backgroundColor: '#FFFFFF', border: '2px solid var(--border)' }}>
+              <div style={{ fontSize: '0.72rem', color: 'var(--text-secondary)', textTransform: 'uppercase', fontWeight: 700 }}>True Negative (TN)</div>
+              <div style={{ fontSize: '1.6rem', fontWeight: 700, color: 'var(--text-primary)', margin: '4px 0' }}>{cm.true_negative}</div>
               <div style={{ fontSize: '0.72rem', color: 'var(--text-muted)' }}>{tnPct}% of patients (Healthy Confirmed)</div>
             </div>
           </div>
@@ -117,15 +135,15 @@ export default function Surveillance({ analysis, onNavigateToExport }) {
             <div style={{ height: 210 }}>
               <ResponsiveContainer width="100%" height="100%">
                 <BarChart data={topDrifting} layout="vertical" margin={{ left: 10, right: 10, top: 10, bottom: 10 }}>
-                  <XAxis type="number" domain={[0, 'dataMax + 0.1']} tick={{ fill: '#A1A1AA', fontSize: 11 }} />
-                  <YAxis type="category" dataKey="name" tick={{ fill: '#FAFAFA', fontSize: 11 }} />
+                  <XAxis type="number" domain={[0, 'dataMax + 0.1']} tick={{ fill: '#52525B', fontSize: 11 }} />
+                  <YAxis type="category" dataKey="name" tick={{ fill: '#09090B', fontSize: 11, fontWeight: 600 }} />
                   <Tooltip
-                    contentStyle={{ backgroundColor: '#121216', borderColor: '#3F3F46', color: '#FAFAFA' }}
+                    contentStyle={{ backgroundColor: '#FFFFFF', borderColor: '#18181B', borderWidth: 2, color: '#09090B' }}
                     formatter={(val) => [val.toFixed(3), 'Drift Score (KS/PSI)']}
                   />
                   <Bar dataKey="score">
                     {topDrifting.map((entry, index) => (
-                      <Cell key={`cell-${index}`} fill={getBarColor(entry.status)} />
+                      <Cell key={`cell-${index}`} fill={getBarColor(entry.status)} stroke="#18181B" strokeWidth={1.5} />
                     ))}
                   </Bar>
                 </BarChart>
@@ -153,12 +171,11 @@ export default function Surveillance({ analysis, onNavigateToExport }) {
                 {fairness.audits.map((audit, idx) => (
                   <div key={idx} style={{
                     padding: 12,
-                    backgroundColor: 'var(--bg-subtle)',
-                    border: '1px solid var(--border-default)',
-                    borderRadius: 'var(--radius-sm)'
+                    backgroundColor: '#FFFFFF',
+                    border: '2px solid var(--border)',
                   }}>
                     <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 8 }}>
-                      <strong style={{ fontSize: '0.82rem', color: 'var(--text-primary)' }}>{audit.attribute_type}</strong>
+                      <strong style={{ fontSize: '0.84rem', color: 'var(--text-primary)', textTransform: 'uppercase' }}>{audit.attribute_type}</strong>
                       <StatusBadge status={audit.status} />
                     </div>
 
@@ -191,12 +208,11 @@ export default function Surveillance({ analysis, onNavigateToExport }) {
         justifyContent: 'space-between',
         alignItems: 'center',
         padding: '16px 20px',
-        backgroundColor: 'var(--bg-surface)',
-        border: '1px solid var(--border-default)',
-        borderRadius: 'var(--radius-sm)'
+        backgroundColor: '#FFFFFF',
+        border: '2px solid var(--border)',
       }}>
         <div>
-          <strong style={{ fontSize: '0.86rem', color: 'var(--text-primary)' }}>Analysis Complete & Ready for Tableau</strong>
+          <strong style={{ fontSize: '0.88rem', color: 'var(--text-primary)', textTransform: 'uppercase' }}>Analysis Complete & Ready for Tableau</strong>
           <p style={{ fontSize: '0.74rem', color: 'var(--text-secondary)', marginTop: 2 }}>
             All patient predictions, KS drift stats, and fairness metrics are packaged for visualization in Tableau.
           </p>
@@ -206,7 +222,7 @@ export default function Surveillance({ analysis, onNavigateToExport }) {
           className="btn-primary"
           onClick={onNavigateToExport}
         >
-          Download Tableau CSVs →
+          DOWNLOAD TABLEAU CSVs →
         </button>
       </div>
     </div>

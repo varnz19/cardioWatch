@@ -1,37 +1,37 @@
 :root {
-  /* Kinetic Typography Design System Tokens */
-  --background: #09090B;
-  --foreground: #FAFAFA;
-  --muted: #27272A;
-  --muted-foreground: #A1A1AA;
+  /* Kinetic Typography Light Design System Tokens */
+  --background: #F4F4F0;
+  --foreground: #09090B;
+  --muted: #E5E5DE;
+  --muted-foreground: #52525B;
   --accent: #DFE104;
   --accent-foreground: #000000;
-  --border: #3F3F46;
+  --border: #18181B;
 
   /* Semantic UI Tokens */
-  --bg-app: #09090B;
-  --bg-surface: #121216;
-  --bg-card: #18181D;
-  --bg-subtle: #27272A;
-  --bg-input: #09090B;
+  --bg-app: #F4F4F0;
+  --bg-surface: #FFFFFF;
+  --bg-card: #FFFFFF;
+  --bg-subtle: #ECECE6;
+  --bg-input: #FFFFFF;
 
-  --border-default: #3F3F46;
-  --border-muted: #27272A;
-  --border-focus: #DFE104;
+  --border-default: #18181B;
+  --border-muted: #D4D4D8;
+  --border-focus: #18181B;
 
-  --text-primary: #FAFAFA;
-  --text-secondary: #A1A1AA;
+  --text-primary: #09090B;
+  --text-secondary: #52525B;
   --text-muted: #71717A;
 
   --accent-primary: #DFE104;
-  --accent-hover: #ECEE22;
+  --accent-hover: #D2D400;
 
-  --state-normal: #10B981;
-  --state-normal-text: #34D399;
-  --state-monitor: #F59E0B;
-  --state-monitor-text: #FBBF24;
-  --state-attention: #EF4444;
-  --state-attention-text: #F87171;
+  --state-normal: #059669;
+  --state-normal-text: #065F46;
+  --state-monitor: #D97706;
+  --state-monitor-text: #92400E;
+  --state-attention: #DC2626;
+  --state-attention-text: #991B1B;
 
   --radius-sharp: 0px;
 }
@@ -48,7 +48,7 @@ body {
   background-color: var(--bg-app);
   color: var(--text-primary);
   min-height: 100vh;
-  line-height: 1.4;
+  line-height: 1.45;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -63,8 +63,8 @@ code, pre, .mono {
 
 /* Scrollbars */
 ::-webkit-scrollbar {
-  width: 5px;
-  height: 5px;
+  width: 6px;
+  height: 6px;
 }
 ::-webkit-scrollbar-track {
   background: var(--bg-app);

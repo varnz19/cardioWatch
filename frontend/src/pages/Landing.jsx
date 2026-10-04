@@ -5,37 +5,37 @@ const FLOATING_MECHANICS = [
     num: '01',
     kicker: 'INGESTION ENGINE',
     title: 'PATIENT BIOMARKER INGESTION',
-    desc: 'Tabular physiological biomarkers (Age, BP, Cholesterol, Max HR, ST depression) ingested without third-party cloud leakage.'
+    desc: 'Ingest raw tabular clinical biomarkers (Age, BP, Cholesterol, Max HR, ST depression) directly into the local evaluation runtime.'
   },
   {
     num: '02',
     kicker: 'INFERENCE PIPELINE',
     title: 'LIVE RANDOM FOREST INFERENCE',
-    desc: 'Trained on UCI Cleveland cardiac records. Computes real-time decision probabilities row-by-row with zero static mock output.'
+    desc: 'The backend Scikit-Learn model runs real-time inference on every incoming row, generating predicted probabilities and diagnostic labels.'
   },
   {
     num: '03',
     kicker: 'CLINICAL SAFETY',
-    title: 'FALSE NEGATIVE RATE SURVEILLANCE',
-    desc: 'Accuracy can be deceptive. A high-accuracy model that misses true cardiac patients is clinically dangerous—we penalize FNR.'
+    title: 'FALSE NEGATIVE SURVEILLANCE',
+    desc: 'Raw accuracy can be deceptive. A model missing actual cardiac patients is clinically hazardous—we audit the False Negative Rate directly.'
   },
   {
     num: '04',
     kicker: 'STATISTICAL DRIFT',
     title: 'TWO-SAMPLE KS-TEST DIVERGENCE',
-    desc: 'Continuous Kolmogorov-Smirnov hypothesis testing detects if the incoming patient population distribution has drifted from baseline.'
+    desc: 'Dynamic Kolmogorov-Smirnov continuous tests and categorical PSI evaluate whether incoming patient distributions diverge from the training baseline.'
   },
   {
     num: '05',
     kicker: 'EQUITY AUDITING',
     title: 'DEMOGRAPHIC FAIRNESS & PARITY',
-    desc: 'Evaluates Equal Opportunity across biological sex (Male vs Female) and age cohorts (<55 vs ≥55) to expose silent diagnostic bias.'
+    desc: 'Audits diagnostic performance across biological sex (Male vs. Female) and age cohorts (<55 vs. ≥55) to expose subgroup sensitivity disparities.'
   },
   {
     num: '06',
     kicker: 'VISUAL HANDOFF',
     title: 'NORMALIZED TABLEAU DATASETS',
-    desc: 'Generates 4 pre-calculated relational CSV exports ready for drag-and-drop visual dashboarding in Tableau.'
+    desc: 'Exports 4 relational CSV tables with patient risk scores, drift statistics, and subgroup disparities ready for Tableau visual analysis.'
   }
 ];
 
@@ -71,11 +71,11 @@ export default function Landing({ onAnalyze, onUseSample, loading, error }) {
 
   return (
     <div className="kinetic-landing">
-      {/* 1. Infinite Ticker Marquee */}
+      {/* 1. Top Infinite Ticker Marquee */}
       <div className="marquee-wrapper" aria-hidden="true">
         <div className="marquee-track">
-          <span>CARDIOWATCH // REAL-TIME DRIFT & DEMOGRAPHIC FAIRNESS SURVEILLANCE // 100% LIVE INFERENCE // TWO-SAMPLE KS-TEST // EQUAL OPPORTUNITY AUDIT // TABLEAU RELATIONAL CSV EXPORT // </span>
-          <span>CARDIOWATCH // REAL-TIME DRIFT & DEMOGRAPHIC FAIRNESS SURVEILLANCE // 100% LIVE INFERENCE // TWO-SAMPLE KS-TEST // EQUAL OPPORTUNITY AUDIT // TABLEAU RELATIONAL CSV EXPORT // </span>
+          <span>CARDIOWATCH // REAL-TIME DRIFT & DEMOGRAPHIC FAIRNESS SURVEILLANCE // DYNAMIC TWO-SAMPLE KS-TEST // POPULATION STABILITY INDEX // LIVE SCIKIT-LEARN INFERENCE // TABLEAU RELATIONAL CSV EXPORT // </span>
+          <span>CARDIOWATCH // REAL-TIME DRIFT & DEMOGRAPHIC FAIRNESS SURVEILLANCE // DYNAMIC TWO-SAMPLE KS-TEST // POPULATION STABILITY INDEX // LIVE SCIKIT-LEARN INFERENCE // TABLEAU RELATIONAL CSV EXPORT // </span>
         </div>
       </div>
 
@@ -163,11 +163,11 @@ export default function Landing({ onAnalyze, onUseSample, loading, error }) {
             onClick={onUseSample}
             disabled={loading}
           >
-            {loading ? 'CALCULATING SURVEILLANCE...' : 'LOAD SAMPLE DATASET (200 PATIENTS) →'}
+            {loading ? 'CALCULATING LIVE METRICS...' : 'LOAD SAMPLE BENCHMARK (UCI CLEVELAND) →'}
           </button>
 
           <p className="cta-micro-caption">
-            Loads reference Cleveland patient cohort with baseline feature distribution and true ground-truth targets.
+            Loads reference Cleveland patient cohort to compute live Kolmogorov-Smirnov drift and demographic fairness.
           </p>
         </div>
 
@@ -190,11 +190,11 @@ export default function Landing({ onAnalyze, onUseSample, loading, error }) {
         </div>
       </div>
 
-      {/* 3. Bottom Marquee Stats Ticker */}
+      {/* 3. Bottom Marquee Pipeline Ticker (100% descriptive, zero fake numbers) */}
       <div className="marquee-wrapper secondary-marquee" aria-hidden="true">
         <div className="marquee-track reverse">
-          <span>0.05 KS P-VALUE THRESHOLD // EQUAL OPPORTUNITY AUDIT // ZERO HEURISTIC SIMULATION // 88.5% BASELINE ACCURACY // 7.1% MISSED CARDIAC CASES // </span>
-          <span>0.05 KS P-VALUE THRESHOLD // EQUAL OPPORTUNITY AUDIT // ZERO HEURISTIC SIMULATION // 88.5% BASELINE ACCURACY // 7.1% MISSED CARDIAC CASES // </span>
+          <span>DYNAMIC P-VALUE EVALUATION // EQUAL OPPORTUNITY AUDIT // ZERO HEURISTIC SIMULATION // CONFUSION MATRIX ANALYSIS // DYNAMIC SUBGROUP SLICING // </span>
+          <span>DYNAMIC P-VALUE EVALUATION // EQUAL OPPORTUNITY AUDIT // ZERO HEURISTIC SIMULATION // CONFUSION MATRIX ANALYSIS // DYNAMIC SUBGROUP SLICING // </span>
         </div>
       </div>
     </div>
