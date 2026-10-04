@@ -852,65 +852,198 @@
   font-weight: 700;
 }
 
-/* Institutional Footer */
-.app-footer {
-  border-top: 2px solid var(--border);
-  background-color: #FFFFFF;
-  padding: 16px 28px 88px 28px;
-  margin-top: auto;
+/* ==========================================================================
+   7. Device Responsive Breakpoints & Smooth Scrolling System
+   ========================================================================== */
+
+/* Universal Smooth Scrolling & Touch Optimizations */
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
 }
 
-.footer-content {
-  max-width: 1440px;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  font-size: 0.72rem;
-  color: var(--muted-foreground);
-  text-transform: uppercase;
+* {
+  -webkit-overflow-scrolling: touch;
 }
 
-.footer-links {
-  display: flex;
-  align-items: center;
-  gap: 16px;
+/* Touch-friendly scrolling track styles */
+.workflow-cards-track {
+  -webkit-overflow-scrolling: touch;
+  scroll-snap-type: x mandatory;
 }
 
-.footer-links button {
-  color: var(--muted-foreground);
-  text-decoration: underline;
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 0;
-  font-size: 0.72rem;
-  text-transform: uppercase;
-  font-family: inherit;
+.workflow-card {
+  scroll-snap-align: start;
 }
 
-.footer-links button:hover {
-  color: #000000;
+.data-table-container {
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
 }
 
-/* Modals */
-.modal-overlay {
-  position: fixed;
-  inset: 0;
-  background: rgba(9, 9, 11, 0.6);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 2000;
-  padding: 20px;
+/* --- Large Desktops (min-width: 1440px) --- */
+@media (min-width: 1440px) {
+  .page-container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 24px 32px 100px 32px;
+  }
 }
 
-.modal-content {
-  background: #FFFFFF;
-  border: 2px solid var(--border);
-  padding: 28px;
-  max-width: 680px;
-  width: 100%;
+/* --- Medium Screens / Laptops (max-width: 1100px) --- */
+@media (max-width: 1100px) {
+  .kpi-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  .grid-2 {
+    grid-template-columns: 1fr;
+  }
+  .workflow-card {
+    flex: 0 0 290px;
+  }
+}
+
+/* --- Tablets & Handhelds (max-width: 768px) --- */
+@media (max-width: 768px) {
+  .top-navbar {
+    padding: 0 16px;
+    height: auto;
+    min-height: 56px;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .top-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .top-actions button {
+    padding: 4px 8px;
+    font-size: 0.65rem;
+    flex: 1;
+  }
+
+  .clean-cardiac-hero {
+    margin: 16px auto 20px auto;
+    padding: 0 12px;
+  }
+
+  .clean-hero-title {
+    font-size: clamp(1.5rem, 6vw, 2.1rem);
+  }
+
+  .clean-hero-lead {
+    font-size: 0.82rem;
+  }
+
+  .scrollable-workflow-section {
+    padding: 0 12px;
+    margin: 24px auto 36px auto;
+  }
+
+  .workflow-header-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .scroll-arrow-controls {
+    align-self: flex-end;
+  }
+
+  .workflow-card {
+    flex: 0 0 260px;
+    padding: 16px;
+  }
+
+  .kpi-grid {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 10px;
+  }
+
+  .metric-card {
+    padding: 12px;
+  }
+
+  .metric-value {
+    font-size: 1.6rem;
+  }
+
+  .card-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  #patient-search-input {
+    width: 100% !important;
+  }
+
+  .risk-filter-bar {
+    gap: 6px;
+    padding: 8px 12px;
+  }
+
+  .risk-filter-btn {
+    padding: 4px 8px;
+    font-size: 0.65rem;
+  }
+
+  .bottom-dock-nav {
+    bottom: 10px;
+    padding: 4px 6px;
+    max-width: calc(100vw - 16px);
+  }
+
+  .dock-item {
+    min-width: 60px;
+    padding: 6px 10px;
+  }
+
+  .dock-label {
+    font-size: 0.58rem;
+  }
+}
+
+/* --- Mobile Phones (max-width: 480px) --- */
+@media (max-width: 480px) {
+  .kpi-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .clean-hero-title {
+    font-size: 1.45rem;
+  }
+
+  .hero-kicker-badge {
+    font-size: 0.62rem;
+    padding: 3px 8px;
+  }
+
+  .workflow-card {
+    flex: 0 0 85vw;
+  }
+
+  .data-table th,
+  .data-table td {
+    padding: 7px 10px;
+    font-size: 0.7rem;
+  }
+
+  .dock-item {
+    min-width: 52px;
+    padding: 5px 6px;
+  }
+
+  .dock-label {
+    font-size: 0.54rem;
+  }
 }
 
 /* Skeletons */

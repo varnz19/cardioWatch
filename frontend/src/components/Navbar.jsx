@@ -9,7 +9,7 @@ export default function Navbar({ currentDatasetName, onQuickSample, onNewDataset
             CARDIOWATCH
             <span className="brand-badge">ML SURVEILLANCE</span>
           </h1>
-          <p>KINETIC DRIFT & FAIRNESS ENGINE</p>
+          <p>CARDIAC ML SURVEILLANCE &amp; DRIFT ENGINE</p>
         </div>
 
         {currentDatasetName && (
