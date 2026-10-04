@@ -2,20 +2,14 @@ import React, { useState, useEffect } from 'react';
 import Navbar from './components/Navbar';
 import BottomNav from './components/BottomNav';
 import Footer from './components/Footer';
-import Home from './pages/Home';
-import Dashboard from './pages/Dashboard';
-import Dataset from './pages/Dataset';
-import Performance from './pages/Performance';
-import Drift from './pages/Drift';
-import Fairness from './pages/Fairness';
-import Prediction from './pages/Prediction';
-import Simulation from './pages/Simulation';
+import OverviewData from './pages/OverviewData';
+import Surveillance from './pages/Surveillance';
 import Export from './pages/Export';
 import { analyzeDataset, getCurrentAnalysis } from './services/api';
 import './App.css';
 
 export default function App() {
-  const [activePage, setActivePage] = useState('dashboard');
+  const [activePage, setActivePage] = useState('surveillance');
   const [analysis, setAnalysis] = useState(null);
   const [loading, setLoading] = useState(false);
   const [globalError, setGlobalError] = useState('');
@@ -45,7 +39,7 @@ export default function App() {
     try {
       const result = await analyzeDataset({ file, sampleName });
       setAnalysis(result);
-      setActivePage('dashboard');
+      setActivePage('surveillance');
     } catch (err) {
       setGlobalError(err.message || 'Analysis processing failed.');
     } finally {
@@ -63,7 +57,7 @@ export default function App() {
       <Navbar
         currentDatasetName={analysis?.dataset_name || 'Loading...'}
         onQuickSample={handleQuickSample}
-        onUploadClick={() => setActivePage('upload')}
+        onUploadClick={() => setActivePage('overview')}
         loading={loading}
       />
 
@@ -84,62 +78,30 @@ export default function App() {
         {loading ? (
           <div className="skeleton-container">
             <div className="skeleton-box skeleton-kpi" />
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 12 }}>
-              <div className="skeleton-box" style={{ height: 70 }} />
-              <div className="skeleton-box" style={{ height: 70 }} />
-              <div className="skeleton-box" style={{ height: 70 }} />
-              <div className="skeleton-box" style={{ height: 70 }} />
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 12 }}>
+              <div className="skeleton-box" style={{ height: 80 }} />
+              <div className="skeleton-box" style={{ height: 80 }} />
+              <div className="skeleton-box" style={{ height: 80 }} />
             </div>
             <div className="skeleton-box skeleton-chart" />
             <div className="skeleton-box" style={{ height: 160 }} />
           </div>
         ) : (
           <>
-            {activePage === 'upload' && (
-              <Home
+            {activePage === 'overview' && (
+              <OverviewData
+                analysis={analysis}
                 onAnalysisComplete={handleAnalysisRequest}
                 onSelectSample={handleQuickSample}
                 loading={loading}
               />
             )}
 
-            {activePage === 'dashboard' && (
-              <Dashboard
+            {activePage === 'surveillance' && (
+              <Surveillance
                 analysis={analysis}
-                onNavigate={setActivePage}
+                onNavigateToExport={() => setActivePage('export')}
               />
-            )}
-
-            {activePage === 'dataset' && (
-              <Dataset
-                analysis={analysis}
-              />
-            )}
-
-            {activePage === 'performance' && (
-              <Performance
-                analysis={analysis}
-              />
-            )}
-
-            {activePage === 'drift' && (
-              <Drift
-                analysis={analysis}
-              />
-            )}
-
-            {activePage === 'fairness' && (
-              <Fairness
-                analysis={analysis}
-              />
-            )}
-
-            {activePage === 'prediction' && (
-              <Prediction />
-            )}
-
-            {activePage === 'simulation' && (
-              <Simulation />
             )}
 
             {activePage === 'export' && (
@@ -149,7 +111,7 @@ export default function App() {
         )}
       </main>
 
-      {/* Floating Bottom Navigation Dock (like the reference screenshot) */}
+      {/* Floating Bottom Navigation Dock (3 Streamlined Sections) */}
       <BottomNav
         activePage={activePage}
         setActivePage={setActivePage}
