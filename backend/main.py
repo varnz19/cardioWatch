@@ -196,6 +196,43 @@ async def analyze_dataset(
     clean_df["predicted_probability"] = np.round(probs, 4)
     clean_df["prediction_label"] = np.where(preds == 1, "Higher Risk", "Lower Risk")
 
+    # Generate patient identity metadata
+    first_names_male = [
+        "James", "Marcus", "Robert", "David", "Liam", "Carlos", "Thomas", "Arthur",
+        "Daniel", "Victor", "Alexander", "Nathan", "Edward", "Raymond", "Samuel", "George"
+    ]
+    first_names_female = [
+        "Eleanor", "Sofia", "Grace", "Amara", "Margaret", "Elena", "Clara", "Hannah",
+        "Miriam", "Victoria", "Evelyn", "Diane", "Lucia", "Theresa", "Sarah", "Maya"
+    ]
+    last_names = [
+        "Vance", "Wilson", "Chen", "Rodriguez", "Patel", "Kelly", "Taylor", "Okafor",
+        "O'Connor", "Brooks", "Mitchell", "Fischer", "Nakamura", "Morales", "Goldstein", "Bennett"
+    ]
+
+    patient_ids = [f"PT-{1001 + i}" for i in range(len(clean_df))]
+    patient_names = []
+    for i, row in clean_df.iterrows():
+        is_male = (row.get("sex", 1) == 1) or (str(row.get("sex_desc", "")).lower() == "male")
+        fn_pool = first_names_male if is_male else first_names_female
+        fn = fn_pool[(i * 7 + 3) % len(fn_pool)]
+        ln = last_names[(i * 11 + 5) % len(last_names)]
+        patient_names.append(f"{fn} {ln}")
+
+    clean_df["patient_id"] = patient_ids
+    clean_df["patient_name"] = patient_names
+
+    # Clinical risk classification
+    def assign_risk_level(prob):
+        if prob >= 0.70:
+            return "HIGH CARDIAC RISK"
+        elif prob >= 0.40:
+            return "MODERATE / ELEVATED"
+        else:
+            return "LOW RISK (STABLE)"
+
+    clean_df["risk_level"] = clean_df["predicted_probability"].apply(assign_risk_level)
+
     # Error classification if target present
     if val_summary["has_target"]:
         def categorize_error(row):
@@ -254,13 +291,17 @@ async def analyze_dataset(
         "max_hr_mean": round(float(clean_df["thalach"].mean()), 1)
     }
 
-    # 7. Data Preview (First 50 rows)
-    preview_cols = ["age", "sex_desc", "cp_desc", "trestbps", "chol", "thalach", "predicted_probability", "prediction_label"]
+    # 7. Data Preview (Up to 200 rows for complete cohort review)
+    preview_cols = [
+        "patient_id", "patient_name", "age", "sex_desc", "risk_level",
+        "predicted_probability", "predicted_outcome", "prediction_label", "cp_desc", "trestbps",
+        "chol", "thalach", "oldpeak"
+    ]
     if val_summary["has_target"]:
-        preview_cols.insert(6, "target")
+        preview_cols.append("target")
         preview_cols.append("error_classification")
 
-    preview_records = clean_df[[c for c in preview_cols if c in clean_df.columns]].head(50).to_dict(orient="records")
+    preview_records = clean_df[[c for c in preview_cols if c in clean_df.columns]].head(200).to_dict(orient="records")
 
     # Combine master analysis response
     response_payload = {
