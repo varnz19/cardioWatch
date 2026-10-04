@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function Navbar({ currentDatasetName, onQuickSample, onUploadClick, loading }) {
+export default function Navbar({ currentDatasetName, hasAnalysis, onQuickSample, onNewDataset, loading }) {
   return (
     <header className="top-navbar">
       <div className="navbar-brand-group">
@@ -12,40 +12,42 @@ export default function Navbar({ currentDatasetName, onQuickSample, onUploadClic
           <p>Clinical ML Surveillance</p>
         </div>
 
-        {currentDatasetName && (
+        {hasAnalysis && currentDatasetName && (
           <div className="active-dataset-tag">
             Active: {currentDatasetName}
           </div>
         )}
       </div>
 
-      <div className="top-actions">
-        <button
-          type="button"
-          className="btn-secondary"
-          onClick={() => onQuickSample('stable')}
-          disabled={loading}
-        >
-          Load Stable Sample
-        </button>
+      {hasAnalysis && (
+        <div className="top-actions">
+          <button
+            type="button"
+            className="btn-secondary"
+            onClick={() => onQuickSample('stable')}
+            disabled={loading}
+          >
+            Stable Sample
+          </button>
 
-        <button
-          type="button"
-          className="btn-secondary"
-          onClick={() => onQuickSample('drifted')}
-          disabled={loading}
-        >
-          Load Drifted Sample
-        </button>
+          <button
+            type="button"
+            className="btn-secondary"
+            onClick={() => onQuickSample('drifted')}
+            disabled={loading}
+          >
+            Drifted Sample
+          </button>
 
-        <button
-          type="button"
-          className="btn-primary"
-          onClick={onUploadClick}
-        >
-          Upload CSV
-        </button>
-      </div>
+          <button
+            type="button"
+            className="btn-primary"
+            onClick={onNewDataset}
+          >
+            New Dataset
+          </button>
+        </div>
+      )}
     </header>
   );
 }

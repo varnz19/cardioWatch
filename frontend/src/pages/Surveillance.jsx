@@ -35,9 +35,9 @@ export default function Surveillance({ analysis, onNavigateToExport }) {
   }));
 
   const getBarColor = (status) => {
-    if (status === 'HIGH') return '#da3633';
-    if (status === 'MEDIUM') return '#9e6a03';
-    return '#238636';
+    if (status === 'HIGH') return '#b3423a';
+    if (status === 'MEDIUM') return '#a8741a';
+    return '#3d7a4f';
   };
 
   return (
@@ -87,10 +87,10 @@ export default function Surveillance({ analysis, onNavigateToExport }) {
               <div style={{ fontSize: '0.72rem', color: 'var(--text-muted)' }}>{fpPct}% of patients (Unnecessary Triage)</div>
             </div>
 
-            <div className="cm-cell" style={{ padding: 14, backgroundColor: 'rgba(218, 54, 51, 0.1)', border: '1px solid #da3633', borderRadius: 'var(--radius-sm)' }}>
-              <div style={{ fontSize: '0.72rem', color: '#f85149', fontWeight: 700, textTransform: 'uppercase' }}>False Negative (FN)</div>
-              <div style={{ fontSize: '1.4rem', fontWeight: 800, color: '#f85149', margin: '4px 0' }}>{cm.false_negative}</div>
-              <div style={{ fontSize: '0.72rem', color: '#f85149' }}>{fnPct}% missed active cardiac risk (Critical Safety Risk)</div>
+            <div className="cm-cell" style={{ padding: 14, backgroundColor: 'rgba(179, 66, 58, 0.1)', border: '1px solid #b3423a', borderRadius: 'var(--radius-sm)' }}>
+              <div style={{ fontSize: '0.72rem', color: '#b3423a', fontWeight: 700, textTransform: 'uppercase' }}>False Negative (FN)</div>
+              <div style={{ fontSize: '1.4rem', fontWeight: 800, color: '#b3423a', margin: '4px 0' }}>{cm.false_negative}</div>
+              <div style={{ fontSize: '0.72rem', color: '#b3423a' }}>{fnPct}% missed active cardiac risk (Critical Safety Risk)</div>
             </div>
 
             <div className="cm-cell" style={{ padding: 14, backgroundColor: 'var(--bg-subtle)', border: '1px solid var(--border-default)', borderRadius: 'var(--radius-sm)' }}>
@@ -117,10 +117,10 @@ export default function Surveillance({ analysis, onNavigateToExport }) {
             <div style={{ height: 210 }}>
               <ResponsiveContainer width="100%" height="100%">
                 <BarChart data={topDrifting} layout="vertical" margin={{ left: 10, right: 10, top: 10, bottom: 10 }}>
-                  <XAxis type="number" domain={[0, 'dataMax + 0.1']} tick={{ fill: '#8b949e', fontSize: 11 }} />
-                  <YAxis type="category" dataKey="name" tick={{ fill: '#e6edf3', fontSize: 11 }} />
+                  <XAxis type="number" domain={[0, 'dataMax + 0.1']} tick={{ fill: '#5f6b70', fontSize: 11 }} />
+                  <YAxis type="category" dataKey="name" tick={{ fill: '#1f2a30', fontSize: 11 }} />
                   <Tooltip
-                    contentStyle={{ backgroundColor: '#161b22', borderColor: '#30363d', borderRadius: 2 }}
+                    contentStyle={{ backgroundColor: '#f6f2e9', borderColor: '#cdc6b5', borderRadius: 2 }}
                     formatter={(val) => [val.toFixed(3), 'Drift Score (KS/PSI)']}
                   />
                   <Bar dataKey="score">

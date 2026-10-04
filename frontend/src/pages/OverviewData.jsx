@@ -147,7 +147,7 @@ export default function OverviewData({ analysis, onAnalysisComplete, onSelectSam
           </div>
 
           {errorMsg && (
-            <div style={{ color: '#f85149', fontSize: '0.78rem', marginTop: 10 }}>
+            <div style={{ color: '#b3423a', fontSize: '0.78rem', marginTop: 10 }}>
               {errorMsg}
             </div>
           )}
@@ -264,7 +264,7 @@ export default function OverviewData({ analysis, onAnalysisComplete, onSelectSam
                   const isFN = row.error_classification === 'False Negative';
                   const isFP = row.error_classification === 'False Positive';
                   return (
-                    <tr key={idx} style={{ backgroundColor: isFN ? 'rgba(218, 54, 51, 0.1)' : undefined }}>
+                    <tr key={idx} style={{ backgroundColor: isFN ? 'rgba(179, 66, 58, 0.1)' : undefined }}>
                       <td>{row.age}</td>
                       <td>{row.sex_desc || (row.sex === 1 ? 'Male' : 'Female')}</td>
                       <td>{row.cp_desc || row.cp}</td>
@@ -273,12 +273,12 @@ export default function OverviewData({ analysis, onAnalysisComplete, onSelectSam
                       <td>{row.thalach}</td>
                       <td>{row.oldpeak}</td>
                       <td>
-                        <span style={{ fontWeight: 600, color: row.target === 1 ? '#f85149' : '#3fb950' }}>
+                        <span style={{ fontWeight: 600, color: row.target === 1 ? '#b3423a' : '#3d7a4f' }}>
                           {row.target === 1 ? 'Presence (1)' : 'Absence (0)'}
                         </span>
                       </td>
                       <td>
-                        <span style={{ fontWeight: 600, color: row.predicted_target === 1 ? '#f85149' : '#3fb950' }}>
+                        <span style={{ fontWeight: 600, color: row.predicted_target === 1 ? '#b3423a' : '#3d7a4f' }}>
                           {row.prediction_label || (row.predicted_target === 1 ? 'High Risk' : 'Low Risk')}
                         </span>
                       </td>
@@ -289,11 +289,11 @@ export default function OverviewData({ analysis, onAnalysisComplete, onSelectSam
                       </td>
                       <td>
                         {isFN ? (
-                          <span style={{ color: '#f85149', fontWeight: 700, fontSize: '0.72rem' }}>FALSE NEGATIVE</span>
+                          <span style={{ color: '#b3423a', fontWeight: 700, fontSize: '0.72rem' }}>FALSE NEGATIVE</span>
                         ) : isFP ? (
-                          <span style={{ color: '#d29922', fontWeight: 600, fontSize: '0.72rem' }}>FALSE POSITIVE</span>
+                          <span style={{ color: '#a8741a', fontWeight: 600, fontSize: '0.72rem' }}>FALSE POSITIVE</span>
                         ) : (
-                          <span style={{ color: '#3fb950', fontSize: '0.72rem' }}>CORRECT</span>
+                          <span style={{ color: '#3d7a4f', fontSize: '0.72rem' }}>CORRECT</span>
                         )}
                       </td>
                     </tr>

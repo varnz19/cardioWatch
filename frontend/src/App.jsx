@@ -1,45 +1,30 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Navbar from './components/Navbar';
 import BottomNav from './components/BottomNav';
 import Footer from './components/Footer';
+import Landing from './pages/Landing';
 import OverviewData from './pages/OverviewData';
 import Surveillance from './pages/Surveillance';
 import Export from './pages/Export';
-import { analyzeDataset, getCurrentAnalysis } from './services/api';
+import { analyzeDataset } from './services/api';
 import './App.css';
 
 export default function App() {
-  const [activePage, setActivePage] = useState('surveillance');
+  const [activePage, setActivePage] = useState('landing');
   const [analysis, setAnalysis] = useState(null);
   const [loading, setLoading] = useState(false);
   const [globalError, setGlobalError] = useState('');
   const [legalModal, setLegalModal] = useState(null); // 'terms' | 'privacy' | null
 
-  useEffect(() => {
-    async function initApp() {
-      try {
-        setLoading(true);
-        let current = await getCurrentAnalysis();
-        if (!current) {
-          current = await analyzeDataset();
-        }
-        setAnalysis(current);
-      } catch (err) {
-        console.warn('Initial analysis load fallback:', err);
-      } finally {
-        setLoading(false);
-      }
-    }
-    initApp();
-  }, []);
+  const onLanding = activePage === 'landing';
 
-  const handleAnalysisRequest = async ({ file = null, sampleName = null }) => {
+  const handleAnalysisRequest = async ({ file = null, sampleName = null, goTo = 'surveillance' }) => {
     setLoading(true);
     setGlobalError('');
     try {
       const result = await analyzeDataset({ file, sampleName });
       setAnalysis(result);
-      setActivePage('surveillance');
+      setActivePage(goTo);
     } catch (err) {
       setGlobalError(err.message || 'Analysis processing failed.');
     } finally {
@@ -55,19 +40,20 @@ export default function App() {
     <div className="app-container">
       {/* Top Navbar */}
       <Navbar
-        currentDatasetName={analysis?.dataset_name || 'Loading...'}
+        hasAnalysis={!!analysis && !onLanding}
+        currentDatasetName={analysis?.dataset_name}
         onQuickSample={handleQuickSample}
-        onUploadClick={() => setActivePage('overview')}
+        onNewDataset={() => { setGlobalError(''); setActivePage('landing'); }}
         loading={loading}
       />
 
-      {globalError && (
+      {globalError && !onLanding && (
         <div style={{
           background: 'var(--bg-subtle)',
-          borderBottom: '1px solid #da3633',
+          borderBottom: '1px solid #b3423a',
           padding: '8px 24px',
           fontSize: '0.78rem',
-          color: '#f85149'
+          color: '#b3423a'
         }}>
           <strong>Error:</strong> {globalError}
         </div>
@@ -88,6 +74,15 @@ export default function App() {
           </div>
         ) : (
           <>
+            {activePage === 'landing' && (
+              <Landing
+                loading={loading}
+                error={globalError}
+                onAnalyze={(file) => handleAnalysisRequest({ file, goTo: 'overview' })}
+                onUseSample={() => handleAnalysisRequest({ sampleName: 'stable', goTo: 'overview' })}
+              />
+            )}
+
             {activePage === 'overview' && (
               <OverviewData
                 analysis={analysis}
@@ -111,11 +106,13 @@ export default function App() {
         )}
       </main>
 
-      {/* Floating Bottom Navigation Dock (3 Streamlined Sections) */}
-      <BottomNav
-        activePage={activePage}
-        setActivePage={setActivePage}
-      />
+      {/* Floating Bottom Navigation Dock (hidden on the landing page) */}
+      {!onLanding && (
+        <BottomNav
+          activePage={activePage}
+          setActivePage={setActivePage}
+        />
+      )}
 
       {/* Institutional Footer with Legal & Regulatory links */}
       <Footer onOpenLegal={setLegalModal} />
