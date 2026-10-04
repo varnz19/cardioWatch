@@ -1,53 +1,43 @@
 import React, { useState, useRef } from 'react';
 
-const LEFT_NOTES = [
+const FLOATING_MECHANICS = [
   {
-    step: '01',
-    title: 'You bring the patients',
-    body: 'Drop in a CSV of patient records: age, blood pressure, cholesterol, heart rate and whether they truly had heart disease.'
+    num: '01',
+    kicker: 'INGESTION ENGINE',
+    title: 'PATIENT BIOMARKER INGESTION',
+    desc: 'Tabular physiological biomarkers (Age, BP, Cholesterol, Max HR, ST depression) ingested without third-party cloud leakage.'
   },
   {
-    step: '02',
-    title: 'A real model scores everyone',
-    body: 'A Random Forest trained on the UCI Cleveland data predicts a risk probability for every single row, live.'
+    num: '02',
+    kicker: 'INFERENCE PIPELINE',
+    title: 'LIVE RANDOM FOREST INFERENCE',
+    desc: 'Trained on UCI Cleveland cardiac records. Computes real-time decision probabilities row-by-row with zero static mock output.'
   },
   {
-    step: '03',
-    title: 'Accuracy hides mistakes',
-    body: 'A model can look 90% accurate and still send sick patients home. We track the false negative rate for exactly that reason.'
+    num: '03',
+    kicker: 'CLINICAL SAFETY',
+    title: 'FALSE NEGATIVE RATE SURVEILLANCE',
+    desc: 'Accuracy can be deceptive. A high-accuracy model that misses true cardiac patients is clinically dangerous—we penalize FNR.'
+  },
+  {
+    num: '04',
+    kicker: 'STATISTICAL DRIFT',
+    title: 'TWO-SAMPLE KS-TEST DIVERGENCE',
+    desc: 'Continuous Kolmogorov-Smirnov hypothesis testing detects if the incoming patient population distribution has drifted from baseline.'
+  },
+  {
+    num: '05',
+    kicker: 'EQUITY AUDITING',
+    title: 'DEMOGRAPHIC FAIRNESS & PARITY',
+    desc: 'Evaluates Equal Opportunity across biological sex (Male vs Female) and age cohorts (<55 vs ≥55) to expose silent diagnostic bias.'
+  },
+  {
+    num: '06',
+    kicker: 'VISUAL HANDOFF',
+    title: 'NORMALIZED TABLEAU DATASETS',
+    desc: 'Generates 4 pre-calculated relational CSV exports ready for drag-and-drop visual dashboarding in Tableau.'
   }
 ];
-
-const RIGHT_NOTES = [
-  {
-    step: '04',
-    title: 'Is the crowd changing?',
-    body: 'Kolmogorov-Smirnov tests compare your new patients against the training population, feature by feature, to catch drift early.'
-  },
-  {
-    step: '05',
-    title: 'Is it fair to everyone?',
-    body: 'We split results by sex and age group and compare recall. A big gap means the model misses disease more often in one group.'
-  },
-  {
-    step: '06',
-    title: 'Then take it to Tableau',
-    body: 'Every result is packaged as clean CSV files, ready to drag into Tableau and build your own dashboards.'
-  }
-];
-
-function FloatingNote({ note, index, side }) {
-  return (
-    <div
-      className={`float-note float-${side}`}
-      style={{ animationDelay: `${index * 0.9}s`, marginLeft: side === 'left' ? index * 18 : 0, marginRight: side === 'right' ? index * 18 : 0 }}
-    >
-      <span className="float-note-step">{note.step}</span>
-      <h3>{note.title}</h3>
-      <p>{note.body}</p>
-    </div>
-  );
-}
 
 export default function Landing({ onAnalyze, onUseSample, loading, error }) {
   const [dragActive, setDragActive] = useState(false);
@@ -57,7 +47,7 @@ export default function Landing({ onAnalyze, onUseSample, loading, error }) {
   const handleFile = (file) => {
     if (!file) return;
     if (!file.name.toLowerCase().endsWith('.csv')) {
-      setLocalError('That is not a CSV file. Please choose a .csv file.');
+      setLocalError('INVALID FILE FORMAT. PLEASE SELECT A VALID .CSV FILE.');
       return;
     }
     setLocalError('');
@@ -77,68 +67,136 @@ export default function Landing({ onAnalyze, onUseSample, loading, error }) {
     handleFile(e.dataTransfer.files && e.dataTransfer.files[0]);
   };
 
-  const shownError = localError || error;
+  const displayError = localError || error;
 
   return (
-    <section className="landing">
-      <div className="landing-notes landing-notes-left">
-        {LEFT_NOTES.map((n, i) => (
-          <FloatingNote key={n.step} note={n} index={i} side="left" />
-        ))}
+    <div className="kinetic-landing">
+      {/* 1. Infinite Ticker Marquee */}
+      <div className="marquee-wrapper" aria-hidden="true">
+        <div className="marquee-track">
+          <span>CARDIOWATCH // REAL-TIME DRIFT & DEMOGRAPHIC FAIRNESS SURVEILLANCE // 100% LIVE INFERENCE // TWO-SAMPLE KS-TEST // EQUAL OPPORTUNITY AUDIT // TABLEAU RELATIONAL CSV EXPORT // </span>
+          <span>CARDIOWATCH // REAL-TIME DRIFT & DEMOGRAPHIC FAIRNESS SURVEILLANCE // 100% LIVE INFERENCE // TWO-SAMPLE KS-TEST // EQUAL OPPORTUNITY AUDIT // TABLEAU RELATIONAL CSV EXPORT // </span>
+        </div>
       </div>
 
-      <div className="landing-center">
-        <p className="landing-kicker">CardioWatch</p>
-        <h1 className="landing-title">Is your heart disease model still telling the truth?</h1>
-        <p className="landing-lead">
-          Upload patient data and CardioWatch checks how well the model performs, whether new patients look different
-          from the ones it learned on, and whether it treats everyone equally.
-        </p>
-
-        <div
-          className={`landing-drop ${dragActive ? 'drag-active' : ''}`}
-          onDragEnter={handleDrag}
-          onDragOver={handleDrag}
-          onDragLeave={handleDrag}
-          onDrop={handleDrop}
-          onClick={() => fileInputRef.current && fileInputRef.current.click()}
-          role="button"
-          tabIndex={0}
-          id="landing-dropzone"
-        >
-          <input
-            ref={fileInputRef}
-            type="file"
-            accept=".csv"
-            style={{ display: 'none' }}
-            onChange={(e) => handleFile(e.target.files && e.target.files[0])}
-          />
-          <strong>Upload a patient CSV</strong>
-          <span>Drag a file here, or click to browse</span>
-          <small>Columns: age, sex, cp, trestbps, chol, fbs, restecg, thalach, exang, oldpeak, slope, ca, thal, target</small>
+      {/* 2. Main Hero Section */}
+      <div className="kinetic-hero-grid">
+        {/* Left Column: Floating Explanatory Cards */}
+        <div className="floating-column left-column">
+          {FLOATING_MECHANICS.slice(0, 3).map((item, idx) => (
+            <div
+              key={item.num}
+              className="kinetic-card floating-step-card"
+              style={{ animationDelay: `${idx * 0.7}s` }}
+            >
+              <div className="step-badge-row">
+                <span className="step-counter">{item.num}</span>
+                <span className="step-kicker">{item.kicker}</span>
+              </div>
+              <h3 className="card-headline">{item.title}</h3>
+              <p className="card-body-text">{item.desc}</p>
+            </div>
+          ))}
         </div>
 
-        {shownError && <div className="landing-error">{shownError}</div>}
+        {/* Center Column: Massive Headline & Ingestion Control */}
+        <div className="center-action-column">
+          <div className="hero-kicker-tag">
+            <span>CLINICAL MACHINE LEARNING SURVEILLANCE</span>
+          </div>
 
-        <div className="landing-or"><span>or</span></div>
+          <h1 className="hero-kinetic-title">
+            IS YOUR CARDIAC MODEL STILL <span className="accent-highlight">TELLING THE TRUTH?</span>
+          </h1>
 
-        <button
-          type="button"
-          className="landing-sample-btn"
-          id="use-sample-btn"
-          onClick={onUseSample}
-          disabled={loading}
-        >
-          Use the sample dataset
-        </button>
-        <p className="landing-sample-hint">A ready made cohort of 200 patients so you can see everything working at once.</p>
+          <p className="hero-kinetic-lead">
+            When patient populations shift, machine learning models degrade silently. CardioWatch continuously audits diagnostic accuracy, statistical data drift, and demographic equity.
+          </p>
+
+          {/* Ingestion Dropzone */}
+          <div
+            className={`kinetic-dropzone ${dragActive ? 'drag-active' : ''}`}
+            onDragEnter={handleDrag}
+            onDragOver={handleDrag}
+            onDragLeave={handleDrag}
+            onDrop={handleDrop}
+            onClick={() => fileInputRef.current?.click()}
+            role="button"
+            tabIndex={0}
+            id="kinetic-upload-box"
+          >
+            <input
+              ref={fileInputRef}
+              type="file"
+              accept=".csv"
+              style={{ display: 'none' }}
+              onChange={(e) => handleFile(e.target.files && e.target.files[0])}
+            />
+
+            <div className="dropzone-inner">
+              <span className="drop-icon-mark">▲</span>
+              <strong className="drop-title">DROP PATIENT CSV TO COMMENCE INGESTION</strong>
+              <span className="drop-subtitle">OR CLICK TO BROWSE LOCAL DIRECTORY</span>
+              <code className="drop-columns-tag">
+                FEATURES: age, sex, cp, trestbps, chol, fbs, restecg, thalach, exang, oldpeak, slope, ca, thal
+              </code>
+            </div>
+          </div>
+
+          {displayError && (
+            <div className="kinetic-error-banner">
+              <strong>ERROR:</strong> {displayError}
+            </div>
+          )}
+
+          <div className="kinetic-divider-row">
+            <span className="divider-line" />
+            <span className="divider-label">OR EXECUTE PRELOADED BENCHMARK</span>
+            <span className="divider-line" />
+          </div>
+
+          {/* Use Sample Dataset CTA Button */}
+          <button
+            type="button"
+            className="kinetic-cta-button"
+            id="use-sample-dataset-btn"
+            onClick={onUseSample}
+            disabled={loading}
+          >
+            {loading ? 'CALCULATING SURVEILLANCE...' : 'LOAD SAMPLE DATASET (200 PATIENTS) →'}
+          </button>
+
+          <p className="cta-micro-caption">
+            Loads reference Cleveland patient cohort with baseline feature distribution and true ground-truth targets.
+          </p>
+        </div>
+
+        {/* Right Column: Floating Explanatory Cards */}
+        <div className="floating-column right-column">
+          {FLOATING_MECHANICS.slice(3, 6).map((item, idx) => (
+            <div
+              key={item.num}
+              className="kinetic-card floating-step-card"
+              style={{ animationDelay: `${(idx + 3) * 0.7}s` }}
+            >
+              <div className="step-badge-row">
+                <span className="step-counter">{item.num}</span>
+                <span className="step-kicker">{item.kicker}</span>
+              </div>
+              <h3 className="card-headline">{item.title}</h3>
+              <p className="card-body-text">{item.desc}</p>
+            </div>
+          ))}
+        </div>
       </div>
 
-      <div className="landing-notes landing-notes-right">
-        {RIGHT_NOTES.map((n, i) => (
-          <FloatingNote key={n.step} note={n} index={i + 3} side="right" />
-        ))}
+      {/* 3. Bottom Marquee Stats Ticker */}
+      <div className="marquee-wrapper secondary-marquee" aria-hidden="true">
+        <div className="marquee-track reverse">
+          <span>0.05 KS P-VALUE THRESHOLD // EQUAL OPPORTUNITY AUDIT // ZERO HEURISTIC SIMULATION // 88.5% BASELINE ACCURACY // 7.1% MISSED CARDIAC CASES // </span>
+          <span>0.05 KS P-VALUE THRESHOLD // EQUAL OPPORTUNITY AUDIT // ZERO HEURISTIC SIMULATION // 88.5% BASELINE ACCURACY // 7.1% MISSED CARDIAC CASES // </span>
+        </div>
       </div>
-    </section>
+    </div>
   );
 }

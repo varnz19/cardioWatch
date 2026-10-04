@@ -16,8 +16,6 @@ export default function App() {
   const [globalError, setGlobalError] = useState('');
   const [legalModal, setLegalModal] = useState(null); // 'terms' | 'privacy' | null
 
-  const onLanding = activePage === 'landing';
-
   const handleAnalysisRequest = async ({ file = null, sampleName = null, goTo = 'surveillance' }) => {
     setLoading(true);
     setGlobalError('');
@@ -33,29 +31,30 @@ export default function App() {
   };
 
   const handleQuickSample = (sampleType) => {
-    handleAnalysisRequest({ sampleName: sampleType });
+    handleAnalysisRequest({ sampleName: sampleType, goTo: activePage === 'landing' ? 'overview' : activePage });
+  };
+
+  const handleNavSwitch = (targetPage) => {
+    if ((targetPage === 'overview' || targetPage === 'surveillance') && !analysis && !loading) {
+      handleAnalysisRequest({ sampleName: 'stable', goTo: targetPage });
+    } else {
+      setActivePage(targetPage);
+    }
   };
 
   return (
     <div className="app-container">
       {/* Top Navbar */}
       <Navbar
-        hasAnalysis={!!analysis && !onLanding}
         currentDatasetName={analysis?.dataset_name}
         onQuickSample={handleQuickSample}
         onNewDataset={() => { setGlobalError(''); setActivePage('landing'); }}
         loading={loading}
       />
 
-      {globalError && !onLanding && (
-        <div style={{
-          background: 'var(--bg-subtle)',
-          borderBottom: '1px solid #b3423a',
-          padding: '8px 24px',
-          fontSize: '0.78rem',
-          color: '#b3423a'
-        }}>
-          <strong>Error:</strong> {globalError}
+      {globalError && (
+        <div className="global-error-strip">
+          <strong>ALERT:</strong> {globalError}
         </div>
       )}
 
@@ -65,12 +64,12 @@ export default function App() {
           <div className="skeleton-container">
             <div className="skeleton-box skeleton-kpi" />
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 12 }}>
-              <div className="skeleton-box" style={{ height: 80 }} />
-              <div className="skeleton-box" style={{ height: 80 }} />
-              <div className="skeleton-box" style={{ height: 80 }} />
+              <div className="skeleton-box" style={{ height: 90 }} />
+              <div className="skeleton-box" style={{ height: 90 }} />
+              <div className="skeleton-box" style={{ height: 90 }} />
             </div>
             <div className="skeleton-box skeleton-chart" />
-            <div className="skeleton-box" style={{ height: 160 }} />
+            <div className="skeleton-box" style={{ height: 180 }} />
           </div>
         ) : (
           <>
@@ -106,13 +105,11 @@ export default function App() {
         )}
       </main>
 
-      {/* Floating Bottom Navigation Dock (hidden on the landing page) */}
-      {!onLanding && (
-        <BottomNav
-          activePage={activePage}
-          setActivePage={setActivePage}
-        />
-      )}
+      {/* Floating Bottom Navigation Dock (Always present down at bottom as requested) */}
+      <BottomNav
+        activePage={activePage}
+        setActivePage={handleNavSwitch}
+      />
 
       {/* Institutional Footer with Legal & Regulatory links */}
       <Footer onOpenLegal={setLegalModal} />
@@ -121,32 +118,32 @@ export default function App() {
       {legalModal && (
         <div className="modal-overlay" onClick={() => setLegalModal(null)}>
           <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 12, borderBottom: '1px solid var(--border-default)', paddingBottom: 8 }}>
-              <h3 style={{ fontSize: '0.95rem', fontWeight: 700, textTransform: 'uppercase' }}>
-                {legalModal === 'privacy' ? 'Privacy Policy & Data Governance' : 'Terms of Service'}
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 16, borderBottom: '2px solid var(--border-default)', paddingBottom: 10 }}>
+              <h3 style={{ fontSize: '1rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+                {legalModal === 'privacy' ? 'DATA GOVERNANCE & PRIVACY' : 'TERMS OF SURVEILLANCE SERVICE'}
               </h3>
               <button
                 type="button"
-                className="btn-secondary"
-                style={{ padding: '2px 8px' }}
+                className="btn-outline-kinetic"
+                style={{ padding: '4px 10px' }}
                 onClick={() => setLegalModal(null)}
               >
-                Close
+                CLOSE [X]
               </button>
             </div>
 
-            <div style={{ fontSize: '0.78rem', color: 'var(--text-secondary)', lineHeight: 1.6 }}>
+            <div style={{ fontSize: '0.82rem', color: 'var(--text-secondary)', lineHeight: 1.6 }}>
               {legalModal === 'privacy' ? (
                 <>
-                  <p><strong>1. Clinical Data Handling:</strong> CardioWatch processes tabular clinical biomarkers locally in-memory. Uploaded datasets are never transmitted to external third-party cloud services or telemetry trackers.</p>
-                  <p style={{ marginTop: 8 }}><strong>2. Patient De-Identification:</strong> All sample records conform to HIPAA Safe Harbor guidelines; direct patient identifiers (names, SSNs, MRNs) are excluded. Only anonymized physiological parameters are stored.</p>
-                  <p style={{ marginTop: 8 }}><strong>3. Local Retention:</strong> Exported CSV files reside strictly within the local filesystem directory for downstream Tableau consumption.</p>
+                  <p><strong>01 / LOCAL IN-MEMORY PROCESSING:</strong> CardioWatch evaluates patient biomarkers strictly inside the local runtime environment. Tabular records are never transmitted to third-party telemetric endpoints.</p>
+                  <p style={{ marginTop: 12 }}><strong>02 / DE-IDENTIFIED RECORDS:</strong> All processed datasets conform to de-identification standards; direct identifiers (names, MRNs, SSNs) are strictly excluded.</p>
+                  <p style={{ marginTop: 12 }}><strong>03 / ARTIFACT RETENTION:</strong> Generated CSV exports reside exclusively in the local directory for downstream Tableau consumption.</p>
                 </>
               ) : (
                 <>
-                  <p><strong>1. Academic & Research Purpose:</strong> CardioWatch is designed strictly for academic coursework, machine learning monitoring research, and visual analytics laboratory evaluation.</p>
-                  <p style={{ marginTop: 8 }}><strong>2. No Diagnostic Warranty:</strong> Predictions generated by this system are statistical outputs and must never be interpreted as clinical diagnoses or medical advice. Licensed clinical evaluation is mandatory for any patient care decision.</p>
-                  <p style={{ marginTop: 8 }}><strong>3. Model Limitations:</strong> Drift metrics reflect statistical distribution shifts (P(X)) and do not guarantee causal clinical outcomes.</p>
+                  <p><strong>01 / CLINICAL ML SURVEILLANCE RESEARCH:</strong> CardioWatch is designed for machine learning drift monitoring and demographic fairness evaluation.</p>
+                  <p style={{ marginTop: 12 }}><strong>02 / NON-DIAGNOSTIC ADVISORY:</strong> Outputs represent statistical estimations and do not constitute certified clinical diagnosis. Licensed medical evaluation is mandatory for any patient care decision.</p>
+                  <p style={{ marginTop: 12 }}><strong>03 / DISTRIBUTIONAL HYPOTHESIS:</strong> Drift metrics reflect continuous P(X) distribution divergence and equal opportunity parity.</p>
                 </>
               )}
             </div>

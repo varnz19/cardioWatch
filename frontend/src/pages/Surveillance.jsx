@@ -35,9 +35,9 @@ export default function Surveillance({ analysis, onNavigateToExport }) {
   }));
 
   const getBarColor = (status) => {
-    if (status === 'HIGH') return '#b3423a';
-    if (status === 'MEDIUM') return '#a8741a';
-    return '#3d7a4f';
+    if (status === 'HIGH') return '#EF4444';
+    if (status === 'MEDIUM') return '#F59E0B';
+    return '#DFE104';
   };
 
   return (
@@ -117,10 +117,10 @@ export default function Surveillance({ analysis, onNavigateToExport }) {
             <div style={{ height: 210 }}>
               <ResponsiveContainer width="100%" height="100%">
                 <BarChart data={topDrifting} layout="vertical" margin={{ left: 10, right: 10, top: 10, bottom: 10 }}>
-                  <XAxis type="number" domain={[0, 'dataMax + 0.1']} tick={{ fill: '#5f6b70', fontSize: 11 }} />
-                  <YAxis type="category" dataKey="name" tick={{ fill: '#1f2a30', fontSize: 11 }} />
+                  <XAxis type="number" domain={[0, 'dataMax + 0.1']} tick={{ fill: '#A1A1AA', fontSize: 11 }} />
+                  <YAxis type="category" dataKey="name" tick={{ fill: '#FAFAFA', fontSize: 11 }} />
                   <Tooltip
-                    contentStyle={{ backgroundColor: '#f6f2e9', borderColor: '#cdc6b5', borderRadius: 2 }}
+                    contentStyle={{ backgroundColor: '#121216', borderColor: '#3F3F46', color: '#FAFAFA' }}
                     formatter={(val) => [val.toFixed(3), 'Drift Score (KS/PSI)']}
                   />
                   <Bar dataKey="score">

@@ -1,47 +1,60 @@
 :root {
-  /* Light palette: warm paper, ink text, deep teal accent */
-  --bg-app: #ebe6da;
-  --bg-surface: #f6f2e9;
-  --bg-subtle: #e4dfd2;
-  --bg-input: #f6f2e9;
+  /* Kinetic Typography Design System Tokens */
+  --background: #09090B;
+  --foreground: #FAFAFA;
+  --muted: #27272A;
+  --muted-foreground: #A1A1AA;
+  --accent: #DFE104;
+  --accent-foreground: #000000;
+  --border: #3F3F46;
 
-  --border-default: #cdc6b5;
-  --border-muted: #ddd7c8;
-  --border-focus: #2f6f6a;
+  /* Semantic UI Tokens */
+  --bg-app: #09090B;
+  --bg-surface: #121216;
+  --bg-card: #18181D;
+  --bg-subtle: #27272A;
+  --bg-input: #09090B;
 
-  --text-primary: #1f2a30;
-  --text-secondary: #4f5b60;
-  --text-muted: #77817f;
+  --border-default: #3F3F46;
+  --border-muted: #27272A;
+  --border-focus: #DFE104;
 
-  --accent-primary: #2f6f6a;
-  --accent-hover: #3d8780;
+  --text-primary: #FAFAFA;
+  --text-secondary: #A1A1AA;
+  --text-muted: #71717A;
 
-  --state-normal: #3d7a4f;
-  --state-normal-text: #3d7a4f;
-  --state-monitor: #a8741a;
-  --state-monitor-text: #a8741a;
-  --state-attention: #b3423a;
-  --state-attention-text: #b3423a;
+  --accent-primary: #DFE104;
+  --accent-hover: #ECEE22;
 
-  --radius-sharp: 2px;
-  --radius-sm: 4px;
-  --radius-md: 6px;
+  --state-normal: #10B981;
+  --state-normal-text: #34D399;
+  --state-monitor: #F59E0B;
+  --state-monitor-text: #FBBF24;
+  --state-attention: #EF4444;
+  --state-attention-text: #F87171;
+
+  --radius-sharp: 0px;
 }
 
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  border-radius: 0;
+  border-radius: 0px !important;
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   background-color: var(--bg-app);
   color: var(--text-primary);
   min-height: 100vh;
-  line-height: 1.45;
+  line-height: 1.4;
   -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: var(--accent);
+  color: var(--accent-foreground);
 }
 
 code, pre, .mono {
@@ -50,12 +63,15 @@ code, pre, .mono {
 
 /* Scrollbars */
 ::-webkit-scrollbar {
-  width: 6px;
-  height: 6px;
+  width: 5px;
+  height: 5px;
 }
 ::-webkit-scrollbar-track {
   background: var(--bg-app);
 }
 ::-webkit-scrollbar-thumb {
   background: var(--border-default);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent);
 }

@@ -1,53 +1,52 @@
 import React from 'react';
 
-export default function Navbar({ currentDatasetName, hasAnalysis, onQuickSample, onNewDataset, loading }) {
+export default function Navbar({ currentDatasetName, onQuickSample, onNewDataset, loading }) {
   return (
     <header className="top-navbar">
       <div className="navbar-brand-group">
-        <div className="brand-text">
+        <div className="brand-text" onClick={onNewDataset} style={{ cursor: 'pointer' }}>
           <h1>
-            CardioWatch
-            <span className="brand-badge">SYS</span>
+            CARDIOWATCH
+            <span className="brand-badge">ML SURVEILLANCE</span>
           </h1>
-          <p>Clinical ML Surveillance</p>
+          <p>KINETIC DRIFT & FAIRNESS ENGINE</p>
         </div>
 
-        {hasAnalysis && currentDatasetName && (
+        {currentDatasetName && (
           <div className="active-dataset-tag">
-            Active: {currentDatasetName}
+            <span className="live-dot" />
+            <span>COHORT: {currentDatasetName}</span>
           </div>
         )}
       </div>
 
-      {hasAnalysis && (
-        <div className="top-actions">
-          <button
-            type="button"
-            className="btn-secondary"
-            onClick={() => onQuickSample('stable')}
-            disabled={loading}
-          >
-            Stable Sample
-          </button>
+      <div className="top-actions">
+        <button
+          type="button"
+          className="btn-outline-kinetic"
+          onClick={() => onQuickSample('stable')}
+          disabled={loading}
+        >
+          STABLE BASELINE
+        </button>
 
-          <button
-            type="button"
-            className="btn-secondary"
-            onClick={() => onQuickSample('drifted')}
-            disabled={loading}
-          >
-            Drifted Sample
-          </button>
+        <button
+          type="button"
+          className="btn-outline-kinetic"
+          onClick={() => onQuickSample('drifted')}
+          disabled={loading}
+        >
+          DRIFTED COHORT
+        </button>
 
-          <button
-            type="button"
-            className="btn-primary"
-            onClick={onNewDataset}
-          >
-            New Dataset
-          </button>
-        </div>
-      )}
+        <button
+          type="button"
+          className="btn-accent-kinetic"
+          onClick={onNewDataset}
+        >
+          UPLOAD DATASET
+        </button>
+      </div>
     </header>
   );
 }
