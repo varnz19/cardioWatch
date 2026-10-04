@@ -148,9 +148,12 @@ def run_future_simulation() -> Dict[str, Any]:
                 "period": period_label,
                 "month_index": month,
                 "feature": d["feature"],
-                "drift_method": d["drift_method"],
-                "drift_score": d["drift_score"],
-                "p_value": d["p_value"],
+                "drift_method": d.get("drift_method", "Two-Sample KS + PSI"),
+                "drift_score": d.get("drift_score", d.get("ks_statistic", 0.0)),
+                "ks_statistic": d.get("ks_statistic", 0.0),
+                "p_value": d.get("p_value", d.get("p_value_raw", 1.0)),
+                "p_value_adjusted": d.get("p_value_adjusted", 1.0),
+                "psi_score": d.get("psi_score", 0.0),
                 "status": d["status"]
             })
 

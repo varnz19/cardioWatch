@@ -92,3 +92,19 @@ export async function runMonitoringSimulation() {
 export function getExportDownloadUrl(exportType) {
   return `${API_BASE}/export/${exportType}`;
 }
+
+export async function getAuditHistory(limit = 50) {
+  const res = await fetch(`${API_BASE}/history?limit=${limit}`);
+  if (!res.ok) {
+    return { batches: [] };
+  }
+  return await res.json();
+}
+
+export async function getDriftPowerSweep(feature = 'trestbps') {
+  const res = await fetch(`${API_BASE}/drift/power-sweep?feature=${encodeURIComponent(feature)}`);
+  if (!res.ok) {
+    throw new Error('Failed to load power sweep analysis.');
+  }
+  return await res.json();
+}

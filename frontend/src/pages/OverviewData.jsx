@@ -122,6 +122,42 @@ export default function OverviewData({ analysis, onAnalysisComplete, onSelectSam
 
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: 24 }}>
+      {/* Research Prototype Limitation Disclaimer */}
+      <div style={{
+        padding: '10px 16px',
+        backgroundColor: '#FEF3C7',
+        border: '1px solid #F59E0B',
+        display: 'flex',
+        alignItems: 'center',
+        gap: 12,
+        fontSize: '0.78rem',
+        color: '#92400E'
+      }}>
+        <span>⚠️</span>
+        <span>
+          <strong>Research Prototype Notice:</strong> CardioWatch is an academic research prototype for machine learning auditing and education, not a certified clinical diagnostic tool.
+        </span>
+      </div>
+
+      {/* Synthetic Cohort Disclosure Banner */}
+      {analysis?.is_synthetic && (
+        <div style={{
+          padding: '12px 16px',
+          backgroundColor: '#F3E8FF',
+          border: '1px solid #A855F7',
+          display: 'flex',
+          flexDirection: 'column',
+          gap: 4
+        }}>
+          <strong style={{ fontSize: '0.8rem', color: '#6B21A8', textTransform: 'uppercase' }}>
+            🧪 Synthetic Stress-Test Cohort Active
+          </strong>
+          <p style={{ fontSize: '0.76rem', color: '#581C87', margin: 0 }}>
+            {analysis.generation_notes}
+          </p>
+        </div>
+      )}
+
       {/* 1. Clinical Cohort Summary KPI Cards */}
       {metadata && (
         <div className="kpi-grid" style={{ gridTemplateColumns: 'repeat(4, 1fr)' }}>
@@ -386,7 +422,7 @@ export default function OverviewData({ analysis, onAnalysisComplete, onSelectSam
                         <td>
                           {isFN ? (
                             <span className="status-badge attention" style={{ fontWeight: 800 }}>
-                              🚨 MISSED SICK (FN)
+                              FLAGGED FALSE NEGATIVE (FN)
                             </span>
                           ) : isFP ? (
                             <span className="status-badge monitor">
@@ -424,7 +460,7 @@ export default function OverviewData({ analysis, onAnalysisComplete, onSelectSam
             <h3>LOAD ANOTHER PATIENT COHORT</h3>
             <p>Upload institutional patient CSV file or toggle clinical benchmarks</p>
           </div>
-          <div style={{ display: 'flex', gap: 10 }}>
+          <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap' }}>
             <button
               type="button"
               className="btn-secondary"
@@ -432,7 +468,16 @@ export default function OverviewData({ analysis, onAnalysisComplete, onSelectSam
               disabled={loading}
               id="load-stable-btn"
             >
-              Load Reference Cohort
+              Cleveland Baseline (n=200)
+            </button>
+            <button
+              type="button"
+              className="btn-secondary"
+              onClick={() => onSelectSample('pooled')}
+              disabled={loading}
+              id="load-pooled-btn"
+            >
+              Pooled Multi-Center UCI (n=920)
             </button>
             <button
               type="button"
@@ -441,7 +486,7 @@ export default function OverviewData({ analysis, onAnalysisComplete, onSelectSam
               disabled={loading}
               id="load-drifted-btn"
             >
-              Load Shifted / Drifted Cohort
+              Synthetic Drifted Cohort
             </button>
           </div>
         </div>

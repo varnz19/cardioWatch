@@ -76,7 +76,7 @@ export default function App() {
                 loading={loading}
                 error={globalError}
                 onAnalyze={(file) => handleAnalysisRequest({ file, goTo: 'overview' })}
-                onUseSample={() => handleAnalysisRequest({ sampleName: 'stable', goTo: 'overview' })}
+                onUseSample={(sampleType = 'stable') => handleAnalysisRequest({ sampleName: sampleType, goTo: 'overview' })}
               />
             )}
 

@@ -17,24 +17,24 @@ const CARDIAC_STEPS = [
   },
   {
     num: '03',
-    category: 'PATIENT SAFETY',
-    title: 'PREVENTING MISSED DIAGNOSES (FNR)',
-    desc: 'A model can boast 90% accuracy while still missing critical heart disease. CardioWatch penalizes False Negatives so high-risk patients are never overlooked.',
-    badge: 'ZERO SICK MISSED'
+    category: 'SAFETY AUDITING',
+    title: 'FLAGGING MISSED DIAGNOSES (FNR)',
+    desc: 'A model can boast 90% accuracy while still missing critical heart disease. CardioWatch audits and flags False Negatives so high-risk cohorts are highlighted for clinical review.',
+    badge: 'FNR AUDITING'
   },
   {
     num: '04',
-    category: 'POPULATION HEALTH',
-    title: 'VITAL SIGNS & POPULATION DRIFT',
-    desc: 'If hospital admissions shift toward older patients or elevated resting blood pressure, the Kolmogorov-Smirnov test detects feature divergence before diagnostic accuracy degrades.',
-    badge: 'KS-TEST DRIFT'
+    category: 'POPULATION DRIFT',
+    title: 'COVARIATE DRIFT & PSI AUDITING',
+    desc: 'If patient cohorts shift toward older age or elevated blood pressure, Two-Sample KS tests with Benjamini-Hochberg FDR control and PSI detect feature divergence.',
+    badge: 'KS & PSI DRIFT'
   },
   {
     num: '05',
-    category: 'EQUITABLE CARE',
-    title: 'GENDER & AGE FAIRNESS AUDITS',
-    desc: 'Heart disease often manifests with atypical symptoms in women. We audit Equal Opportunity across biological sex and age cohorts to ensure equitable healthcare for every patient.',
-    badge: 'BIAS AUDITING'
+    category: 'EQUITY AUDITING',
+    title: 'DEMOGRAPHIC FAIRNESS & 95% CIs',
+    desc: 'Heart disease often manifests with atypical symptoms in women. We audit Equal Opportunity and compute 1,000-resample bootstrap 95% confidence intervals across biological sex and age cohorts.',
+    badge: 'BOOTSTRAP CI'
   },
   {
     num: '06',
@@ -85,19 +85,38 @@ export default function Landing({ onAnalyze, onUseSample, loading, error }) {
 
   return (
     <div className="kinetic-landing">
+      {/* Research Prototype Disclaimer Strip */}
+      <div style={{
+        maxWidth: 1000,
+        margin: '0 auto 20px auto',
+        padding: '10px 16px',
+        backgroundColor: '#FEF3C7',
+        border: '1px solid #F59E0B',
+        display: 'flex',
+        alignItems: 'center',
+        gap: 12,
+        fontSize: '0.78rem',
+        color: '#92400E'
+      }}>
+        <span>⚠️</span>
+        <span>
+          <strong>Research Prototype Notice:</strong> CardioWatch is an academic research prototype for machine learning auditing and education, not a certified clinical diagnostic tool.
+        </span>
+      </div>
+
       {/* 1. Main Hero Section — Clean, Spacious, Heart-Health Focused */}
       <section className="clean-cardiac-hero">
         <div className="hero-kicker-badge">
           <span className="heart-icon">♥</span>
-          <span>PATIENT CARDIAC SURVEILLANCE & EARLY RISK DETECTION</span>
+          <span>CLINICAL ML BATCH AUDITING &amp; COVARIATE DRIFT SURVEILLANCE</span>
         </div>
 
         <h1 className="clean-hero-title">
-          PROTECTING PATIENT HEARTS WITH <span className="accent-highlight">INTELLIGENT SURVEILLANCE</span>
+          AUDITING CARDIAC ML PREDICTIONS WITH <span className="accent-highlight">STATISTICAL RIGOR</span>
         </h1>
 
         <p className="clean-hero-lead">
-          Cardiovascular disease is the world’s leading health challenge. CardioWatch monitors physiological vitals—blood pressure, cholesterol, maximum heart rate, and ST depression—identifying cardiac risk while ensuring diagnostic models remain accurate, unbiased, and safe across all patient groups.
+          CardioWatch audits clinical risk models on incoming patient cohorts—quantifying covariate drift via Kolmogorov-Smirnov tests with FDR control and PSI, and computing defensible 95% bootstrap confidence intervals on subgroup false negative rates.
         </p>
 
         {/* Central Action Console */}
@@ -123,7 +142,7 @@ export default function Landing({ onAnalyze, onUseSample, loading, error }) {
 
             <div className="dropzone-inner">
               <span className="drop-icon-mark">▲</span>
-              <strong className="drop-title">UPLOAD PATIENT CARDIAC RECORDS (.CSV)</strong>
+              <strong className="drop-title">UPLOAD PATIENT CARDIAC BATCH (.CSV)</strong>
               <span className="drop-subtitle">OR DRAG & DROP COHORT FILE HERE</span>
               <code className="drop-columns-tag">
                 VITALS: age, sex, chest_pain, resting_bp, cholesterol, fasting_sugar, max_hr, st_depression
@@ -139,22 +158,36 @@ export default function Landing({ onAnalyze, onUseSample, loading, error }) {
 
           <div className="kinetic-divider-row">
             <span className="divider-line" />
-            <span className="divider-label">OR EXPLORE WITH CLINICAL BENCHMARK</span>
+            <span className="divider-label">OR AUDIT WITH PRE-LOADED CLINICAL COHORTS</span>
             <span className="divider-line" />
           </div>
 
-          <button
-            type="button"
-            className="kinetic-cta-button"
-            id="use-sample-dataset-btn"
-            onClick={onUseSample}
-            disabled={loading}
-          >
-            {loading ? 'EVALUATING CARDIAC VITALS...' : 'TEST LIVE CARDIAC DATASET (200 PATIENTS) →'}
-          </button>
+          <div style={{ display: 'flex', gap: 12, justifyContent: 'center' }}>
+            <button
+              type="button"
+              className="kinetic-cta-button"
+              id="use-pooled-dataset-btn"
+              onClick={() => onUseSample('pooled')}
+              disabled={loading}
+              style={{ flex: 1 }}
+            >
+              {loading ? 'AUDITING...' : 'POOLED MULTI-CENTER UCI (n=920) →'}
+            </button>
+
+            <button
+              type="button"
+              className="kinetic-cta-button"
+              id="use-sample-dataset-btn"
+              onClick={() => onUseSample('stable')}
+              disabled={loading}
+              style={{ flex: 1, backgroundColor: '#FFFFFF', color: 'var(--text-primary)' }}
+            >
+              {loading ? 'AUDITING...' : 'CLEVELAND BENCHMARK (n=200) →'}
+            </button>
+          </div>
 
           <p className="cta-micro-caption">
-            Instantly evaluates reference Cleveland cardiac cohort with live patient predictions and drift audits.
+            Evaluates multi-center cohorts (Cleveland, Hungarian, Switzerland, VA Long Beach) with live bootstrap CIs, KS drift, and SQLite history recording.
           </p>
         </div>
       </section>

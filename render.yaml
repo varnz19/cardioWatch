@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: cardiowatch-api
+    env: python
+    region: oregon
+    plan: free
+    buildCommand: "pip install -r requirements.txt && (cd frontend && npm install && npm run build)"
+    startCommand: "python3 -m uvicorn backend.main:app --host 0.0.0.0 --port $PORT"
+    healthCheckPath: /api/health
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.9.16

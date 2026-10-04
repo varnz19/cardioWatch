@@ -4,7 +4,7 @@ Calculates accuracy, precision, recall, F1, ROC-AUC, FPR, FNR,
 confusion matrices, and ROC/PR curve points.
 """
 
-from typing import Dict, Any, List
+from typing import Dict, Any, List, Optional
 import numpy as np
 import pandas as pd
 from sklearn.metrics import (
@@ -13,13 +13,16 @@ from sklearn.metrics import (
     confusion_matrix, brier_score_loss
 )
 
-def compute_model_performance(y_true: np.ndarray, y_pred: np.ndarray, y_prob: np.ndarray) -> Dict[str, Any]:
+def compute_model_performance(y_true: np.ndarray, y_pred: np.ndarray, y_prob: Optional[np.ndarray] = None) -> Dict[str, Any]:
     """
     Computes standard diagnostic evaluation metrics and curve coordinates.
     """
     y_true = np.array(y_true, dtype=int)
     y_pred = np.array(y_pred, dtype=int)
-    y_prob = np.array(y_prob, dtype=float)
+    if y_prob is None:
+        y_prob = y_pred.astype(float)
+    else:
+        y_prob = np.array(y_prob, dtype=float)
 
     cm = confusion_matrix(y_true, y_pred, labels=[0, 1])
     tn, fp, fn, tp = cm.ravel()

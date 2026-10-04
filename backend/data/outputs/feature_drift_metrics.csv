@@ -1,66 +1,31 @@
-period,month_index,feature,drift_method,drift_score,p_value,status
-Month 1,1,trestbps,KS-Test,0.112,0.08839,MEDIUM
-Month 1,1,thalach,KS-Test,0.087,0.29841,LOW
-Month 1,1,chol,KS-Test,0.0675,0.61013,LOW
-Month 1,1,age,KS-Test,0.066,0.63825,LOW
-Month 1,1,oldpeak,KS-Test,0.0559,0.81807,LOW
-Month 1,1,restecg,PSI,0.0248,0.5,LOW
-Month 1,1,thal,PSI,0.0245,0.5,LOW
-Month 1,1,ca,KS-Test,0.0114,1.0,LOW
-Month 1,1,sex,PSI,0.0071,0.5,LOW
-Month 1,1,cp,PSI,0.0041,0.5,LOW
-Month 1,1,slope,PSI,0.0037,0.5,LOW
-Month 1,1,exang,PSI,0.0022,0.5,LOW
-Month 1,1,fbs,PSI,0.0021,0.5,LOW
-Month 2,2,trestbps,KS-Test,0.2022,8e-05,HIGH
-Month 2,2,thalach,KS-Test,0.1707,0.00151,MEDIUM
-Month 2,2,chol,KS-Test,0.1486,0.00851,MEDIUM
-Month 2,2,age,KS-Test,0.1008,0.15891,MEDIUM
-Month 2,2,ca,KS-Test,0.0691,0.58218,LOW
-Month 2,2,oldpeak,KS-Test,0.0659,0.6397,LOW
-Month 2,2,thal,PSI,0.0195,0.5,LOW
-Month 2,2,sex,PSI,0.0133,0.5,LOW
-Month 2,2,cp,PSI,0.0099,0.5,LOW
-Month 2,2,slope,PSI,0.0075,0.5,LOW
-Month 2,2,exang,PSI,0.0049,0.5,LOW
-Month 2,2,restecg,PSI,0.0023,0.5,LOW
-Month 2,2,fbs,PSI,0.0006,0.5,LOW
-Month 3,3,age,KS-Test,0.4047,0.0,HIGH
-Month 3,3,thalach,KS-Test,0.3513,0.0,HIGH
-Month 3,3,trestbps,KS-Test,0.1244,0.0432,MEDIUM
-Month 3,3,oldpeak,KS-Test,0.1144,0.07725,MEDIUM
-Month 3,3,ca,KS-Test,0.0691,0.58218,LOW
-Month 3,3,chol,KS-Test,0.0624,0.70572,LOW
-Month 3,3,cp,PSI,0.0317,0.5,LOW
-Month 3,3,restecg,PSI,0.029,0.5,LOW
-Month 3,3,thal,PSI,0.0181,0.5,LOW
-Month 3,3,slope,PSI,0.0124,0.5,LOW
-Month 3,3,fbs,PSI,0.0072,0.5,LOW
-Month 3,3,sex,PSI,0.0071,0.5,LOW
-Month 3,3,exang,PSI,0.0,0.5,LOW
-Month 4,4,trestbps,KS-Test,0.3472,0.0,HIGH
-Month 4,4,sex,PSI,0.2796,0.001,HIGH
-Month 4,4,chol,KS-Test,0.0967,0.19334,LOW
-Month 4,4,age,KS-Test,0.0893,0.27105,LOW
-Month 4,4,cp,PSI,0.0752,0.5,LOW
-Month 4,4,oldpeak,KS-Test,0.0496,0.90905,LOW
-Month 4,4,thalach,KS-Test,0.0491,0.91477,LOW
-Month 4,4,thal,PSI,0.0412,0.5,LOW
-Month 4,4,slope,PSI,0.0107,0.5,LOW
-Month 4,4,exang,PSI,0.0082,0.5,LOW
-Month 4,4,ca,KS-Test,0.0064,1.0,LOW
-Month 4,4,restecg,PSI,0.0054,0.5,LOW
-Month 4,4,fbs,PSI,0.0047,0.5,LOW
-Month 5,5,trestbps,KS-Test,0.4772,0.0,HIGH
-Month 5,5,chol,KS-Test,0.4662,0.0,HIGH
-Month 5,5,age,KS-Test,0.4143,0.0,HIGH
-Month 5,5,thalach,KS-Test,0.4067,0.0,HIGH
-Month 5,5,ca,KS-Test,0.0941,0.2188,LOW
-Month 5,5,oldpeak,KS-Test,0.0606,0.73846,LOW
-Month 5,5,cp,PSI,0.0409,0.5,LOW
-Month 5,5,sex,PSI,0.0245,0.5,LOW
-Month 5,5,restecg,PSI,0.0153,0.5,LOW
-Month 5,5,slope,PSI,0.0136,0.5,LOW
-Month 5,5,thal,PSI,0.0025,0.5,LOW
-Month 5,5,fbs,PSI,0.001,0.5,LOW
-Month 5,5,exang,PSI,0.0003,0.5,LOW
+period,month_index,feature,drift_method,drift_score,ks_statistic,p_value,p_value_adjusted,psi_score,status
+Month 1,1,age,Two-Sample KS + PSI,0.066,0.066,0.63825,0.95738,0.0422,LOW
+Month 1,1,trestbps,Two-Sample KS + PSI,0.082,0.082,0.36704,0.74476,0.1513,MEDIUM
+Month 1,1,chol,Two-Sample KS + PSI,0.0816,0.0816,0.37238,0.74476,0.0342,LOW
+Month 1,1,thalach,Two-Sample KS + PSI,0.087,0.087,0.29841,0.74476,0.0439,LOW
+Month 1,1,oldpeak,Two-Sample KS + PSI,0.0559,0.0559,0.81807,0.98169,0.0429,LOW
+Month 1,1,ca,Two-Sample KS + PSI,0.0114,0.0114,1.0,1.0,0.0024,LOW
+Month 2,2,age,Two-Sample KS + PSI,0.1008,0.1008,0.15891,0.23836,0.0684,LOW
+Month 2,2,trestbps,Two-Sample KS + PSI,0.2044,0.2044,7e-05,0.00041,0.4478,HIGH
+Month 2,2,chol,Two-Sample KS + PSI,0.1445,0.1445,0.01149,0.02299,0.1024,MEDIUM
+Month 2,2,thalach,Two-Sample KS + PSI,0.1527,0.1527,0.00629,0.01887,0.1521,MEDIUM
+Month 2,2,oldpeak,Two-Sample KS + PSI,0.0659,0.0659,0.6397,0.6397,0.0491,LOW
+Month 2,2,ca,Two-Sample KS + PSI,0.0691,0.0691,0.58218,0.6397,0.016,LOW
+Month 3,3,age,Two-Sample KS + PSI,0.3835,0.3835,0.0,0.0,0.8174,HIGH
+Month 3,3,trestbps,Two-Sample KS + PSI,0.1244,0.1244,0.0432,0.0864,0.1802,MEDIUM
+Month 3,3,chol,Two-Sample KS + PSI,0.0624,0.0624,0.70572,0.70572,0.0874,LOW
+Month 3,3,thalach,Two-Sample KS + PSI,0.3744,0.3744,0.0,0.0,1.2064,HIGH
+Month 3,3,oldpeak,Two-Sample KS + PSI,0.1144,0.1144,0.07725,0.11588,0.0548,LOW
+Month 3,3,ca,Two-Sample KS + PSI,0.0691,0.0691,0.58218,0.69861,0.0256,LOW
+Month 4,4,age,Two-Sample KS + PSI,0.0893,0.0893,0.27105,0.5421,0.0634,LOW
+Month 4,4,trestbps,Two-Sample KS + PSI,0.3672,0.3672,0.0,0.0,1.0142,HIGH
+Month 4,4,chol,Two-Sample KS + PSI,0.0967,0.0967,0.19334,0.5421,0.0767,LOW
+Month 4,4,thalach,Two-Sample KS + PSI,0.0491,0.0491,0.91477,1.0,0.0718,LOW
+Month 4,4,oldpeak,Two-Sample KS + PSI,0.0496,0.0496,0.90905,1.0,0.0327,LOW
+Month 4,4,ca,Two-Sample KS + PSI,0.0064,0.0064,1.0,1.0,0.0003,LOW
+Month 5,5,age,Two-Sample KS + PSI,0.4243,0.4243,0.0,0.0,1.1449,HIGH
+Month 5,5,trestbps,Two-Sample KS + PSI,0.4722,0.4722,0.0,0.0,2.086,HIGH
+Month 5,5,chol,Two-Sample KS + PSI,0.4774,0.4774,0.0,0.0,1.364,HIGH
+Month 5,5,thalach,Two-Sample KS + PSI,0.4131,0.4131,0.0,0.0,1.4562,HIGH
+Month 5,5,oldpeak,Two-Sample KS + PSI,0.0606,0.0606,0.73846,0.73846,0.029,LOW
+Month 5,5,ca,Two-Sample KS + PSI,0.0941,0.0941,0.2188,0.26256,0.0351,LOW

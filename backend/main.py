@@ -24,14 +24,15 @@ from services.model_service import (
     predict_batch, predict_single_patient, get_feature_importance_list, train_models
 )
 from services.metrics_service import compute_model_performance
-from services.drift_service import analyze_data_drift
+from services.drift_service import analyze_data_drift, run_drift_detection_sweep
 from services.fairness_service import analyze_fairness
 from services.simulation_service import run_future_simulation
+from services.audit_db import init_audit_db, record_audit_batch, get_audit_history
 
 app = FastAPI(
-    title="CardioWatch ML Surveillance API",
-    description="Backend engine for ML performance, Kolmogorov-Smirnov data drift, and fairness monitoring",
-    version="1.0.0"
+    title="CardioWatch ML Batch Auditing API",
+    description="Batch auditing engine for ML clinical risk models: Kolmogorov-Smirnov drift, PSI stability, Benjamini-Hochberg FDR control, and bootstrap 95% fairness intervals. Research prototype for auditing and education, not a clinical diagnostic tool.",
+    version="1.1.0"
 )
 
 from fastapi.staticfiles import StaticFiles
@@ -122,15 +123,16 @@ async def upload_csv(file: UploadFile = File(...)):
 def load_sample_dataset(sample_name: str):
     """
     Loads pre-built sample datasets for instantaneous testing:
-    'sample_cardio_stable' or 'sample_cardio_drifted'
+    'stable', 'drifted', or 'pooled' (all 4 UCI sites, n=920)
     """
     valid_samples = {
         "stable": "sample_cardio_stable.csv",
-        "drifted": "sample_cardio_drifted.csv"
+        "drifted": "sample_cardio_drifted.csv",
+        "pooled": "sample_cardio_pooled_uci.csv"
     }
 
     if sample_name not in valid_samples:
-        raise HTTPException(status_code=404, detail="Sample not found. Options: 'stable', 'drifted'")
+        raise HTTPException(status_code=404, detail="Sample not found. Options: 'stable', 'drifted', 'pooled'")
 
     sample_path = os.path.join(SAMPLES_DIR, valid_samples[sample_name])
     if not os.path.exists(sample_path):
@@ -157,12 +159,15 @@ async def analyze_dataset(
     sample_name: Optional[str] = Query(None)
 ):
     """
-    Master analysis endpoint.
-    Accepts an uploaded CSV file OR a sample_name ('stable' / 'drifted'),
-    cleans the data, runs predictions, evaluates performance, computes KS drift,
-    and conducts subgroup fairness audits.
+    Master batch auditing endpoint.
+    Accepts an uploaded CSV file OR a sample_name ('stable' / 'drifted' / 'pooled'),
+    cleans the data, runs predictions, evaluates performance, computes KS drift with BH FDR correction,
+    conducts 1,000-resample bootstrap fairness audits, and records audit batch to SQLite.
     """
     global _current_analysis_cache, _current_dataset_cache
+
+    is_synthetic = False
+    generation_notes = None
 
     if file is not None:
         content = await file.read()
@@ -171,16 +176,34 @@ async def analyze_dataset(
         except Exception as e:
             raise HTTPException(status_code=400, detail=f"Could not read CSV: {str(e)}")
         filename = file.filename
-    elif sample_name in ["stable", "drifted"]:
-        filename = f"sample_cardio_{sample_name}.csv"
+        generation_notes = "User uploaded batch."
+    elif sample_name in ["stable", "drifted", "pooled"]:
+        filename = f"sample_cardio_{sample_name}.csv" if sample_name != "pooled" else "sample_cardio_pooled_uci.csv"
         sample_path = os.path.join(SAMPLES_DIR, filename)
         if not os.path.exists(sample_path):
             raise HTTPException(status_code=404, detail="Sample file not found.")
         raw_df = pd.read_csv(sample_path)
+        if sample_name == "drifted":
+            is_synthetic = True
+            generation_notes = (
+                "Synthetic stress-test cohort: demographic aging reweighting (P(Age>=55)=2.8x), "
+                "+12% systolic BP shift (~+16 mmHg, ~0.9 SD), +15% cholesterol shift (~+35 mg/dL, ~0.7 SD), "
+                "-10% max HR, and 60% atypical/non-anginal chest pain presentation in diseased females."
+            )
+        elif sample_name == "pooled":
+            is_synthetic = False
+            generation_notes = (
+                "Gold-standard pooled 4-site UCI Heart Disease cohort (Cleveland, Hungarian, "
+                "Switzerland, VA Long Beach, n=920, 194 females, 50 positive cases)."
+            )
+        else:
+            is_synthetic = False
+            generation_notes = "Empirical resampled Cleveland cohort with minimal Gaussian measurement noise."
     else:
         # Fallback to reference dataset
         raw_df = get_reference_dataset()
         filename = "heart_disease_reference.csv"
+        generation_notes = "Gold-standard Cleveland reference baseline (n=303)."
 
     # Validate dataset
     is_valid, err_msg, val_summary = validate_dataset(raw_df)
@@ -270,7 +293,7 @@ async def analyze_dataset(
     ref_clean = preprocess_dataframe(ref_df)
     drift_results = analyze_data_drift(ref_clean, clean_df)
 
-    # 4. Demographic Fairness Audit
+    # 4. Demographic Fairness Audit with 95% Bootstrap CIs
     fairness_results = analyze_fairness(clean_df)
 
     # 5. Feature Importances
@@ -303,10 +326,25 @@ async def analyze_dataset(
 
     preview_records = clean_df[[c for c in preview_cols if c in clean_df.columns]].head(200).to_dict(orient="records")
 
+    # 8. Record to SQLite Audit History
+    batch_id = record_audit_batch(
+        batch_name=filename,
+        total_patients=len(clean_df),
+        performance=perf_metrics,
+        drift=drift_results,
+        fairness=fairness_results,
+        is_synthetic=is_synthetic,
+        generation_notes=generation_notes
+    )
+
     # Combine master analysis response
     response_payload = {
         "status": "success",
+        "batch_id": batch_id,
         "dataset_name": filename,
+        "is_synthetic": is_synthetic,
+        "generation_notes": generation_notes,
+        "limitation_note": "Research prototype for machine learning auditing and education, not a certified clinical diagnostic tool.",
         "metadata": {
             "total_rows": len(clean_df),
             "total_columns": len(clean_df.columns),
@@ -332,6 +370,23 @@ def get_current_analysis():
     if _current_analysis_cache is None:
         raise HTTPException(status_code=404, detail="No active analysis found. Please upload or analyze a dataset first.")
     return _current_analysis_cache
+
+@app.get("/api/history")
+def get_audit_batches(limit: int = 50):
+    """Returns chronological list of audited batches stored in SQLite for timeline history charting."""
+    records = get_audit_history(limit=limit)
+    return {"status": "success", "count": len(records), "batches": records}
+
+@app.get("/api/drift/power-sweep")
+def get_drift_power_sweep(feature: str = Query("trestbps", description="Feature to sweep: 'trestbps' or 'chol'")):
+    """
+    Returns power sweep analysis simulating shifts of 0.10, 0.25, 0.50, and 1.00 SD
+    to evaluate at what effect size the Kolmogorov-Smirnov test and PSI detect covariate shift.
+    """
+    ref_df = get_reference_dataset()
+    ref_clean = preprocess_dataframe(ref_df)
+    sweep = run_drift_detection_sweep(ref_clean, feature=feature, shifts=[0.10, 0.25, 0.50, 1.00])
+    return {"status": "success", "power_sweep": sweep}
 
 @app.post("/api/predict")
 def predict_patient(patient: PatientInput):
