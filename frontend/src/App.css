@@ -8,49 +8,7 @@
   color: var(--foreground);
 }
 
-/* 1. Infinite Marquee Elements */
-.marquee-wrapper {
-  width: 100%;
-  overflow: hidden;
-  white-space: nowrap;
-  background: #FFFFFF;
-  border-bottom: 2px solid var(--border);
-  padding: 10px 0;
-  display: flex;
-}
 
-.secondary-marquee {
-  border-top: 2px solid var(--border);
-  border-bottom: 2px solid var(--border);
-  margin-top: 36px;
-  background: var(--muted);
-}
-
-.marquee-track {
-  display: inline-block;
-  white-space: nowrap;
-  animation: marquee-infinite 30s linear infinite;
-  font-size: 0.78rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: #09090B;
-}
-
-.marquee-track.reverse {
-  animation: marquee-infinite-reverse 32s linear infinite;
-  color: var(--muted-foreground);
-}
-
-@keyframes marquee-infinite {
-  0% { transform: translateX(0%); }
-  100% { transform: translateX(-50%); }
-}
-
-@keyframes marquee-infinite-reverse {
-  0% { transform: translateX(-50%); }
-  100% { transform: translateX(0%); }
-}
 
 /* 2. Top Header */
 .top-navbar {

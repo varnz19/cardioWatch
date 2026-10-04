@@ -85,15 +85,7 @@ export default function Landing({ onAnalyze, onUseSample, loading, error }) {
 
   return (
     <div className="kinetic-landing">
-      {/* 1. Top Informational Ticker Marquee */}
-      <div className="marquee-wrapper" aria-hidden="true">
-        <div className="marquee-track">
-          <span>CARDIOWATCH // CARDIAC HEALTHCARE SURVEILLANCE // EARLY HEART DISEASE DETECTION // TWO-SAMPLE KS-TEST VITAL SHIFT MONITORING // EQUAL OPPORTUNITY GENDER FAIRNESS // TABLEAU RELATIONAL CSV EXPORT // </span>
-          <span>CARDIOWATCH // CARDIAC HEALTHCARE SURVEILLANCE // EARLY HEART DISEASE DETECTION // TWO-SAMPLE KS-TEST VITAL SHIFT MONITORING // EQUAL OPPORTUNITY GENDER FAIRNESS // TABLEAU RELATIONAL CSV EXPORT // </span>
-        </div>
-      </div>
-
-      {/* 2. Main Hero Section — Clean, Spacious, Heart-Health Focused */}
+      {/* 1. Main Hero Section — Clean, Spacious, Heart-Health Focused */}
       <section className="clean-cardiac-hero">
         <div className="hero-kicker-badge">
           <span className="heart-icon">♥</span>
@@ -211,13 +203,6 @@ export default function Landing({ onAnalyze, onUseSample, loading, error }) {
         </div>
       </section>
 
-      {/* 4. Bottom Ticker Marquee */}
-      <div className="marquee-wrapper secondary-marquee" aria-hidden="true">
-        <div className="marquee-track reverse">
-          <span>PRIORITIZING SICK PATIENT DETECTION // MINIMIZING FALSE NEGATIVES // DETECTING SHIFTS IN BLOOD PRESSURE & CHOLESTEROL // AUDITING GENDER EQUITY // TABLEAU READY // </span>
-          <span>PRIORITIZING SICK PATIENT DETECTION // MINIMIZING FALSE NEGATIVES // DETECTING SHIFTS IN BLOOD PRESSURE & CHOLESTEROL // AUDITING GENDER EQUITY // TABLEAU READY // </span>
-        </div>
-      </div>
     </div>
   );
 }
