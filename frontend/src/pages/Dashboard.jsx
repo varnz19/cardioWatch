@@ -63,36 +63,24 @@ export default function Dashboard({ analysis, onNavigate }) {
         </button>
       </div>
 
-      {/* KPI Grid (4 or 5 columns, not 3) */}
-      <div className="kpi-grid" style={{ gridTemplateColumns: 'repeat(5, 1fr)' }}>
+      {/* 3 Core Pillar Surveillance Indicators */}
+      <div className="kpi-grid" style={{ gridTemplateColumns: 'repeat(3, 1fr)' }}>
         <MetricCard
-          label="Model Accuracy"
+          label="Model Performance"
           value={acc}
-          subtext="Validation baseline"
+          subtext={`Accuracy baseline (${rec} sensitivity, ${fnr} FNR)`}
           status={hasPerf && performance.accuracy < 0.80 ? 'Attention' : 'Normal'}
-        />
-        <MetricCard
-          label="Recall (Sensitivity)"
-          value={rec}
-          subtext="Cardiac detection rate"
-          status={hasPerf && performance.recall < 0.80 ? 'Attention' : 'Normal'}
-        />
-        <MetricCard
-          label="False Negative Rate"
-          value={fnr}
-          subtext="Undetected risk"
-          status={hasPerf && performance.false_negative_rate > 0.15 ? 'Attention' : 'Normal'}
         />
         <MetricCard
           label="Population Drift"
           value={driftStatus}
-          subtext={`${drift.high_drift_count} high-drift features`}
+          subtext={`${drift.high_drift_count} high-drift features (KS / PSI)`}
           status={driftStatus}
         />
         <MetricCard
           label="Peak Fairness Gap"
           value={maxGap}
-          subtext="Subgroup FNR gap"
+          subtext="Subgroup FNR disparity (Sex & Age)"
           status={fairnessStatus}
         />
       </div>
