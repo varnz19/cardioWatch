@@ -3,45 +3,45 @@ import React, { useState, useRef } from 'react';
 const CARDIAC_STEPS = [
   {
     num: '01',
-    category: 'VITAL SIGNS',
-    title: 'CARDIAC BIOMARKER INGESTION',
-    desc: 'Tracks key cardiovascular risk markers: Resting Blood Pressure, Serum Cholesterol, Maximum Heart Rate achieved, and Exercise ST Depression without external cloud exposure.',
-    badge: 'HEART VITALS'
+    category: 'HEALTH DATA',
+    title: 'PATIENT HEALTH RECORDS',
+    desc: 'Upload standard heart health records including age, sex, blood pressure, cholesterol, heart rate, and chest symptoms.',
+    badge: 'HEALTH VITALS'
   },
   {
     num: '02',
-    category: 'DIAGNOSTIC INFERENCE',
-    title: 'EARLY CARDIAC RISK DETECTION',
-    desc: 'A trained Scikit-Learn Random Forest analyzes physiological patterns live, calculating cardiac risk probabilities for each patient to flag early disease markers.',
-    badge: 'LIVE ML PREDICTION'
+    category: 'PREDICTION',
+    title: 'CARDIAC RISK SCORING',
+    desc: 'Machine learning analyzes patient health patterns to calculate the likelihood of heart disease for early detection.',
+    badge: 'RISK SCORE'
   },
   {
     num: '03',
-    category: 'SAFETY AUDITING',
-    title: 'FLAGGING MISSED DIAGNOSES (FNR)',
-    desc: 'A model can boast 90% accuracy while still missing critical heart disease. CardioWatch audits and flags False Negatives so high-risk cohorts are highlighted for clinical review.',
-    badge: 'FNR AUDITING'
+    category: 'ACCURACY',
+    title: 'AVOIDING MISSED CASES',
+    desc: 'Monitors false negatives closely so high-risk patients are not overlooked or dismissed as healthy.',
+    badge: 'PATIENT SAFETY'
   },
   {
     num: '04',
-    category: 'POPULATION DRIFT',
-    title: 'COVARIATE DRIFT & PSI AUDITING',
-    desc: 'If patient cohorts shift toward older age or elevated blood pressure, Two-Sample KS tests with Benjamini-Hochberg FDR control and PSI detect feature divergence.',
-    badge: 'KS & PSI DRIFT'
+    category: 'MONITORING',
+    title: 'HEALTH PATTERNS OVER TIME',
+    desc: 'Tracks whether patient vitals and demographics in new cohorts are shifting compared to past records.',
+    badge: 'TREND CHECK'
   },
   {
     num: '05',
-    category: 'EQUITY AUDITING',
-    title: 'DEMOGRAPHIC FAIRNESS & 95% CIs',
-    desc: 'Heart disease often manifests with atypical symptoms in women. We audit Equal Opportunity and compute 1,000-resample bootstrap 95% confidence intervals across biological sex and age cohorts.',
-    badge: 'BOOTSTRAP CI'
+    category: 'FAIRNESS',
+    title: 'FAIRNESS ACROSS GROUPS',
+    desc: 'Audits diagnostic performance across gender and age groups to ensure fair outcomes for all patients.',
+    badge: 'FAIRNESS'
   },
   {
     num: '06',
-    category: 'CLINICAL VISUALS',
-    title: 'ACTIONABLE TABLEAU EXPORTS',
-    desc: 'Packages all evaluated patient risk scores, drift statistics, and subgroup equity metrics into 4 ready-to-use CSV files for physician and executive dashboards in Tableau.',
-    badge: 'TABLEAU READY'
+    category: 'REPORTS',
+    title: 'TABLEAU & EXCEL EXPORTS',
+    desc: 'Download all patient risk scores, trends, and summary tables to CSV ready for Tableau or Excel dashboards.',
+    badge: 'CSV EXPORT'
   }
 ];
 
@@ -54,7 +54,7 @@ export default function Landing({ onAnalyze, onUseSample, loading, error }) {
   const handleFile = (file) => {
     if (!file) return;
     if (!file.name.toLowerCase().endsWith('.csv')) {
-      setLocalError('INVALID FILE FORMAT. PLEASE SELECT A VALID .CSV PATIENT FILE.');
+      setLocalError('INVALID FILE FORMAT. PLEASE SELECT A VALID .CSV FILE.');
       return;
     }
     setLocalError('');
@@ -89,15 +89,15 @@ export default function Landing({ onAnalyze, onUseSample, loading, error }) {
       <section className="clean-cardiac-hero">
         <div className="hero-kicker-badge">
           <span className="heart-icon">♥</span>
-          <span>CLINICAL ML BATCH AUDITING &amp; COVARIATE DRIFT SURVEILLANCE</span>
+          <span>HEART HEALTH &amp; MACHINE LEARNING</span>
         </div>
 
         <h1 className="clean-hero-title">
-          AUDITING CARDIAC ML PREDICTIONS WITH <span className="accent-highlight">STATISTICAL RIGOR</span>
+          CARDIAC RISK PREDICTION &amp; <span className="accent-highlight">HEALTH MONITORING</span>
         </h1>
 
         <p className="clean-hero-lead">
-          CardioWatch audits clinical risk models on incoming patient cohorts—quantifying covariate drift via Kolmogorov-Smirnov tests with FDR control and PSI, and computing defensible 95% bootstrap confidence intervals on subgroup false negative rates.
+          Predict heart disease risk for patients, track changes in health metrics over time, and ensure fair outcomes across all patient groups.
         </p>
 
         {/* Central Action Console */}
@@ -123,11 +123,8 @@ export default function Landing({ onAnalyze, onUseSample, loading, error }) {
 
             <div className="dropzone-inner">
               <span className="drop-icon-mark">▲</span>
-              <strong className="drop-title">UPLOAD PATIENT CARDIAC BATCH (.CSV)</strong>
-              <span className="drop-subtitle">OR DRAG & DROP COHORT FILE HERE</span>
-              <code className="drop-columns-tag">
-                VITALS: age, sex, chest_pain, resting_bp, cholesterol, fasting_sugar, max_hr, st_depression
-              </code>
+              <strong className="drop-title">UPLOAD DATA (.CSV)</strong>
+              <span className="drop-subtitle">DRAG &amp; DROP CSV FILE HERE, OR CLICK TO BROWSE</span>
             </div>
           </div>
 
@@ -139,47 +136,33 @@ export default function Landing({ onAnalyze, onUseSample, loading, error }) {
 
           <div className="kinetic-divider-row">
             <span className="divider-line" />
-            <span className="divider-label">OR AUDIT WITH PRE-LOADED CLINICAL COHORTS</span>
+            <span className="divider-label">OR</span>
             <span className="divider-line" />
           </div>
 
-          <div style={{ display: 'flex', gap: 12, justifyContent: 'center' }}>
-            <button
-              type="button"
-              className="kinetic-cta-button"
-              id="use-pooled-dataset-btn"
-              onClick={() => onUseSample('pooled')}
-              disabled={loading}
-              style={{ flex: 1 }}
-            >
-              {loading ? 'AUDITING...' : 'POOLED MULTI-CENTER UCI (n=920) →'}
-            </button>
-
-            <button
-              type="button"
-              className="kinetic-cta-button"
-              id="use-sample-dataset-btn"
-              onClick={() => onUseSample('stable')}
-              disabled={loading}
-              style={{ flex: 1, backgroundColor: '#FFFFFF', color: 'var(--text-primary)' }}
-            >
-              {loading ? 'AUDITING...' : 'CLEVELAND BENCHMARK (n=200) →'}
-            </button>
-          </div>
+          <button
+            type="button"
+            className="kinetic-cta-button"
+            id="use-sample-dataset-btn"
+            onClick={() => onUseSample('pooled')}
+            disabled={loading}
+          >
+            {loading ? 'LOADING DATASET...' : 'USE SAMPLE DATASET →'}
+          </button>
 
           <p className="cta-micro-caption">
-            Evaluates multi-center cohorts (Cleveland, Hungarian, Switzerland, VA Long Beach) with live bootstrap CIs, KS drift, and SQLite history recording.
+            Instantly explore live predictions, health trends, and fairness metrics with real patient records.
           </p>
         </div>
       </section>
 
-      {/* 3. Scrollable Content Thingy: How CardioWatch Protects Patient Health */}
+      {/* 2. Scrollable Workflow Section */}
       <section className="scrollable-workflow-section">
         <div className="workflow-header-row">
           <div>
-            <span className="workflow-kicker">STEP-BY-STEP CLINICAL WORKFLOW</span>
-            <h2 className="workflow-title">HOW CARDIAC SURVEILLANCE PROTECTS PATIENT HEALTH</h2>
-            <p className="workflow-subtitle">Scroll through the 6 stages of machine-learning patient care & drift monitoring</p>
+            <span className="workflow-kicker">STEP-BY-STEP WORKFLOW</span>
+            <h2 className="workflow-title">HOW IT WORKS</h2>
+            <p className="workflow-subtitle">Explore how patient data is analyzed, monitored, and audited</p>
           </div>
           <div className="scroll-arrow-controls">
             <button
