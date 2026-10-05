@@ -122,23 +122,6 @@ export default function OverviewData({ analysis, onAnalysisComplete, onSelectSam
 
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: 24 }}>
-      {/* Research Prototype Limitation Disclaimer */}
-      <div style={{
-        padding: '10px 16px',
-        backgroundColor: '#FEF3C7',
-        border: '1px solid #F59E0B',
-        display: 'flex',
-        alignItems: 'center',
-        gap: 12,
-        fontSize: '0.78rem',
-        color: '#92400E'
-      }}>
-        <span>⚠️</span>
-        <span>
-          <strong>Research Prototype Notice:</strong> CardioWatch is an academic research prototype for machine learning auditing and education, not a certified clinical diagnostic tool.
-        </span>
-      </div>
-
       {/* Synthetic Cohort Disclosure Banner */}
       {analysis?.is_synthetic && (
         <div style={{

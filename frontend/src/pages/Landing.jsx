@@ -85,25 +85,6 @@ export default function Landing({ onAnalyze, onUseSample, loading, error }) {
 
   return (
     <div className="kinetic-landing">
-      {/* Research Prototype Disclaimer Strip */}
-      <div style={{
-        maxWidth: 1000,
-        margin: '0 auto 20px auto',
-        padding: '10px 16px',
-        backgroundColor: '#FEF3C7',
-        border: '1px solid #F59E0B',
-        display: 'flex',
-        alignItems: 'center',
-        gap: 12,
-        fontSize: '0.78rem',
-        color: '#92400E'
-      }}>
-        <span>⚠️</span>
-        <span>
-          <strong>Research Prototype Notice:</strong> CardioWatch is an academic research prototype for machine learning auditing and education, not a certified clinical diagnostic tool.
-        </span>
-      </div>
-
       {/* 1. Main Hero Section — Clean, Spacious, Heart-Health Focused */}
       <section className="clean-cardiac-hero">
         <div className="hero-kicker-badge">

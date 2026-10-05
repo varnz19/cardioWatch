@@ -86,40 +86,6 @@ export default function Surveillance({ analysis, onNavigateToExport }) {
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: 24 }}>
 
-      {/* Scientific Limitation & Research Prototype Disclaimer */}
-      <div style={{
-        padding: '12px 18px',
-        backgroundColor: '#FEF3C7',
-        border: '2px solid #F59E0B',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'space-between',
-        gap: 16
-      }}>
-        <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
-          <span style={{ fontSize: '1.2rem' }}>⚠️</span>
-          <div>
-            <strong style={{ fontSize: '0.8rem', color: '#92400E', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
-              RESEARCH PROTOTYPE NOTICE
-            </strong>
-            <p style={{ fontSize: '0.76rem', color: '#78350F', margin: 0, marginTop: 2 }}>
-              {limitation_note || 'CardioWatch is an academic research prototype for machine learning auditing and education, not a certified clinical diagnostic tool.'}
-            </p>
-          </div>
-        </div>
-        <span style={{
-          fontSize: '0.7rem',
-          fontWeight: 700,
-          color: '#92400E',
-          backgroundColor: '#FDE68A',
-          padding: '4px 8px',
-          border: '1px solid #D97706',
-          whiteSpace: 'nowrap'
-        }}>
-          AUDITING ENGINE
-        </span>
-      </div>
-
       {/* Synthetic Cohort Disclosure Banner (if synthetic) */}
       {is_synthetic && (
         <div style={{

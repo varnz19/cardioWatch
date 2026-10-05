@@ -38,7 +38,7 @@ from services.audit_db import init_audit_db, record_audit_batch, get_audit_histo
 
 app = FastAPI(
     title="CardioWatch ML Batch Auditing API",
-    description="Batch auditing engine for ML clinical risk models: Kolmogorov-Smirnov drift, PSI stability, Benjamini-Hochberg FDR control, and bootstrap 95% fairness intervals. Research prototype for auditing and education, not a clinical diagnostic tool.",
+    description="Batch auditing engine for ML clinical risk models: Kolmogorov-Smirnov drift, PSI stability, Benjamini-Hochberg FDR control, and bootstrap 95% fairness intervals.",
     version="1.1.0"
 )
 
@@ -351,7 +351,6 @@ async def analyze_dataset(
         "dataset_name": filename,
         "is_synthetic": is_synthetic,
         "generation_notes": generation_notes,
-        "limitation_note": "Research prototype for machine learning auditing and education, not a certified clinical diagnostic tool.",
         "metadata": {
             "total_rows": len(clean_df),
             "total_columns": len(clean_df.columns),
