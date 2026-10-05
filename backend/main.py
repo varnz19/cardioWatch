@@ -6,7 +6,14 @@ and Tableau-ready CSV exports.
 """
 
 import os
+import sys
 import io
+
+# Ensure backend directory is always in python search path
+CURRENT_DIR = os.path.dirname(os.path.abspath(__file__))
+if CURRENT_DIR not in sys.path:
+    sys.path.insert(0, CURRENT_DIR)
+
 from typing import Dict, Any, Optional
 import pandas as pd
 import numpy as np
