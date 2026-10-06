@@ -14,8 +14,19 @@ export default function BottomNav({ activePage, setActivePage }) {
       )
     },
     {
+      id: 'insights',
+      label: 'POWER BI INSIGHTS',
+      icon: (
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="square" strokeLinejoin="miter">
+          <line x1="18" y1="20" x2="18" y2="10" />
+          <line x1="12" y1="20" x2="12" y2="4" />
+          <line x1="6" y1="20" x2="6" y2="14" />
+        </svg>
+      )
+    },
+    {
       id: 'overview',
-      label: 'DATASET & COHORT',
+      label: 'PATIENT RECORDS',
       icon: (
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="square" strokeLinejoin="miter">
           <rect x="3" y="3" width="18" height="18" />
@@ -30,17 +41,6 @@ export default function BottomNav({ activePage, setActivePage }) {
       icon: (
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="square" strokeLinejoin="miter">
           <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
-        </svg>
-      )
-    },
-    {
-      id: 'export',
-      label: 'TABLEAU EXPORT',
-      icon: (
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="square" strokeLinejoin="miter">
-          <path d="M21 15v4H5v-4" />
-          <polyline points="7 10 12 15 17 10" />
-          <line x1="12" y1="15" x2="12" y2="3" />
         </svg>
       )
     }

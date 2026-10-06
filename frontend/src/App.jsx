@@ -5,6 +5,7 @@ import Landing from './pages/Landing';
 import OverviewData from './pages/OverviewData';
 import Surveillance from './pages/Surveillance';
 import Export from './pages/Export';
+import PowerBIInsights from './pages/PowerBIInsights';
 import { analyzeDataset } from './services/api';
 import './App.css';
 
@@ -14,7 +15,7 @@ export default function App() {
   const [loading, setLoading] = useState(false);
   const [globalError, setGlobalError] = useState('');
 
-  const handleAnalysisRequest = async ({ file = null, sampleName = null, goTo = 'surveillance' }) => {
+  const handleAnalysisRequest = async ({ file = null, sampleName = null, goTo = 'insights' }) => {
     setLoading(true);
     setGlobalError('');
     try {
@@ -29,11 +30,11 @@ export default function App() {
   };
 
   const handleQuickSample = (sampleType) => {
-    handleAnalysisRequest({ sampleName: sampleType, goTo: activePage === 'landing' ? 'overview' : activePage });
+    handleAnalysisRequest({ sampleName: sampleType, goTo: activePage === 'landing' ? 'insights' : activePage });
   };
 
   const handleNavSwitch = (targetPage) => {
-    if ((targetPage === 'overview' || targetPage === 'surveillance') && !analysis && !loading) {
+    if ((targetPage === 'insights' || targetPage === 'overview' || targetPage === 'surveillance') && !analysis && !loading) {
       handleAnalysisRequest({ sampleName: 'stable', goTo: targetPage });
     } else {
       setActivePage(targetPage);
@@ -75,8 +76,15 @@ export default function App() {
               <Landing
                 loading={loading}
                 error={globalError}
-                onAnalyze={(file) => handleAnalysisRequest({ file, goTo: 'overview' })}
-                onUseSample={(sampleType = 'stable') => handleAnalysisRequest({ sampleName: sampleType, goTo: 'overview' })}
+                onAnalyze={(file) => handleAnalysisRequest({ file, goTo: 'insights' })}
+                onUseSample={(sampleType = 'stable') => handleAnalysisRequest({ sampleName: sampleType, goTo: 'insights' })}
+              />
+            )}
+
+            {activePage === 'insights' && (
+              <PowerBIInsights
+                analysis={analysis}
+                onNavigateToDataset={() => setActivePage('overview')}
               />
             )}
 
@@ -92,7 +100,7 @@ export default function App() {
             {activePage === 'surveillance' && (
               <Surveillance
                 analysis={analysis}
-                onNavigateToExport={() => setActivePage('export')}
+                onNavigateToExport={() => setActivePage('insights')}
               />
             )}
 

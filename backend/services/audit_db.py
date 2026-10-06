@@ -129,9 +129,11 @@ def get_audit_history(limit: int = 50) -> List[Dict[str, Any]]:
     init_audit_db()
     with get_db_connection() as conn:
         cursor = conn.execute("""
-            SELECT * FROM audit_batches
-            ORDER BY id ASC
-            LIMIT ?
+            SELECT * FROM (
+                SELECT * FROM audit_batches
+                ORDER BY id DESC
+                LIMIT ?
+            ) ORDER BY id ASC
         """, (limit,))
         rows = [dict(r) for r in cursor.fetchall()]
 
