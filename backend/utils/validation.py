@@ -27,9 +27,11 @@ COLUMN_ALIASES: Dict[str, str] = {
     "chest_pain": "cp",
     "chest_pain_type": "cp",
     "cp_type": "cp",
+    "chestpaintype": "cp",
     
     "trestbps": "trestbps",
     "resting_bp": "trestbps",
+    "restingbp": "trestbps",
     "blood_pressure": "trestbps",
     "resting_blood_pressure": "trestbps",
     "bp": "trestbps",
@@ -42,19 +44,23 @@ COLUMN_ALIASES: Dict[str, str] = {
     "fbs": "fbs",
     "fasting_blood_sugar": "fbs",
     "fasting_bs": "fbs",
+    "fastingbs": "fbs",
     "blood_sugar": "fbs",
     
     "restecg": "restecg",
     "resting_ecg": "restecg",
+    "restingecg": "restecg",
     "ecg": "restecg",
     
     "thalach": "thalach",
     "max_hr": "thalach",
+    "maxhr": "thalach",
     "max_heart_rate": "thalach",
     "heart_rate": "thalach",
     
     "exang": "exang",
     "exercise_angina": "exang",
+    "exerciseangina": "exang",
     "exercise_induced_angina": "exang",
     
     "oldpeak": "oldpeak",
@@ -63,6 +69,7 @@ COLUMN_ALIASES: Dict[str, str] = {
     
     "slope": "slope",
     "st_slope": "slope",
+    "stslope": "slope",
     
     "ca": "ca",
     "num_major_vessels": "ca",
@@ -76,6 +83,7 @@ COLUMN_ALIASES: Dict[str, str] = {
     "target": "target",
     "num": "target",
     "heart_disease": "target",
+    "heartdisease": "target",
     "diagnosis": "target",
     "condition": "target",
     "outcome": "target"
