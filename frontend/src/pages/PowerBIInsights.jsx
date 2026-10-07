@@ -449,6 +449,45 @@ export default function PowerBIInsights({ analysis, onNavigateToDataset }) {
     ];
   }, []);
 
+  // 10. Confusion Matrix Diagnostic Computations
+  const confusionMatrixStats = useMemo(() => {
+    let tp = 0;
+    let fp = 0;
+    let fn = 0;
+    let tn = 0;
+
+    filteredPatients.forEach((p) => {
+      const actual = p.target ?? (p.error_classification?.includes('Positive') ? 1 : 0);
+      const pred = p.predicted_outcome ?? (p.predicted_probability >= 0.5 ? 1 : 0);
+
+      if (actual === 1 && pred === 1) tp += 1;
+      else if (actual === 0 && pred === 1) fp += 1;
+      else if (actual === 1 && pred === 0) fn += 1;
+      else tn += 1;
+    });
+
+    const total = tp + fp + fn + tn || 1;
+    const actualPos = tp + fn || 1;
+    const actualNeg = tn + fp || 1;
+    const predPos = tp + fp || 1;
+    const predNeg = tn + fn || 1;
+
+    return {
+      tp, fp, fn, tn, total,
+      tpPct: Math.round((tp / total) * 100),
+      fpPct: Math.round((fp / total) * 100),
+      fnPct: Math.round((fn / total) * 100),
+      tnPct: Math.round((tn / total) * 100),
+      sensitivity: Math.round((tp / actualPos) * 100),
+      specificity: Math.round((tn / actualNeg) * 100),
+      precision: Math.round((tp / predPos) * 100),
+      npv: Math.round((tn / predNeg) * 100),
+      fnr: Math.round((fn / actualPos) * 100),
+      fpr: Math.round((fp / actualNeg) * 100),
+      accuracy: Math.round(((tp + tn) / total) * 100)
+    };
+  }, [filteredPatients]);
+
   // Tableau Export Files
   const tableauFiles = [
     { id: 'performance', title: 'Performance KPIs', file: 'monthly_performance_kpis.csv' },
@@ -1074,6 +1113,7 @@ export default function PowerBIInsights({ analysis, onNavigateToDataset }) {
               <option value="heatmap">7. Heatmap Matrix Grid: Symptom vs. Age Bracket Risk Intensity</option>
               <option value="gauge">8. Radial Clinical Risk Gauge: Cohort Threat Index Dial</option>
               <option value="waterfall">9. Waterfall Attribution: Step-by-Step Risk Accumulation</option>
+              <option value="cm">10. Confusion Matrix: Clinical 2×2 Diagnostic Grid (TP, FP, FN, TN)</option>
             </select>
           </div>
         </div>
@@ -1788,6 +1828,172 @@ export default function PowerBIInsights({ analysis, onNavigateToDataset }) {
 
             <div style={{ marginTop: 14, padding: '10px 14px', backgroundColor: '#F8FAFC', borderLeft: '4px solid #18181B', fontSize: '0.74rem', color: '#334155' }}>
               <strong>Clinical Observation:</strong> Exercise ST depression (+14%) and senior age progression (+11%) contribute the largest additive increments toward high risk, whereas preserved chronotropic response provides a robust -9% protective buffer.
+            </div>
+          </div>
+        )}
+
+        {/* ---------------------------------------------------- */}
+        {/* VIEW 10: CONFUSION MATRIX (2x2 Diagnostic Grid) */}
+        {/* ---------------------------------------------------- */}
+        {selectedVisualType === 'cm' && (
+          <div>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 14 }}>
+              <div>
+                <strong style={{ fontSize: '0.86rem', color: 'var(--text-primary)', textTransform: 'uppercase' }}>
+                  Clinical 2×2 Confusion Matrix & Diagnostic Diagnostic Quality Audit
+                </strong>
+                <p style={{ fontSize: '0.74rem', color: 'var(--text-secondary)', margin: '2px 0 0 0' }}>
+                  Stratifies model predictions against ground truth outcomes for the active cohort slice ({confusionMatrixStats.total} patients).
+                </p>
+              </div>
+              <span className="status-badge normal" style={{ fontSize: '0.68rem' }}>
+                ACCURACY: {confusionMatrixStats.accuracy}%
+              </span>
+            </div>
+
+            {/* 2x2 Matrix Container */}
+            <div style={{ maxWidth: 720, margin: '0 auto', padding: '12px 0' }}>
+              {/* Column Headers: Predicted Condition */}
+              <div style={{ display: 'grid', gridTemplateColumns: '120px 1fr 1fr', gap: 10, marginBottom: 8, textAlign: 'center' }}>
+                <div />
+                <div style={{ padding: '6px 8px', backgroundColor: '#18181B', color: '#FFFFFF', fontSize: '0.72rem', fontWeight: 700, textTransform: 'uppercase' }}>
+                  PREDICTED DISEASE (+)
+                </div>
+                <div style={{ padding: '6px 8px', backgroundColor: '#18181B', color: '#FFFFFF', fontSize: '0.72rem', fontWeight: 700, textTransform: 'uppercase' }}>
+                  PREDICTED HEALTHY (-)
+                </div>
+              </div>
+
+              {/* Row 1: Actual Disease (+) */}
+              <div style={{ display: 'grid', gridTemplateColumns: '120px 1fr 1fr', gap: 10, marginBottom: 10 }}>
+                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '10px 8px', backgroundColor: '#F4F4F5', fontSize: '0.72rem', fontWeight: 700, textTransform: 'uppercase', textAlign: 'center', border: '1px solid var(--border)' }}>
+                  ACTUAL DISEASE (+)
+                </div>
+
+                {/* TRUE POSITIVE (TP) */}
+                <div style={{ padding: '16px 18px', backgroundColor: '#F0FDF4', border: '2px solid #16A34A', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+                  <div>
+                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                      <span style={{ fontSize: '0.72rem', fontWeight: 700, color: '#166534', textTransform: 'uppercase' }}>
+                        TRUE POSITIVE (TP)
+                      </span>
+                      <span style={{ fontSize: '0.7rem', fontWeight: 700, padding: '2px 6px', backgroundColor: '#DCFCE7', color: '#166534' }}>
+                        {confusionMatrixStats.tpPct}% of slice
+                      </span>
+                    </div>
+                    <div style={{ fontSize: '1.8rem', fontWeight: 800, color: '#16A34A', margin: '6px 0 2px 0' }}>
+                      {confusionMatrixStats.tp}
+                    </div>
+                  </div>
+                  <div style={{ fontSize: '0.7rem', color: '#166534', borderTop: '1px dashed #86EFAC', paddingTop: 6, marginTop: 6 }}>
+                    ✓ Correct disease identification & prompt triage
+                  </div>
+                </div>
+
+                {/* FALSE NEGATIVE (FN) */}
+                <div style={{ padding: '16px 18px', backgroundColor: '#FEF2F2', border: '2px solid #DC2626', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+                  <div>
+                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                      <span style={{ fontSize: '0.72rem', fontWeight: 700, color: '#991B1B', textTransform: 'uppercase' }}>
+                        FALSE NEGATIVE (FN)
+                      </span>
+                      <span style={{ fontSize: '0.7rem', fontWeight: 700, padding: '2px 6px', backgroundColor: '#FEE2E2', color: '#991B1B' }}>
+                        {confusionMatrixStats.fnPct}% of slice
+                      </span>
+                    </div>
+                    <div style={{ fontSize: '1.8rem', fontWeight: 800, color: '#DC2626', margin: '6px 0 2px 0' }}>
+                      {confusionMatrixStats.fn}
+                    </div>
+                  </div>
+                  <div style={{ fontSize: '0.7rem', color: '#991B1B', fontWeight: 600, borderTop: '1px dashed #FCA5A5', paddingTop: 6, marginTop: 6 }}>
+                    🚨 CRITICAL HAZARD: Missed pathology cases
+                  </div>
+                </div>
+              </div>
+
+              {/* Row 2: Actual Normal (-) */}
+              <div style={{ display: 'grid', gridTemplateColumns: '120px 1fr 1fr', gap: 10 }}>
+                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '10px 8px', backgroundColor: '#F4F4F5', fontSize: '0.72rem', fontWeight: 700, textTransform: 'uppercase', textAlign: 'center', border: '1px solid var(--border)' }}>
+                  ACTUAL HEALTHY (-)
+                </div>
+
+                {/* FALSE POSITIVE (FP) */}
+                <div style={{ padding: '16px 18px', backgroundColor: '#FFFBEB', border: '2px solid #D97706', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+                  <div>
+                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                      <span style={{ fontSize: '0.72rem', fontWeight: 700, color: '#92400E', textTransform: 'uppercase' }}>
+                        FALSE POSITIVE (FP)
+                      </span>
+                      <span style={{ fontSize: '0.7rem', fontWeight: 700, padding: '2px 6px', backgroundColor: '#FEF3C7', color: '#92400E' }}>
+                        {confusionMatrixStats.fpPct}% of slice
+                      </span>
+                    </div>
+                    <div style={{ fontSize: '1.8rem', fontWeight: 800, color: '#D97706', margin: '6px 0 2px 0' }}>
+                      {confusionMatrixStats.fp}
+                    </div>
+                  </div>
+                  <div style={{ fontSize: '0.7rem', color: '#92400E', borderTop: '1px dashed #FDE68A', paddingTop: 6, marginTop: 6 }}>
+                    ⚠ Unnecessary secondary screening & clinical anxiety
+                  </div>
+                </div>
+
+                {/* TRUE NEGATIVE (TN) */}
+                <div style={{ padding: '16px 18px', backgroundColor: '#EFF6FF', border: '2px solid #2563EB', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+                  <div>
+                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                      <span style={{ fontSize: '0.72rem', fontWeight: 700, color: '#1E40AF', textTransform: 'uppercase' }}>
+                        TRUE NEGATIVE (TN)
+                      </span>
+                      <span style={{ fontSize: '0.7rem', fontWeight: 700, padding: '2px 6px', backgroundColor: '#DBEAFE', color: '#1E40AF' }}>
+                        {confusionMatrixStats.tnPct}% of slice
+                      </span>
+                    </div>
+                    <div style={{ fontSize: '1.8rem', fontWeight: 800, color: '#2563EB', margin: '6px 0 2px 0' }}>
+                      {confusionMatrixStats.tn}
+                    </div>
+                  </div>
+                  <div style={{ fontSize: '0.7rem', color: '#1E40AF', borderTop: '1px dashed #BFDBFE', paddingTop: 6, marginTop: 6 }}>
+                    ✓ Confirmed healthy baseline discharges
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Diagnostic Ratio Ratios Strip */}
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(130px, 1fr))', gap: 10, marginTop: 14, paddingTop: 14, borderTop: '1px solid #E4E4E7' }}>
+              <div style={{ padding: '8px 12px', backgroundColor: '#F8FAFC', border: '1px solid #E2E8F0', textAlign: 'center' }}>
+                <div style={{ fontSize: '0.66rem', color: 'var(--text-muted)', textTransform: 'uppercase' }}>Sensitivity (Recall)</div>
+                <div style={{ fontSize: '1.15rem', fontWeight: 700, color: '#16A34A', marginTop: 2 }}>{confusionMatrixStats.sensitivity}%</div>
+                <div style={{ fontSize: '0.62rem', color: 'var(--text-secondary)' }}>TP / (TP + FN)</div>
+              </div>
+
+              <div style={{ padding: '8px 12px', backgroundColor: '#F8FAFC', border: '1px solid #E2E8F0', textAlign: 'center' }}>
+                <div style={{ fontSize: '0.66rem', color: 'var(--text-muted)', textTransform: 'uppercase' }}>Specificity</div>
+                <div style={{ fontSize: '1.15rem', fontWeight: 700, color: '#2563EB', marginTop: 2 }}>{confusionMatrixStats.specificity}%</div>
+                <div style={{ fontSize: '0.62rem', color: 'var(--text-secondary)' }}>TN / (TN + FP)</div>
+              </div>
+
+              <div style={{ padding: '8px 12px', backgroundColor: '#F8FAFC', border: '1px solid #E2E8F0', textAlign: 'center' }}>
+                <div style={{ fontSize: '0.66rem', color: 'var(--text-muted)', textTransform: 'uppercase' }}>Precision (PPV)</div>
+                <div style={{ fontSize: '1.15rem', fontWeight: 700, color: '#18181B', marginTop: 2 }}>{confusionMatrixStats.precision}%</div>
+                <div style={{ fontSize: '0.62rem', color: 'var(--text-secondary)' }}>TP / (TP + FP)</div>
+              </div>
+
+              <div style={{ padding: '8px 12px', backgroundColor: '#F8FAFC', border: '1px solid #E2E8F0', textAlign: 'center' }}>
+                <div style={{ fontSize: '0.66rem', color: 'var(--text-muted)', textTransform: 'uppercase' }}>Neg Pred Value (NPV)</div>
+                <div style={{ fontSize: '1.15rem', fontWeight: 700, color: '#18181B', marginTop: 2 }}>{confusionMatrixStats.npv}%</div>
+                <div style={{ fontSize: '0.62rem', color: 'var(--text-secondary)' }}>TN / (TN + FN)</div>
+              </div>
+
+              <div style={{ padding: '8px 12px', backgroundColor: '#FEF2F2', border: '1px solid #FECACA', textAlign: 'center' }}>
+                <div style={{ fontSize: '0.66rem', color: '#991B1B', textTransform: 'uppercase' }}>Miss Rate (FNR)</div>
+                <div style={{ fontSize: '1.15rem', fontWeight: 800, color: '#DC2626', marginTop: 2 }}>{confusionMatrixStats.fnr}%</div>
+                <div style={{ fontSize: '0.62rem', color: '#991B1B' }}>FN / (TP + FN)</div>
+              </div>
+            </div>
+
+            <div style={{ marginTop: 12, padding: '10px 14px', backgroundColor: '#F8FAFC', borderLeft: '4px solid #DC2626', fontSize: '0.74rem', color: '#334155' }}>
+              <strong>Clinical Surveillance Rationale:</strong> In clinical cardiovascular triage, the cost of a False Negative (missed ischemic cardiac event) is exponentially higher than a False Positive (extra echocardiogram or stress test). CardioWatch audits this matrix per demographic cohort to prevent bias against underrepresented patient groups.
             </div>
           </div>
         )}
